@@ -12059,7 +12059,7 @@ keyboard.inline_keyboard = {
 {text = '⑼', callback_data="/help9"},{text = '⑽', callback_data="/help10"},
 },
 {
-{text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
+{text = '🦇 𝘽𝙖𝙘𝙠 🦇', callback_data="/help"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
@@ -12258,7 +12258,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
+{text = '🦇 𝘽𝙖𝙘𝙠 🦇', callback_data="/add"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
