@@ -298,7 +298,7 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1897626429) then  
-var = 'مطور السورس'
+var = 'نجــࢪ ¹𖥻𝙒𝘼𝙀𝙇'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = 'مطور سورس 2'  
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -7832,7 +7832,7 @@ else
 lock_inlin = '🔐'
 end
 if database:get(bot_id.."lock:forward"..msg.chat_id_) == "del" then
-lock_fwd = '??'
+lock_fwd = '🔓'
 elseif database:get(bot_id.."lock:forward"..msg.chat_id_) == "ked" then 
 lock_fwd = 'بالتقيد'    
 elseif database:get(bot_id.."lock:forward"..msg.chat_id_) == "ktm" then 
