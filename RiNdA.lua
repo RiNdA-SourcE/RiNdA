@@ -11147,7 +11147,7 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11443,7 +11443,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11513,7 +11513,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11567,7 +11567,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11627,7 +11627,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11692,7 +11692,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11776,7 +11776,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11850,7 +11850,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11894,7 +11894,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -11991,7 +11991,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -12047,7 +12047,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
@@ -12076,7 +12076,7 @@ end
 local Teext =[[
 𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙍𝙞𝙉𝙙𝘼 𝙄𝙣𝙛𝙤 🦖.
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
-*⑴◂ اوامر الحمايه .*
+*➊◂ اوامر الحمايه .*
 *➋◂ اوامر تعطيل ~ تفعيل .*
 *➌◂ اوامر ضع ~ اضف  .*
 *➍◂ اوامر مسح ~ حذف .*
@@ -12085,14 +12085,14 @@ local Teext =[[
 *➐◂ اوامر التحشيش .*
 *➑◂ اوامر مطور البوت .*
 *➒◂ اوامر مطور الاساسي .*
-*➊◂ اوامر الاعضاء .*
+*➓ اوامر الاعضاء .*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
 ❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
+{text = '➊', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
 {text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
