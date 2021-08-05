@@ -11147,16 +11147,16 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = ''➊, callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '⑽', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➓', callback_data="/help10"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
