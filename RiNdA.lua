@@ -823,7 +823,7 @@ Chat_Type = 'GroupBot'
 end
 end
 if database:get(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✧." then   
+if text == "الغاء" or text == "الغاء ❧." then   
 send(msg.chat_id_, msg.id_," •تم الغاء الاذاعه")
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -874,24 +874,24 @@ end
 if Devmode(msg) then
 local bl = ' •اهلا عزيزي آلمـطـور\n •آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n •تسـتطـيع‌‏ آلتحگم باوامر البوت\n •من خلاال الكيبورد خاص بك\n •قناة سورس البوت [اضغط هنا](t.me/SourcE_RiNdA)'
 local keyboard = {
-{'الاحصائيات ✧.'},
-{'تعطيل التواصل ✧.','تفعيل التواصل ✧.'},
-{'ضع اسم للبوت ✧.','قائمه العام ✧.','قائمه الكتم العام ✧.'},
-{'✧. تحديثات سورس ريندا ✧.'},
-{'المطورين ✧.','الثانويين ✧.'},
-{'المشتركين ✧.','الكروبات ✧.'},
-{'تغير رساله الاشتراك','حذف رساله الاشتراك ✧.','تغير الاشتراك'},
-{'ضع كليشه ستارت ✧.','حذف كليشه ستارت ✧.'},
-{'اذاعه ✧.','اذاعه خاص ✧.','اذاعه بالتثبيت ✧.'},
-{'اذاعه بالتوجيه ✧.','اذاعه بالتوجيه خاص ✧.'},
-{'تفعيل الاشتراك الاجباري ✧.','تعطيل الاشتراك الاجباري ✧.'},
-{'الاشتراك الاجباري ✧.','وضع قناة الاشتراك ✧.'},
-{'تفعيل البوت الخدمي ✧.','تعطيل البوت الخدمي ✧.'},
-{'تنظيف الكروبات ✧.','تنظيف المشتركين ✧.'},
-{'جلب نسخه الاحتياطيه ✧.'},
-{'تحديث السورس ✧.','الاصدار ✧.'},
-{'معلومات السيرفر ✧.'},
-{'الغاء ✧.'},
+{'الاحصائيات ❧.'},
+{'تعطيل التواصل ❧.','تفعيل التواصل ❧.'},
+{'ضع اسم للبوت ❧.','قائمه العام ❧.','قائمه الكتم العام ❧.'},
+{'❧. تحديثات سورس ريندا ❧.'},
+{'المطورين ❧.','الثانويين ❧.'},
+{'المشتركين ❧.','الكروبات ❧.'},
+{'تغير رساله الاشتراك','حذف رساله الاشتراك ❧.','تغير الاشتراك'},
+{'ضع كليشه ستارت ❧.','حذف كليشه ستارت ❧.'},
+{'اذاعه ❧.','اذاعه خاص ❧.','اذاعه بالتثبيت ❧.'},
+{'اذاعه بالتوجيه ❧.','اذاعه بالتوجيه خاص ❧.'},
+{'تفعيل الاشتراك الاجباري ❧.','تعطيل الاشتراك الاجباري ❧.'},
+{'الاشتراك الاجباري ❧.','وضع قناة الاشتراك ❧.'},
+{'تفعيل البوت الخدمي ❧.','تعطيل البوت الخدمي ❧.'},
+{'تنظيف الكروبات ❧.','تنظيف المشتركين ❧.'},
+{'جلب نسخه الاحتياطيه ❧.'},
+{'تحديث السورس ❧.','الاصدار ❧.'},
+{'معلومات السيرفر ❧.'},
+{'الغاء ❧.'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 else
@@ -989,7 +989,7 @@ end,nil)
 end,nil)
 end,nil)
 end 
-if text == 'تفعيل التواصل ✧.' and Devmode(msg) then  
+if text == 'تفعيل التواصل ❧.' and Devmode(msg) then  
 if database:get(bot_id..'Tuasl:Bots') then
 database:del(bot_id..'Tuasl:Bots') 
 Text = '\n •تم تفعيل التواصل ' 
@@ -998,7 +998,7 @@ Text = '\n •بالتاكيد تم تفعيل التواصل '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل التواصل ✧.' and Devmode(msg) then  
+if text == 'تعطيل التواصل ❧.' and Devmode(msg) then  
 if not database:get(bot_id..'Tuasl:Bots') then
 database:set(bot_id..'Tuasl:Bots',true) 
 Text = '\n •تم تعطيل التواصل' 
@@ -1007,7 +1007,7 @@ Text = '\n •بالتاكيد تم تعطيل التواصل'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تفعيل البوت الخدمي ✧.' and Devmode(msg) then  
+if text == 'تفعيل البوت الخدمي ❧.' and Devmode(msg) then  
 if database:get(bot_id..'Free:Bots') then
 database:del(bot_id..'Free:Bots') 
 Text = '\n •تم تفعيل البوت الخدمي ' 
@@ -1016,7 +1016,7 @@ Text = '\n •بالتاكيد تم تفعيل البوت الخدمي '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل البوت الخدمي ✧.' and Devmode(msg) then  
+if text == 'تعطيل البوت الخدمي ❧.' and Devmode(msg) then  
 if not database:get(bot_id..'Free:Bots') then
 database:set(bot_id..'Free:Bots',true) 
 Text = '\n •تم تعطيل البوت الخدمي' 
@@ -1026,7 +1026,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text and database:get(bot_id..'Start:Bots') then
-if text == 'الغاء' or text == 'الغاء ✧.' then   
+if text == 'الغاء' or text == 'الغاء ❧.' then   
 send(msg.chat_id_, msg.id_,' •الغاء حفظ كليشه ستارت')
 database:del(bot_id..'Start:Bots') 
 return false
@@ -1036,16 +1036,16 @@ send(msg.chat_id_, msg.id_,' •تم حفظ كليشه ستارت')
 database:del(bot_id..'Start:Bots') 
 return false
 end
-if text == 'ضع كليشه ستارت ✧.' and Devmode(msg) then 
+if text == 'ضع كليشه ستارت ❧.' and Devmode(msg) then 
 database:set(bot_id..'Start:Bots',true) 
 send(msg.chat_id_, msg.id_,' •ارسل لي الكليشه الان')
 return false
 end
-if text == 'حذف كليشه ستارت ✧.' and Devmode(msg) then 
+if text == 'حذف كليشه ستارت ❧.' and Devmode(msg) then 
 database:del(bot_id..'Start:Bot') 
 send(msg.chat_id_, msg.id_,' •تم حذف كليشه ستارت')
 end
-if text == 'معلومات السيرفر ✧.' and Devmode(msg) then 
+if text == 'معلومات السيرفر ❧.' and Devmode(msg) then 
 send(msg.chat_id_, msg.id_, io.popen([[
 linux_version=`lsb_release -ds`
 memUsedPrc=`free -m | awk 'NR==2{printf "%sMB/%sMB {%.2f%}\n", $3,$2,$3*100/$2 }'`
@@ -1053,51 +1053,51 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n*»» '"$linux_version"'*' 
-echo '*———————————~*\n✧.{ الذاكره العشوائيه } ⇎\n*»» '"$memUsedPrc"'*'
-echo '*———————————~*\n✧.{ وحـده الـتـخـزيـن } ⇎\n*»» '"$HardDisk"'*'
-echo '*———————————~*\n✧.{ الـمــعــالــج } ⇎\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '*———————————~*\n✧.{ الــدخــول } ⇎\n*»» '`whoami`'*'
-echo '*———————————~*\n✧.{ مـده تـشغيـل الـسـيـرفـر }⇎\n*»» '"$uptime"'*'
+echo '*———————————~*\n❧.{ الذاكره العشوائيه } ⇎\n*»» '"$memUsedPrc"'*'
+echo '*———————————~*\n❧.{ وحـده الـتـخـزيـن } ⇎\n*»» '"$HardDisk"'*'
+echo '*———————————~*\n❧.{ الـمــعــالــج } ⇎\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '*———————————~*\n❧.{ الــدخــول } ⇎\n*»» '`whoami`'*'
+echo '*———————————~*\n❧.{ مـده تـشغيـل الـسـيـرفـر }⇎\n*»» '"$uptime"'*'
 ]]):read('*all'))  
 end
 
-if text == 'تحديث السورس ✧.' and Devmode(msg) then 
+if text == 'تحديث السورس ❧.' and Devmode(msg) then 
 os.execute('rm -rf RiNdA.lua')
 os.execute('wget https://raw.githubusercontent.com/RiNdA-SourcE/RiNdA/main/RiNdA.lua')
 send(msg.chat_id_, msg.id_,' •تم تحديث السورس \n •لديك اخر اصدار لسورس ريندا\n •الاصدار » { v 1.6 }')
 dofile('RiNdA.lua')  
 end
-if text == 'الاصدار ✧.' and Devmode(msg) then 
+if text == 'الاصدار ❧.' and Devmode(msg) then 
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' •اصدار سورس ريندا \n •الاصدار »{ v 1.6 }')
 end
-if text == "ضع اسم للبوت ✧." and Devmode(msg) then  
+if text == "ضع اسم للبوت ❧." and Devmode(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
 send(msg.chat_id_, msg.id_," •ارسل اليه الاسم الان ")
 return false
 end
-if text == 'الاحصائيات ✧.' and Devmode(msg) then 
+if text == 'الاحصائيات ❧.' and Devmode(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
-Text = ' الاحصائيات ✧. \n'..' •عدد الكروبات » {'..Groups..'}'..'\n •عدد المشتركين » {'..Users..'}'
+Text = ' الاحصائيات ❧. \n'..' •عدد الكروبات » {'..Groups..'}'..'\n •عدد المشتركين » {'..Users..'}'
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
-if text == 'المشتركين ✧.' and Devmode(msg) then 
+if text == 'المشتركين ❧.' and Devmode(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
 Text = '\n •المشتركين»{`'..Users..'`}'
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
-if text == 'الكروبات ✧.' and Devmode(msg) then 
+if text == 'الكروبات ❧.' and Devmode(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
 Text = '\n •الكروبات»{`'..Groups..'`}'
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
-if text == ("المطورين ✧.") and Devmode(msg) then
+if text == ("المطورين ❧.") and Devmode(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
 t = "\n •قائمة المطورين \n⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆\n"
 for k,v in pairs(list) do
@@ -1113,7 +1113,7 @@ t = "* •لا يوجد مطورين*"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text == ("الثانويين ✧.") and Devmode(msg) then
+if text == ("الثانويين ❧.") and Devmode(msg) then
 local list = database:smembers(bot_id..'Dev:mode:2')
 t = "\n •قائمة الثانويين \n⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆\n"
 for k,v in pairs(list) do
@@ -1130,7 +1130,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 -------------
-if text == "✧. تحديثات سورس ريندا ✧." and Devmode(msg) then  
+if text == "❧. تحديثات سورس ريندا ❧." and Devmode(msg) then  
 local updatech =[[
 *يجب عليك الاشتراك في قناة*
 *تحديثات وشروحات سورس ريندا*
@@ -1145,7 +1145,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 return false
 end
 -----------
-if text == ("قائمه العام ✧.") and Devmode(msg) then
+if text == ("قائمه العام ❧.") and Devmode(msg) then
 local list = database:smembers(bot_id..'GBan:User')
 t = "\n •قائمه المحظورين عام \n⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆\n"
 for k,v in pairs(list) do
@@ -1162,7 +1162,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text == ("قائمه الكتم العام ✧.") and Devmode(msg) then
+if text == ("قائمه الكتم العام ❧.") and Devmode(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
 t = "\n •قائمة المكتومين عام \n⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆\n"
 for k,v in pairs(list) do
@@ -1179,35 +1179,35 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text=="اذاعه خاص ✧." and msg.reply_to_message_id_ == 0 and Devmode(msg) then 
+if text=="اذاعه خاص ❧." and msg.reply_to_message_id_ == 0 and Devmode(msg) then 
 database:setex(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," •ارسل الان اذاعتك؟ \n •للخروج ارسل الغاء ")
 return false
 end 
-if text=="اذاعه ✧." and msg.reply_to_message_id_ == 0 and Devmode(msg) then 
+if text=="اذاعه ❧." and msg.reply_to_message_id_ == 0 and Devmode(msg) then 
 database:setex(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," •ارسل الان اذاعتك؟ \n •للخروج ارسل الغاء ")
 return false
 end  
-if text=="اذاعه بالتثبيت ✧." and msg.reply_to_message_id_ == 0 and Devmode(msg) then 
+if text=="اذاعه بالتثبيت ❧." and msg.reply_to_message_id_ == 0 and Devmode(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," •ارسل الان اذاعتك؟ \n •للخروج ارسل الغاء ")
 return false
 end 
-if text=="اذاعه بالتوجيه ✧." and msg.reply_to_message_id_ == 0  and Devmode(msg) then 
+if text=="اذاعه بالتوجيه ❧." and msg.reply_to_message_id_ == 0  and Devmode(msg) then 
 database:setex(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," •ارسل لي التوجيه الان")
 return false
 end 
-if text=="اذاعه بالتوجيه خاص ✧." and msg.reply_to_message_id_ == 0  and Devmode(msg) then 
+if text=="اذاعه بالتوجيه خاص ❧." and msg.reply_to_message_id_ == 0  and Devmode(msg) then 
 database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," •ارسل لي التوجيه الان")
 return false
 end 
-if text == 'جلب نسخه الاحتياطيه ✧.' and Devmode(msg) then 
+if text == 'جلب نسخه الاحتياطيه ❧.' and Devmode(msg) then 
 GetFile_Bot(msg)
 end
-if text == "تنظيف المشتركين ✧." and Devmode(msg) then 
+if text == "تنظيف المشتركين ❧." and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1243,7 +1243,7 @@ end,nil)
 end
 return false
 end
-if text == "تنظيف الكروبات ✧." and Devmode(msg) then 
+if text == "تنظيف الكروبات ❧." and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1417,7 +1417,7 @@ end,nil)
 end
 end
 if database:get(bot_id..'Set:Name:Bot'..msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✧.' then   
+if text == 'الغاء' or text == 'الغاء ❧.' then   
 send(msg.chat_id_, msg.id_," •تم الغاء حفظ اسم البوت")
 database:del(bot_id..'Set:Name:Bot'..msg.sender_user_id_) 
 return false  
@@ -1428,7 +1428,7 @@ send(msg.chat_id_, msg.id_, " •تم حفظ الاسم")
 return false
 end 
 if database:get(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✧.' then   
+if text == 'الغاء' or text == 'الغاء ❧.' then   
 send(msg.chat_id_, msg.id_," •تم الغاء الاذاعه للخاص")
 database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1461,7 +1461,7 @@ database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
 end
 
 if database:get(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✧.' then   
+if text == 'الغاء' or text == 'الغاء ❧.' then   
 send(msg.chat_id_, msg.id_," •تم الغاء الاذاعه")
 database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1494,7 +1494,7 @@ database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 end
 
 if database:get(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✧.' then   
+if text == 'الغاء' or text == 'الغاء ❧.' then   
 send(msg.chat_id_, msg.id_," •تم الغاء الاذاعه")
 database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
@@ -1514,7 +1514,7 @@ database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_
 end 
 end
 if database:get(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✧.' then   
+if text == 'الغاء' or text == 'الغاء ❧.' then   
 send(msg.chat_id_, msg.id_," •تم الغاء الاذاعه")
 database:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
@@ -2357,17 +2357,17 @@ database:setex(bot_id.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id
 send(msg.chat_id_, msg.id_, ' •حسنآ ارسل لي النص الذي تريده')
 return false  
 end
-if text == "حذف رساله الاشتراك ✧." and Devmode(msg) then  
+if text == "حذف رساله الاشتراك ❧." and Devmode(msg) then  
 database:del(bot_id..'text:ch:user')
 send(msg.chat_id_, msg.id_, " •تم مسح رساله الاشتراك ")
 return false  
 end
-if text and text:match("^وضع قناة الاشتراك ✧.$") and Devmode(msg) then  
+if text and text:match("^وضع قناة الاشتراك ❧.$") and Devmode(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, ' •حسنآ ارسل لي معرف القناة')
 return false  
 end
-if text == "تفعيل الاشتراك الاجباري ✧." and Devmode(msg) then  
+if text == "تفعيل الاشتراك الاجباري ❧." and Devmode(msg) then  
 if database:get(bot_id..'add:ch:id') then
 local addchusername = database:get(bot_id..'add:ch:username')
 send(msg.chat_id_, msg.id_," •الاشتراك الاجباري مفعل \n •على القناة » ["..addchusername.."]")
@@ -2377,13 +2377,13 @@ send(msg.chat_id_, msg.id_," •اهلا عزيزي المطور \n •ارسل 
 end
 return false  
 end
-if text == "تعطيل الاشتراك الاجباري ✧." and Devmode(msg) then  
+if text == "تعطيل الاشتراك الاجباري ❧." and Devmode(msg) then  
 database:del(bot_id..'add:ch:id')
 database:del(bot_id..'add:ch:username')
 send(msg.chat_id_, msg.id_, " •تم تعطيل الاشتراك الاجباري ")
 return false  
 end
-if text == "الاشتراك الاجباري ✧." and Devmode(msg) then  
+if text == "الاشتراك الاجباري ❧." and Devmode(msg) then  
 if database:get(bot_id..'add:ch:username') then
 local addchusername = database:get(bot_id..'add:ch:username')
 send(msg.chat_id_, msg.id_, " •تم تفعيل الاشتراك الاجباري \n •على القناة » ["..addchusername.."]")
@@ -2765,7 +2765,7 @@ if text == "ترتيب الاوامر" and Constructor(msg) then
  database:sadd(bot_id.."List:Cmd:Group:New"..msg.chat_id_,"تعط")
  database:set(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..":تفع","تفعيل الايدي بالصوره")
  database:sadd(bot_id.."List:Cmd:Group:New"..msg.chat_id_,"تفع")
- send(msg.chat_id_, msg.id_,"*•تم ترتيب الاوامر بالشكل التالي ~*\n✧. ايدي - ا . \n✧. طرد - دي . \n✧. حظر - بنعال . \n✧. كتم - اش . \n✧. مميز - م .\n✧. ادمن - اد .\n✧. مدير - مد . \n✧. منشى - من . \n✧. المنشئ الاساسي - اس . \n✧. تعطيل الايدي بالصوره - تعط .\n✧. تفعيل الايدي بالصوره - تفع .")
+ send(msg.chat_id_, msg.id_,"*•تم ترتيب الاوامر بالشكل التالي ~*\n❧. ايدي - ا . \n❧. طرد - دي . \n❧. حظر - بنعال . \n❧. كتم - اش . \n❧. مميز - م .\n❧. ادمن - اد .\n❧. مدير - مد . \n❧. منشى - من . \n❧. المنشئ الاساسي - اس . \n❧. تعطيل الايدي بالصوره - تعط .\n❧. تفعيل الايدي بالصوره - تفع .")
  end
 --------------------------------------------------------------------------------------------------------------
 if text == 'قفل الدردشه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
@@ -2776,7 +2776,7 @@ end,nil)
 elseif text == 'قفل الاضافه' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:AddMempar"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' *•بواسطه »* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n*✧.| تـم قفـل اضافة *')
+send(msg.chat_id_, msg.id_,' *•بواسطه »* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n*❧.| تـم قفـل اضافة *')
 end,nil)   
 elseif text == 'قفل الدخول' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 database:set(bot_id.."lock:Join"..msg.chat_id_,'kick')  
@@ -8583,7 +8583,7 @@ end
 end
 if text == "كت" or text == "كت تويت" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"*✧ وين تحب تسافر*","*✧ فنانك المفضل*","*✧ اسمك الحقيقي نفسه اسمك بالتلي؟*","*✧ تحب منوو*","*✧ تتوقع روحك بالجنه لو بالنار؟*","*✧ اكثر دكه ناقصه سويتها؟*","*✧ تعرف شكد احبك؟*","*✧ عيونك يالون؟*","*✧ اسم التحبه/تحبي؟*","*✧ هم تكره الشجر*","*✧ تعرف رسو ؟*","*✧ شنو سويت اخر شي؟*","*✧ تدري انته كيك*","‏*✧ ما هي الصفة التي تبتعد عن الآخرين بسببها . . . ؟*","*✧ فكرة خاطئة منتشرة عند البنات ؟.*","*✧ هل مدمن ع شي متكدر تتركه؟*","*✧ طفولتك حلوه؟*","*✧ اذا رجعلك الحب الاول تبقة تحبه نفس الحب؟*","*✧ كم وجبه تاكل باليوم؟*","*✧ تحصيلك الدراسي؟*","*✧ اغنيه عندك بيها ذكريات؟*","*✧ لو الحرام اصبح حلال ما اول شيئ تفعله؟*","*✧ تحب شخص يكرهك؟*","*✧ الصديق ام المال؟*","*✧ وقت فرحك من أول شخص تكلمة.؟*","*✧ منشن لشخص دكله اطلع من حياتي؟*","*✧ لو اغمضت عيناك الان ماهوه الشيئ الذي ستفكر به ؟*","*✧ شنو اسم امك؟*","*✧ يوم تحبه؟*","*✧ اغنيتك المفضله؟*","*✧ تدخن ؟*","*✧ تحب اهلك ؟*","*✧ عمرك ؟*","*✧ صفه تخليك تكره الشخص ؟*","*✧ شكد جبت اعلى درجه بالمدرسه ؟*","*✧ كم مره راسب ؟*","*✧ شهر تحبه ؟*","*✧ الصيف لو الشتاء ؟*","*✧ مشهور تحبه ؟*","*✧ اسم الي تحبه ؟*","*✧ موقف محرج ؟*","*✧ اكلتك المفضله ؟*","*✧ ملسلسك المفضل؟*"}
+local texting = {"*❧ وين تحب تسافر*","*❧ فنانك المفضل*","*❧ اسمك الحقيقي نفسه اسمك بالتلي؟*","*❧ تحب منوو*","*❧ تتوقع روحك بالجنه لو بالنار؟*","*❧ اكثر دكه ناقصه سويتها؟*","*❧ تعرف شكد احبك؟*","*❧ عيونك يالون؟*","*❧ اسم التحبه/تحبي؟*","*❧ هم تكره الشجر*","*❧ تعرف رسو ؟*","*❧ شنو سويت اخر شي؟*","*❧ تدري انته كيك*","‏*❧ ما هي الصفة التي تبتعد عن الآخرين بسببها . . . ؟*","*❧ فكرة خاطئة منتشرة عند البنات ؟.*","*❧ هل مدمن ع شي متكدر تتركه؟*","*❧ طفولتك حلوه؟*","*❧ اذا رجعلك الحب الاول تبقة تحبه نفس الحب؟*","*❧ كم وجبه تاكل باليوم؟*","*❧ تحصيلك الدراسي؟*","*❧ اغنيه عندك بيها ذكريات؟*","*❧ لو الحرام اصبح حلال ما اول شيئ تفعله؟*","*❧ تحب شخص يكرهك؟*","*❧ الصديق ام المال؟*","*❧ وقت فرحك من أول شخص تكلمة.؟*","*❧ منشن لشخص دكله اطلع من حياتي؟*","*❧ لو اغمضت عيناك الان ماهوه الشيئ الذي ستفكر به ؟*","*❧ شنو اسم امك؟*","*❧ يوم تحبه؟*","*❧ اغنيتك المفضله؟*","*❧ تدخن ؟*","*❧ تحب اهلك ؟*","*❧ عمرك ؟*","*❧ صفه تخليك تكره الشخص ؟*","*❧ شكد جبت اعلى درجه بالمدرسه ؟*","*❧ كم مره راسب ؟*","*❧ شهر تحبه ؟*","*❧ الصيف لو الشتاء ؟*","*❧ مشهور تحبه ؟*","*❧ اسم الي تحبه ؟*","*❧ موقف محرج ؟*","*❧ اكلتك المفضله ؟*","*❧ ملسلسك المفضل؟*"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
@@ -10148,7 +10148,7 @@ if text == 'الاحصائيات' then
 if Sudo(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
-Text = ' الاحصائيات ✧. \n'..' •عدد الكروبات » {'..Groups..'}'..'\n •عدد المشتركين » {'..Users..'}'
+Text = ' الاحصائيات ❧. \n'..' •عدد الكروبات » {'..Groups..'}'..'\n •عدد المشتركين » {'..Users..'}'
 send(msg.chat_id_, msg.id_,Text) 
 end
 return false
@@ -10960,7 +10960,7 @@ database:del(bot_id.."gemadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_)
 local numadded = string.match(text, "(%d+)") 
 local iduserr = database:get(bot_id..'idgem:user'..msg.chat_id_)  
 database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..iduserr,numadded)  
-send(msg.chat_id_, msg.id_,  1, "✧.| تم اضافة له {"..numadded..'} من النقود', 1 , 'md')  
+send(msg.chat_id_, msg.id_,  1, "❧.| تم اضافة له {"..numadded..'} من النقود', 1 , 'md')  
 end
 ------------------------------------------------------------
 if text and text:match("^اضف رسائل (%d+)$") and msg.reply_to_message_id_ == 0 and Constructor(msg) then    
@@ -11142,7 +11142,7 @@ local Text =[[
 *➒ اوامر مطور الاساسي .*
 *➓ اوامر الاعضاء .*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11190,7 +11190,7 @@ local Text =[[
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11227,7 +11227,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ\n•✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA) ')
+send(msg.chat_id_, msg.id_, t..'⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ\n•❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA) ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '*•تم تعطيل الابراج*')
@@ -11331,13 +11331,13 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'رابط الحذف' or text == 'رابط حذف' then
 t =[[
-✧. رابط الحذف في جميع مواقع التواصل
+❧. رابط الحذف في جميع مواقع التواصل
 فكر قبل لا تتسرع وتروح
 ≪─━─━─𝙆𝙮━─━─≫
- ✧. رابط حذف  [Telegram](https://my.telegram.org/auth?to=delete) ܁
- ✧. رابط حذف [instagram](https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/) ܁
- ✧. رابط حذف [Facebook](https://www.facebook.com/help/deleteaccount) ܁
- ✧. رابط حذف [Snspchat](https://accounts.RiNdAchat.com/accounts/login?continue=https%3A%2F%2Faccounts.RiNdAchat.com%2Faccounts%2Fdeleteaccount) ܁
+ ❧. رابط حذف  [Telegram](https://my.telegram.org/auth?to=delete) ܁
+ ❧. رابط حذف [instagram](https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/) ܁
+ ❧. رابط حذف [Facebook](https://www.facebook.com/help/deleteaccount) ܁
+ ❧. رابط حذف [Snspchat](https://accounts.RiNdAchat.com/accounts/login?continue=https%3A%2F%2Faccounts.RiNdAchat.com%2Faccounts%2Fdeleteaccount) ܁
 ]]
 send(msg.chat_id_, msg.id_,t) 
 return false
@@ -11398,7 +11398,7 @@ local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
 if Text == '/help1' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11438,7 +11438,7 @@ local Teext =[[
 •الجهات
 •الاشعارات
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11465,7 +11465,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help2' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11508,7 +11508,7 @@ local Teext =[[
 •اوامر التحشيش
 •صورتي 
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11535,7 +11535,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help3' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11562,7 +11562,7 @@ local Teext =[[
 •امر
 •ترتيب الاوامر
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11589,7 +11589,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help4' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11622,7 +11622,7 @@ local Teext =[[
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆
 •الاوامر المضافه ( لعرض الاوامر المضافه ) 
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11649,7 +11649,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help5' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11687,7 +11687,7 @@ local Teext =[[
 •تغير امر الاوامر
 •تغير امر م1 ~ الئ م10
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11714,7 +11714,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help6' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11771,7 +11771,7 @@ local Teext =[[
 •الساعه
 •التاريخ
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11798,7 +11798,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help7' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11845,7 +11845,7 @@ local Teext =[[
 •رفع + تنزيل ← الحاته
 •تاك للحاتات
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11872,7 +11872,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help8' then
 if not Sudo(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11889,7 +11889,7 @@ local Teext =[[
 •اسم ~ ايدي + بوت غادر 
 •اذاعه 
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11916,7 +11916,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help9' then
 if not Sudo(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -11986,7 +11986,7 @@ local Teext =[[
 •تنظيف المشتركين
 •تنظيف الكروبات
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12042,7 +12042,7 @@ local Teext =[[
 •شنو رئيك بهاي بالرد
 •تحب هذا
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆ٴ
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12069,7 +12069,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/help' then
 if not Mod(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -12087,7 +12087,7 @@ local Teext =[[
 *⑼◂ اوامر مطور الاساسي .*
 *⑽◂ اوامر الاعضاء .*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12112,7 +12112,7 @@ end
 ------------------------------ callback add dev mr mode
 if Text == '/mute-name' then
 if not Constructor(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -12145,7 +12145,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/mode' then
 if not Constructor(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -12178,7 +12178,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/change-names' then
 if not Constructor(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -12208,7 +12208,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/change-id' then
 if not Constructor(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -12238,12 +12238,12 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/change-photo' then
 if not Constructor(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
 local Teext =[[
-*انت الان في قائمة تنبيه الصور*
+*انـت الان في قائمة تنبيه الصور*
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆
 *الاوامر الخاصة فـي تنبيه الصور*
 *تفعيل تنبيه الصور*
@@ -12269,7 +12269,7 @@ end
 --- callback added
 if Text == '/add' then
 if not Constructor(data) then
-local notText = '✧. عذرا الاوامر هذه لا تخصك'
+local notText = '❧. عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
@@ -12282,7 +12282,7 @@ local Teext =[[
 *يمكنك تصفح الاضافات من خلال*
 *الكيبورد الموجود في الأسفل*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
-✧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
