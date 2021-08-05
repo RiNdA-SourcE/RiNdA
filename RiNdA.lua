@@ -10614,7 +10614,7 @@ local List = {
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
-➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
+➭- 𝒊𝒅 𓂅 #id 𓍯. 
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★
@@ -12059,7 +12059,7 @@ keyboard.inline_keyboard = {
 {text = '⑼', callback_data="/help9"},{text = '⑽', callback_data="/help10"},
 },
 {
-{text = '🦇 𝘽𝙖𝙘𝙠 🦇', callback_data="/help"},
+{text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
@@ -12243,7 +12243,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-*انـت الان في قائمة تنبيه الصور*
+*انت الان في قائمة تنبيه الصور*
 ⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆
 *الاوامر الخاصة فـي تنبيه الصور*
 *تفعيل تنبيه الصور*
@@ -12258,7 +12258,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '🦇 𝘽𝙖𝙘𝙠 🦇', callback_data="/add"},
+{text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
