@@ -11129,34 +11129,34 @@ end
 return false
 end
 local Text =[[
-𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙍𝙞𝙉𝙙𝘼 𝙄𝙣𝙛𝙤  💭
+𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙍𝙞𝙉𝙙𝘼 𝙄𝙣𝙛𝙤  🦇
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
-*⑴◂ اوامر الحمايه .*
-*⑵◂ اوامر تعطيل ~ تفعيل .*
-*⑶◂ اوامر ضع ~ اضف  .*
-*⑷◂ اوامر مسح ~ حذف .*
-*⑸◂ اوامر تنزيل+رفع+التغير .*
-*⑹◂ اوامر الكروب .*
-*⑺◂ اوامر التحشيش .*
-*⑻◂ اوامر مطور البوت .*
-*⑼◂ اوامر مطور الاساسي .*
-*➊◂ اوامر الاعضاء .*
+*➊ اوامر الحمايه .*
+*➋ اوامر تعطيل ~ تفعيل .*
+*➌ اوامر ضع ~ اضف  .*
+*➍ اوامر مسح ~ حذف .*
+*➎ اوامر تنزيل+رفع+التغير .*
+*➏ اوامر الكروب .*
+*➐ اوامر التحشيش .*
+*➑ اوامر مطور البوت .*
+*➒ اوامر مطور الاساسي .*
+*➓ اوامر الاعضاء .*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
 ❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
@@ -11443,16 +11443,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11513,16 +11513,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11567,16 +11567,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11627,16 +11627,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖??𝙠 ↺', callback_data="/help"},
@@ -11692,16 +11692,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11776,16 +11776,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11850,16 +11850,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11894,16 +11894,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -11991,16 +11991,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -12047,16 +12047,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
@@ -12074,17 +12074,17 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙍𝙞𝙉𝙙𝘼 𝙄𝙣𝙛𝙤  💭
+𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙍𝙞𝙉𝙙𝘼 𝙄𝙣𝙛𝙤 🦖.
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
 *⑴◂ اوامر الحمايه .*
-*⑵◂ اوامر تعطيل ~ تفعيل .*
-*⑶◂ اوامر ضع ~ اضف  .*
-*⑷◂ اوامر مسح ~ حذف .*
-*⑸◂ اوامر تنزيل+رفع+التغير .*
-*⑹◂ اوامر الكروب .*
-*⑺◂ اوامر التحشيش .*
-*⑻◂ اوامر مطور البوت .*
-*⑼◂ اوامر مطور الاساسي .*
+*➋◂ اوامر تعطيل ~ تفعيل .*
+*➌◂ اوامر ضع ~ اضف  .*
+*➍◂ اوامر مسح ~ حذف .*
+*➎◂ اوامر تنزيل+رفع+التغير .*
+*➏◂ اوامر الكروب .*
+*➐◂ اوامر التحشيش .*
+*➑◂ اوامر مطور البوت .*
+*➒◂ اوامر مطور الاساسي .*
 *➊◂ اوامر الاعضاء .*
 *⋆ ┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉ ⋆*
 ❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
@@ -12092,16 +12092,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '⑴', callback_data="/help1"},{text = '➋', callback_data="/help2"},{text = '➌', callback_data="/help3"},
 },
 {
-{text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
+{text = '➍', callback_data="/help4"},{text = '➎', callback_data="/help5"},
 },
 {
-{text = '⑹', callback_data="/help6"},{text = '⑺', callback_data="/help7"},{text = '⑻', callback_data="/help8"},
+{text = '➏', callback_data="/help6"},{text = '➐', callback_data="/help7"},{text = '➑', callback_data="/help8"},
 },
 {
-{text = '⑼', callback_data="/help9"},{text = '➊', callback_data="/help10"},
+{text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
