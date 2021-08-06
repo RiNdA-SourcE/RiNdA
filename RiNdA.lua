@@ -298,15 +298,15 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1897626429) then  
-var = 'نجــࢪ ¹𖥻𝙒𝘼𝙀𝙇'
+var = '𝙏𝙚𝙡𝙚𝙧𝙖𝙢 𝘿𝙚𝙑𝙚𝙡𝙤𝙥𝙚𝙧'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = '𝗛ٍَ𝗮َ!َِ𝗦َِ𝗼'  
 elseif tonumber(user_id) == tonumber(SUDO) then
-var = 'المطور الاساسي'  
+var = 'المطـوࢪ الاساسـي'  
 elseif database:sismember(bot_id.."Dev:mode:2", user_id) then 
-var = "المطور الاساسي²"  
+var = "المطـوࢪ الاساسـي²"  
 elseif tonumber(user_id) == tonumber(bot_id) then  
-var = 'البوت'
+var = 'البـوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
 var = database:get(bot_id.."Sudo:Rd"..msg.chat_id_) or 'المطور'  
 elseif database:sismember(bot_id..'CoSu'..chat_id, user_id) then
@@ -2627,7 +2627,7 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼\n\n[𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙧𝙘𝙚 ](http://t.me/Yv4BoT)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝘿𝙚𝙫 𝙍𝙞𝙉𝙙𝘼 .',url="https://t.me/PPPPZ"}},
+{{text = '𝘿𝙚𝙫 𝙍𝙞𝙉𝙙𝘼 .',url="https://t.me/WYYYYY"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
