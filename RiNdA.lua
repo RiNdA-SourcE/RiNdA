@@ -12098,7 +12098,7 @@ keyboard.inline_keyboard = {
 {text = '⑥', callback_data="/help6"},{text = '⑦', callback_data="/help7"},{text = '⑧', callback_data="/help8"},
 },
 {
-{text = '⑨', callback_data="/help9"},{text = '①', callback_data="/help10"},
+{text = '⑨', callback_data="/help9"},{text = '⑩', callback_data="/help10"},
 },
 {
 {text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
