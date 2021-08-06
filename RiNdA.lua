@@ -1138,7 +1138,7 @@ local updatech =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"}},
+{{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(updatech).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2624,7 +2624,7 @@ end
 end,nil)  
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then       
-Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼\n\n[𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙧𝙘𝙚 ](http://t.me/Yv4BoT)"
+Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼\n\n[𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙧𝙘𝙚 ](http://t.me/Yv4BoT)"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '𝘿𝙚𝙫 𝙍𝙞𝙉𝙙𝘼 .',url="https://t.me/PPPPZ"}},
@@ -7991,7 +7991,7 @@ local text =
 ' }\n'..' •الايدي » { '..idgp..
 ' }\n'..' •الايدي بالصوره » { '..idph..
 ' }\n'..' •الرفع » { '..setadd..
-' }\n'..' •الحظر » { '..banm..' }\n\n•------------------------------------------•\n •قناة سورس ريندا ↓\n [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA) \n'
+' }\n'..' •الحظر » { '..banm..' }\n\n•------------------------------------------•\n •قناة سورس ريندا ↓\n [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -9814,7 +9814,7 @@ if audios.Info == true then
 local Text ='*•تم اختيار المقطع الصوتي لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼',url="t.me/SourcE_RiNdA"}},
+{{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼',url="t.me/SourcE_RiNdA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -11142,7 +11142,7 @@ local Text =[[
 *➒ اوامࢪ  مطـور الاساسـي .*
 *➓ اوامࢪ الاعضـاء .*
 *•------------------------------------------•*
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11159,7 +11159,7 @@ keyboard.inline_keyboard = {
 {text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -11182,15 +11182,16 @@ end
 return false
 end
 local Text =[[
-*اهلا انتツفي اضافات البوت*
+*اهلا انـت في اضـافـات البـوت🦖*
 *•------------------------------------------•*
-* يمكنك معرفة حاله تفعيل الاضافات *
-* من خلال ارسال حاله الاضافات *
+* يمكنك معرفـة حاله تفعيل الاضافات *
+* من خلال ارسال {حاله الاضافات} *
 *•------------------------------------------•*
-*يمكنك تصفح الاضافات من خلال*
-*الكيبورد الموجود في الأسفل*
+*يمكنك تصفح الاضـافات من خلـال*
+*الكيـبوࢪد الموجـود فـي الأسفـل*
+ـ 𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼
 *•------------------------------------------•*
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11201,7 +11202,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -11227,7 +11228,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'•------------------------------------------•ٴ\n•❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA) ')
+send(msg.chat_id_, msg.id_, t..'•------------------------------------------•ٴ\n•❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA) ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '*•تم تعطيل الابراج*')
@@ -11333,7 +11334,7 @@ if text == 'رابط الحذف' or text == 'رابط حذف' then
 t =[[
 ❧. رابط الحذف في جميع مواقع التواصل
 فكر قبل لا تتسرع وتروح
-≪─━─━─𝙆𝙮━─━─≫
+🕷️•-------------------ℝ𝕚ℕ𝕕𝔸--------------------•🕷️
  ❧. رابط حذف  [Telegram](https://my.telegram.org/auth?to=delete) ܁
  ❧. رابط حذف [instagram](https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/) ܁
  ❧. رابط حذف [Facebook](https://www.facebook.com/help/deleteaccount) ܁
@@ -11454,7 +11455,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11504,7 +11505,7 @@ local Teext =[[
 •اوامر التحشيش
 •صورتي 
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11524,7 +11525,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11558,7 +11559,7 @@ local Teext =[[
 •امر
 •ترتيب الاوامر
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11578,7 +11579,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11618,7 +11619,7 @@ local Teext =[[
 •------------------------------------------•
 •الاوامر المضافه ( لعرض الاوامر المضافه ) 
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11638,7 +11639,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖??𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11683,7 +11684,7 @@ local Teext =[[
 •تغير امر الاوامر
 •تغير امر م1 ~ الئ م10
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11703,7 +11704,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11767,7 +11768,7 @@ local Teext =[[
 •الساعه
 •التاريخ
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11787,7 +11788,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11841,7 +11842,7 @@ local Teext =[[
 •رفع + تنزيل ← الحاته
 •تاك للحاتات
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11861,7 +11862,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11885,7 +11886,7 @@ local Teext =[[
 •اسم ~ ايدي + بوت غادر 
 •اذاعه 
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11905,7 +11906,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11982,7 +11983,7 @@ local Teext =[[
 •تنظيف المشتركين
 •تنظيف الكروبات
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12002,7 +12003,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12038,7 +12039,7 @@ local Teext =[[
 •شنو رئيك بهاي بالرد
 •تحب هذا
 •------------------------------------------•ٴ
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12058,7 +12059,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/help"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12083,7 +12084,7 @@ local Teext =[[
 *➒◂ اوامر مطور الاساسي .*
 *➓ اوامر الاعضاء .*
 *•------------------------------------------•*
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12100,7 +12101,7 @@ keyboard.inline_keyboard = {
 {text = '➒', callback_data="/help9"},{text = '➊', callback_data="/help10"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12134,7 +12135,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12167,7 +12168,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12197,7 +12198,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12227,7 +12228,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12257,7 +12258,7 @@ keyboard.inline_keyboard = {
 {text = '↻ 𝘽𝙖𝙘𝙠 ↺', callback_data="/add"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -12270,15 +12271,16 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-*اهلا انتツفي اضافات البوت*
+*اهلا انـت في اضـافـات البـوت🦖*
 *•------------------------------------------•*
-* يمكنك معرفة حاله تفعيل الاضافات *
-* من خلال ارسال حاله الاضافات *
+* يمكنك معرفـة حاله تفعيل الاضافات *
+* من خلال ارسال {حاله الاضافات} *
 *•------------------------------------------•*
-*يمكنك تصفح الاضافات من خلال*
-*الكيبورد الموجود في الأسفل*
+*يمكنك تصفح الاضـافات من خلـال*
+*الكيـبوࢪد الموجـود فـي الأسفـل*
+ـ 𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼
 *•------------------------------------------•*
-❧. [𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
+❧. [𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12289,7 +12291,7 @@ keyboard.inline_keyboard = {
 {text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
 },
 {
-{text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
+{text = '𝙎𝙤𝙪𝙍𝙘𝙀🇬🇧𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
