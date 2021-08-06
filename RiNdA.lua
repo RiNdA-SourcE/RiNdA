@@ -300,7 +300,7 @@ function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1897626429) then  
 var = '𝙏𝙚𝙡𝙚𝙧𝙖𝙢 𝘿𝙚𝙑𝙚𝙡𝙤𝙥𝙚𝙧'
 elseif tonumber(user_id) == tonumber(1581304066) then
-var = '𝗛ٍَ𝗮َ!َِ𝗦َِ𝗼'  
+var = '𝗙𝘂𝗡𝗱𝗘𝗱 𝗥𝗶𝗡𝗱𝗔'  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطـوࢪ الاساسـي'  
 elseif database:sismember(bot_id.."Dev:mode:2", user_id) then 
