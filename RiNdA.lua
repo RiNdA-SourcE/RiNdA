@@ -2624,10 +2624,10 @@ end
 end,nil)  
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then       
-Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼\n\n[𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/P222P)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙧𝙘𝙚 ](http://t.me/Yv4BoT)"
+Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼\n\n[𝗗𝗲𝗩 𝗪𝗔𝗘𝗟](http://t.me/WYYYYY)\n\n[𝗗𝗲𝗩 𝗛𝗔𝗦𝗢 ](http://t.me/biiiii)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙧𝙘𝙚 ](http://t.me/SourcE_RiNdAbot)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝘿𝙚𝙫 𝙍𝙞𝙉𝙙𝘼 .',url="https://t.me/PPPPZ"}},
+{{text = '𝙎𝙤𝙪𝙍𝙘𝙀 𝙍𝙞𝙉𝙙𝘼 🇬🇧 .',url="https://t.me/SourcE_RiNdA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -7832,7 +7832,7 @@ else
 lock_inlin = '🔐'
 end
 if database:get(bot_id.."lock:forward"..msg.chat_id_) == "del" then
-lock_fwd = '??'
+lock_fwd = '🔓'
 elseif database:get(bot_id.."lock:forward"..msg.chat_id_) == "ked" then 
 lock_fwd = 'بالتقيد'    
 elseif database:get(bot_id.."lock:forward"..msg.chat_id_) == "ktm" then 
