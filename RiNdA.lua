@@ -2623,10 +2623,14 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then       
 Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼\n\n[𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/P222P)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙧𝙘𝙚 ](http://t.me/Yv4BoT)"
+if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then       
+Text = "𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐒𝐨𝐮𝐫𝐜𝐄 𝐑𝐢𝐧𝐝𝐚 \n\n[𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/SourcE_RiNdA)\n\n[𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙍𝙞𝙉𝙙𝘼 ](http://t.me/)\n\n[𝙏𝙬𝙎 𝙎𝙤𝙪𝙍𝙘𝙀 𝙍𝙞𝙉𝙙𝘼  ](http://t.me/SourcE_RiNdAbot)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝘿𝙚𝙫 𝙍𝙞𝙉𝙙𝘼 .',url="https://t.me/WYYYYY"}},
+{{text = '𝘿𝙚𝙫 𝙒𝘼𝙀𝙇 .',url="https://t.me/wyyyyy"}},
 }
+{
+{{text = '𝘿𝙚𝙫 𝗛ٍَ𝗮َ𝗦ِ𝗼 .',url="https://t.me/biiiii"}},
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
@@ -11904,7 +11908,7 @@ keyboard.inline_keyboard = {
 {text = '⑼', callback_data="/help9"},{text = '⑽', callback_data="/help10"},
 },
 {
-{text = '↑𝐁𝐚𝐜𝐤 𝐭𝐨 𝐥𝐢𝐬??↑', callback_data="/help"},
+{text = '↑𝐁𝐚𝐜𝐤 𝐭𝐨 𝐥𝐢𝐬𝐭↑', callback_data="/help"},
 },
 {
 {text = '𝙏𝙚𝘼𝙢 𝙍𝙞𝙉𝙙𝘼', url="t.me/SourcE_RiNdA"},
