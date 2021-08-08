@@ -10428,10 +10428,10 @@ end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
 local mode = ' •عدد الادمنيه : '..data.administrator_count_..
-'\n\n •عدد الطارديـهم..🦇 : '..data.kicked_count_..
-'\n\n •عدد الاعضائـك..🦇 : '..data.member_count_..
-'\n\n •عدد رسائل الكࢪوبـك..🦇 : '..(msg.id_/2097152/0.5)..
-'\n\n •اسـم كروبـك..🦇 : ['..ta.title_..']'
+'\n\n •عدد الطارديـهم..🍼 : '..data.kicked_count_..
+'\n\n •عدد اعضائـك..🍼 : '..data.member_count_..
+'\n\n •عدد رسائل الكࢪوبـك..🍼 : '..(msg.id_/2097152/0.5)..
+'\n\n •اسـم كروبـك..🍼 : ['..ta.title_..']'
 send(msg.chat_id_, msg.id_, mode) 
 end,nil)
 end,nil)
