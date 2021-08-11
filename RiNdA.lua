@@ -8102,6 +8102,32 @@ database:setex(bot_id.."Set:Priovate:Group:Link"..msg.chat_id_..""..msg.sender_u
 return false
 end
 end
+if text == "تفعيل حذف الردود" then
+if Mod(msg) then  
+database:del(bot_id.."Rio:Lock:GpRd"..msg.chat_id_) 
+send(msg.chat_id_, msg.id_,"*•تـم تفعيل حذف الردود..🕷️*") 
+return false end
+end
+if text == "تعطيل حذف الردود" then
+if Mod(msg) then  
+database:set(bot_id.."Rio:Lock:GpRd"..msg.chat_id_,true) 
+send(msg.chat_id_, msg.id_,"*•تـم تعـطيـل حذف الردود..🕷️*") 
+return false  
+end
+end
+if text == "تفعيل اضف رد" then
+if Mod(msg) then  
+database:del(bot_id.."Rio:Lock:AddRd"..msg.chat_id_) 
+send(msg.chat_id_, msg.id_,"*•تـم تفعيل حذف الردود..🕷️*") 
+return false end
+end
+if text == "تعطيل اضف رد" then
+if Mod(msg) then  
+database:set(bot_id.."Rio:Lock:AddRd"..msg.chat_id_,true) 
+send(msg.chat_id_, msg.id_,"*•تـم تعـطيـل حذف الردود..🕷️*") 
+return false  
+end
+end
 if text == "تفعيل رابط" or text == 'تفعيل الرابط' then
 if Mod(msg) then  
 database:set(bot_id.."Link_Group:status"..msg.chat_id_,true) 
@@ -8116,15 +8142,15 @@ send(msg.chat_id_, msg.id_,"*•تـم تعـطيـل ࢪابـط الڪروب..
 return false end
 end
 if text == 'المطور' or text == 'مطور' then
-local TEXT_SUDO = database:get(bot_id..'TEXT_SUDO')
-if TEXT_SUDO then 
-send(msg.chat_id_, msg.id_,TEXT_SUDO)
-else
-tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result) 
-local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
-sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
+local msg_id = msg.id_/2097152/0.5
+Text = "*•Dev Name ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*•Dev User ↬* [@"..result.username_.."]"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
+}
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
-end
 end
 ---------------------
 if text == "تفعيل صورتي" or text == 'تفعيل الصوره' then
@@ -8141,25 +8167,17 @@ send(msg.chat_id_, msg.id_,"* •تم تعطيل الصوره*")
 return false end
 end
 if text == "الرابط" then 
-local status_Link = database:get(bot_id.."Link_Group:status"..msg.chat_id_)
-if not status_Link then
-send(msg.chat_id_, msg.id_,"*الرابط معطل*") 
-return false  
-end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_)            
-if link then                              
-send(msg.chat_id_,msg.id_,'- 𝙇𝙞𝙣𝙠 ↓\n●━━━𝐑𝐀━━━●\n ['..ta.title_..']('..link..')')                          
-else                
-local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-linkgp = '- 𝙇𝙞𝙣𝙠 ↓\n●━━━𝐑𝐀━━━●\n ['..ta.title_..']('..linkgpp.result..')'
-else
-linkgp = 'لا يوجد رابط ارسل ` ضع رابط` لعمل رابط'
-end  
-send(msg.chat_id_, msg.id_,linkgp)              
-end      
-end,nil)
+local Text = '- 𝙇𝙞𝙣𝙠 ↓\n●━━━𝐑𝐀━━━●\n ['..ta.title_..']('..linkgpp.result..')' 
+local inline = {{{text = ta.title_, url=linkgpp.result}},
+} 
+send_inline_key(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5) 
+else 
+send(msg.chat_id_, msg.id_,'لا يوجد رابط ارسل ` ضع رابط` لعمل رابط') 
+end 
+end,nil) 
 end
 if text == 'مسح الرابط' or text == 'حذف الرابط' then
 if Mod(msg) then     
@@ -8391,7 +8409,6 @@ database:del(bot_id.."filtersteckr"..msg.chat_id_)
 send(msg.chat_id_, msg.id_,' •تم مسح قائمه منع الملصقات')  
 end
 ------------------
-
 if text == 'مسح كليشه المطور' and Devmode(msg) then
 database:del(bot_id..'TEXT_SUDO')
 send(msg.chat_id_, msg.id_,' •تم مسح كليشه المطور')
@@ -9594,7 +9611,8 @@ end
 send(msg.chat_id_, msg.id_,"*•تم حذف ردود المتعدده*")
 end
 ------------------------------------------------------------------------
-if text == ("مسح ردود المدير") and Manager(msg) then
+if Manager(msg) then
+if text == ("مسح ردود المدير") and not database:get(bot_id.."Rio:Lock:GpRd"..msg.chat_id_) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
 for k,v in pairs(list) do
 database:del(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_)   
@@ -9608,6 +9626,7 @@ database:del(bot_id.."Add:Rd:Manager:Audio"..v..msg.chat_id_)
 database:del(bot_id.."List:Manager"..msg.chat_id_)
 end
 send(msg.chat_id_, msg.id_,"*•تـم مسـح ࢪدود المـديࢪ*")
+end
 end
 if text == ("ردود المدير") and Manager(msg) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
@@ -9685,7 +9704,7 @@ send(msg.chat_id_, msg.id_,"*•تـم حفـظ الࢪد بنـجاح..🕷️*
 return false  
 end  
 end
-if text == "اضف رد" and Manager(msg) then
+if text == "اضف رد" and not database:get(bot_id.."Rio:Lock:AddRd"..msg.chat_id_) and Manager(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -9807,7 +9826,7 @@ send(msg.chat_id_, msg.id_, '['..Textxt..']')
 end
 
 if text == "غنيلي" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
-data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
+data,res = https.request('https://ccccxcc.ml/David/Audios.php')
 if res == 200 then
 audios = json:decode(data)
 if audios.Info == true then
@@ -9818,6 +9837,36 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
+end
+if text == "ميمز" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
+data,res = https.request('https://ccccxcc.ml/David/memz.php')
+if res == 200 then
+audios = json:decode(data)
+if audios.Info == true then
+local Text ='*•تـم اختياࢪ الميمز لـڪ•🍼*'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🕷️𝙍𝙞𝙉𝙙𝘼>',url="t.me/SourcE_RiNdA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
+end
+if text == "متحركه" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
+data,res = https.request('https://ccccxcc.ml/David/animation.php')
+if res == 200 then
+animation = json:decode(data)
+if animation.Info == true then
+local Text ='*•تـم اختياࢪ المتحركه لـڪ•🍼*'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🕷️𝙍𝙞𝙉𝙙𝘼>',url="t.me/SourcE_RiNdA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation='..URL.escape(animation.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
 end
