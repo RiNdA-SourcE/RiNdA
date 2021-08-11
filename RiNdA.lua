@@ -9449,7 +9449,7 @@ return false
 end  
 end
 
-if text == "اضف رد للكل" and Devmode(msg) then 
+if text == "اضف رد عام" and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -11297,7 +11297,7 @@ end
 end
 if text == "شنو رئيك بهذا" or text == "شنو رئيك بهذ" or text == "شنو رئيج بهذ" or text == "شنو رئيج بهذا" or text == "شنو رايك بهذا" or text == "شنو رايك بهذ" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"ادب سسز يباوع علي بنات 😂🥺"," مو خوش ولد 😶","زاحف وما احبه 😾😹"}
+local texting = {"ادب سسز يباوع علي بنات 😂🥺"," مو خوش ولد 😶","زاحف وما احبه ??😹"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
