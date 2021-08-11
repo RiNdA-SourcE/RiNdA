@@ -298,7 +298,7 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1897626429) then  
-var = '𝗧𝗲𝗹𝗲𝗿𝗮𝗺 𝗗𝗲𝗩𝗲𝗹𝗼𝗽𝗲𝗿'
+var = 'مـبـࢪمج السـوࢪس'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = '𝗙𝘂𝗡𝗱𝗘𝗱 𝗥𝗶𝗡𝗱𝗔'  
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -1132,13 +1132,11 @@ end
 -------------
 if text == "•. تحديثات سورس ريندا •." and Devmode(msg) then  
 local updatech =[[
-*يجب عليك الاشتراك في قناة*
-*تحديثات وشروحات سورس ريندا*
-*قم بالضغط في الاسفل ليحولك الئ القناة*
+*اهلا بک فـي قـنـاتہ سـورس وتحـديثاتہ ريـنـدأآ قـمہ بالاشتراک بالقـناتہ ليصـلک ڪـل جديـد 🍇🍃*
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🕷️𝙍𝙞𝙉𝙙𝘼>', url="t.me/P222P"}},
+{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🕷️𝙍𝙞𝙉𝙙𝘼>', url="t.me/SourcE_RiNdA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(updatech).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
