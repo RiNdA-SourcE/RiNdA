@@ -539,36 +539,36 @@ Send(msg.chat_id_,msg.id_,'\n•الشخص غير موجود هنا ')
 return false  end
 if Json_Info.result.status == "administrator" then
 if Json_Info.result.can_change_info == true then
-info = '✔️'
+info = '√'
 else
-info = '✖'
+info = '×'
 end
 if Json_Info.result.can_delete_messages == true then
-delete = '✔️'
+delete = '√'
 else
-delete = '✖'
+delete = '×'
 end
 if Json_Info.result.can_invite_users == true then
-invite = '✔️'
+invite = '√'
 else
-invite = '✖'
+invite = '×'
 end
 if Json_Info.result.can_pin_messages == true then
-pin = '✔️'
+pin = '√'
 else
-pin = '✖'
+pin = '×'
 end
 if Json_Info.result.can_restrict_members == true then
-restrict = '✔️'
+restrict = '√'
 else
-restrict = '✖'
+restrict = '×'
 end
 if Json_Info.result.can_promote_members == true then
-promote = '✔️'
+promote = '√'
 else
-promote = '✖'
+promote = '×'
 end
-Send(chat,msg.id_,'\n- الرتبة : مشرف  '..'\n- والصلاحيات هي ↓ \nٴ━━━━━━━━━━'..'\n- تغير معلومات الكروب ↞ ❴ '..info..' ❵'..'\n- حذف الرسائل ↞ ❴ '..delete..' ❵'..'\n- حظر المستخدمين ↞ ❴ '..restrict..' ❵'..'\n- دعوة مستخدمين ↞ ❴ '..invite..' ❵'..'\n- تثبيت الرسائل ↞ ❴ '..pin..' ❵'..'\n- اضافة مشرفين جدد ↞ ❴ '..promote..' ❵')   
+Send(chat,msg.id_,'\n- الرتبة : مشـࢪف  '..'\n- والصلاحيات هي ↓ \nٴ━━━━━━━━━━'..'\n- تغير معلومات الكروب ↞ ❴ '..info..' ❵'..'\n- حذف الرسائل ↞ ❴ '..delete..' ❵'..'\n- حظر المستخدمين ↞ ❴ '..restrict..' ❵'..'\n- دعوة مستخدمين ↞ ❴ '..invite..' ❵'..'\n- تثبيت الرسائل ↞ ❴ '..pin..' ❵'..'\n- اضافة مشرفين جدد ↞ ❴ '..promote..' ❵')   
 end
 end
 end
@@ -824,7 +824,7 @@ end
 end
 if database:get(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == "الغاء" or text == "الغاء •." then   
-send(msg.chat_id_, msg.id_," •تم الغاء الاذاعه")
+send(msg.chat_id_, msg.id_,"تـم الغاء الاذاعـه بـرو..🕷️")
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
@@ -855,7 +855,7 @@ sendSticker(v, 0, msg.content_.sticker_.sticker_.persistent_id_)
 database:set(bot_id..'Msg:Pin:Chat'..v,msg.content_.sticker_.sticker_.persistent_id_) 
 end 
 end
-send(msg.chat_id_, msg.id_," •تمت الاذاعه الى *~ "..#list.." ~* كروب ")
+send(msg.chat_id_, msg.id_," •تـم الاذاعـه بـرو..🕷️ "..#list.." ~* كـروب ")
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end
@@ -909,7 +909,7 @@ database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
 return false
 end
 if not Devmode(msg) and not database:sismember(bot_id..'Ban:User_Bot',msg.sender_user_id_) and not database:get(bot_id..'Tuasl:Bots') then
-send(msg.sender_user_id_, msg.id_,' •تم ارسال رسالتك\n •سيتم رد في اقرب وقت')
+send(msg.sender_user_id_, msg.id_,' •تم ارسال رسالتك\n •بـس اشـوف ࢪسالتك ارد')
 tdcli_function ({ID = "ForwardMessages", chat_id_ = SUDO,    from_chat_id_ = msg.sender_user_id_,    message_ids_ = {[0] = msg.id_},    disable_notification_ = 1,    from_background_ = 1 },function(arg,data) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ta) 
 vardump(data)
@@ -1607,7 +1607,7 @@ if data.message_ == "CHAT_ADMIN_REQUIRED" then
 send(msg.chat_id_, msg.id_,' •… عذرآ البوت لايملك صلاحيات')
 database:del(bot_id..'Change:Chat:Photo'..msg.chat_id_..':'..msg.sender_user_id_) 
 else
-send(msg.chat_id_, msg.id_,' •تم تغيير صورة الكروب')
+send(msg.chat_id_, msg.id_,' •تـم بـرو تغيـرت صـوره كـروبك')
 end
 end, nil) 
 database:del(bot_id..'Change:Chat:Photo'..msg.chat_id_..':'..msg.sender_user_id_) 
@@ -1622,32 +1622,32 @@ return false
 end 
 database:del(bot_id.."Set:Description" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 https.request('https://api.telegram.org/bot'..token..'/setChatDescription?chat_id='..msg.chat_id_..'&description='..text) 
-send(msg.chat_id_, msg.id_,'* •تم تغيير وصف الكروب*')
+send(msg.chat_id_, msg.id_,'* •تـم بࢪو. تغير وصـف كروبـك*')
 return false  
 end 
 --------------------------------------------------------------------------------------------------------------
 if database:get(bot_id.."Welcome:Group" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text == 'الغاء' then 
-send(msg.chat_id_, msg.id_,"* •تم الغاء حفظ الترحيب*")
+send(msg.chat_id_, msg.id_,"* •تم الغاء حفـض ترحيـب بـرو..🕷️*")
 database:del(bot_id.."Welcome:Group" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  
 end 
 database:del(bot_id.."Welcome:Group" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 database:set(bot_id..'Get:Welcome:Group'..msg.chat_id_,text) 
-send(msg.chat_id_, msg.id_,'* •تم حفظ ترحيب الكروب*')
+send(msg.chat_id_, msg.id_,'* •تـم حفـض التـرحيب..🕷️*')
 return false   
 end
 --------------------------------------------------------------------------------------------------------------
 if database:get(bot_id.."Set:Priovate:Group:Link"..msg.chat_id_..""..msg.sender_user_id_) then
 if text == 'الغاء' then
-send(msg.chat_id_,msg.id_,"* •تم الغاء حفظ الرابط*")
+send(msg.chat_id_,msg.id_,"* •تم الغاء حفظ الرابط..🕷️*")
 database:del(bot_id.."Set:Priovate:Group:Link"..msg.chat_id_..""..msg.sender_user_id_) 
 return false
 end
 if text and text:match("(https://telegram.me/joinchat/%S+)") or text and text:match("(https://t.me/joinchat/%S+)") then     
 local Link = text:match("(https://telegram.me/joinchat/%S+)") or text and text:match("(https://t.me/joinchat/%S+)")   
 database:set(bot_id.."Private:Group:Link"..msg.chat_id_,Link)
-send(msg.chat_id_,msg.id_,"* •تم حفظ الرابط بنجاح*")
+send(msg.chat_id_,msg.id_,"* •تم حفـض رابـط بـرو..🕷️*")
 database:del(bot_id.."Set:Priovate:Group:Link"..msg.chat_id_..""..msg.sender_user_id_) 
 return false 
 end
@@ -1658,9 +1658,9 @@ local RiNdA_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)
 if RiNdA_Msg then    
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," •العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n •["..RiNdA_Msg.."] \n")
+send(msg.chat_id_,0," •العـضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n •["..RiNdA_Msg.."] \n")
 else
-send(msg.chat_id_,0," •العضو : {["..data.first_name_.."](T.ME/SourcE_RiNdA)}\n •["..RiNdA_Msg.."] \n")
+send(msg.chat_id_,0," •الـعضو {["..data.first_name_.."](T.ME/SourcE_RiNdA)}\n •["..RiNdA_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
