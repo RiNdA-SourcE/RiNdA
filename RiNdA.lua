@@ -12693,7 +12693,7 @@ end
 if text then
 local RiNdA1_Msg = database:get(bot_id.."RiNdA1:Add:Filter:Rp2"..text..result.chat_id_)   
 if RiNdA1_Msg then    
-send(msg.chat_id_, msg.id_," •"..RiNdA1_Msg)
+send(msg.chat_id_, msg.id_," • "..RiNdA1_Msg)
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
