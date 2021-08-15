@@ -5839,7 +5839,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("رفع مطي") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
+if text == ("رفع تمبلر") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -5856,8 +5856,8 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Mote:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n *•العضو >* ['..data.first_name_..'](t.me/'..(data.username_ or 'DEVBESSO')..')'
-local  statuss  = '\n •تم رفع العضو مطي في الكروب \n •تعال حبي استلم العربانه'
+usertext = '\n *•بـࢪو >* ['..data.first_name_..'](t.me/'..(data.username_ or 'DEVBESSO')..')'
+local  statuss  = '\n •تم رفـع الـضلـ؏ُ تـمبلر\n •بلـعافيه صـࢪت مثـقـف..🛹'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -5865,7 +5865,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if (text == ("تنزيل مطي")) and msg.reply_to_message_id_ and Mod(msg) then
+if (text == ("تنزل كانسغ")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -5878,8 +5878,8 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Mote:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n *•العضو >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-status  = '\n •تم تنزيل العضو مطي في الكروب\n •تعال حبي رجع العربانه'
+usertext = '\n *•بـࢪو >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
+status  = '\n •تم تنـزيل الـضلـ؏ُ كـانسـغ\n •بلـعافيه صـࢪت مـعـيدي..🥢'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
