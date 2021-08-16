@@ -61,6 +61,7 @@ print('\27[0;31m⊶──────────≺𝙍𝙉𝘿≻────�
 end 
 os.execute('lua RiNdA.lua')
 end
+end
 if not database:get(id_server..":SUDO:USERNAME") then
 io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
