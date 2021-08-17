@@ -308,7 +308,7 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1897626429) then  
-var = 'مـبـࢪمج السـوࢪس'
+var = 'لـوحدي ¹𖥻𝙒𝘼𝙀𝙇'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = '𝗙𝘂𝗡𝗱𝗘𝗱 𝗥𝗶𝗡𝗱𝗔'  
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -4149,7 +4149,7 @@ end
 
 if text == 'قائمه المالك' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n •قائمه المالك \n●━━━━𝐑𝐀━━━━●\n"
+t = "\n •قائمه المالك \n●━━━━??𝐀━━━━●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
