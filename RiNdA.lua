@@ -6004,8 +6004,8 @@ end
 function start_function(extra, result, success)
 database:sadd(bot_id..'Modde:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n •العضــو > ['..data.first_name_..'](t.me/'..(data.username_ or 'DEVBESSO')..')'
-local  statuss  = '\n •تم رفع العضــو الصاك في الكروب \n •تعال حبي الصاك نطيني بوسه'
+usertext = '\n •بـࢪو > > ['..data.first_name_..'](t.me/'..(data.username_ or 'DEVBESSO')..')'
+local  statuss  = '\n  •تم رفـع الـضلـ؏ُ صـاك \n  •نرفـع صـاك الاخ شبـعو حلـوك..🍼'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -6026,8 +6026,8 @@ end
 function start_function(extra, result, success)
 database:srem(bot_id..'Modde:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n •العضــو > ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-status  = '\n •تم تنزيل العضــو الصاك من الكروب\n •مشيي مو خوش صاك'
+usertext = '\n •بـࢪو > ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
+status  = '\n •تم تنـزيل الـضلـ؏ُ صـاك\n •تنـزل صـاك بعد مابـيه حته حـلك..🦖'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
