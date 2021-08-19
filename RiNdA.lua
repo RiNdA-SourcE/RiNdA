@@ -2410,7 +2410,7 @@ database:set(bot_id.."AL:AddS0FI:stats","×")
 end
 if text == "حاله الاضافات" and Constructor(msg) then
 local MRSoOoFi = database:get(bot_id.."AL:AddS0FI:stats") or "لم يتم التحديد"
-send(msg.chat_id_, msg.id_,"حالـۿ الاضافـات ↫{"..MRSoOoFi.."}\nحبيـبي اذا {√} الاضافات مفعـليه..🍼\nضلـ؏ اذا  {×} الاضافات معطـليها..🥤")
+send(msg.chat_id_, msg.id_,"حالـۿ الاضافـات «{"..MRSoOoFi.."}\nحبيـبي اذا {√} الاضافات مفعـليه..🍼\nضلـ؏ اذا  {×} الاضافات معطـليها..🥤")
 end
 function bnnaGet(user_id, cb)
 tdcli_function ({
@@ -8152,7 +8152,7 @@ end
 if text == 'المطور' or text == 'مطور' then
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5
-Text = "*≁ Dev Name ↫ * ["..result.first_name_.."](T.me/"..result.username_..")\n*≁ Dev User ↫* [@"..result.username_.."]"
+Text = "*≁ Dev Name « * ["..result.first_name_.."](T.me/"..result.username_..")\n*≁ Dev User «* [@"..result.username_.."]"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
@@ -10817,7 +10817,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ≁ ايديك ↫ '..msg.sender_user_id_..'\n ≁ يـوزࢪ نـيم تبعڪ ↫ '..username..'\n ≁ رتـبتك بـرو ↫ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ≁ موقـعك ↫ '..rtpa..'\n ≁ تفاعلك ↫ '..Total_Msg(Msguser)..'\n ≁ رسائلك ↫ '..Msguser..'\n ≁ نسبه تفاعلك ↫ '..string.sub(nspatfa, 1,5)..' %\n ≁ جفـصاتك ↫ '..edit..'\n ≁ نقـاط تبـعك ↫ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ≁ ايديك « '..msg.sender_user_id_..'\n ≁ يـوزࢪ نـيم تبعڪ « '..username..'\n ≁ رتـبتك بـرو « '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ≁ موقـعك » '..rtpa..'\n ≁ تفاعلك « '..Total_Msg(Msguser)..'\n ≁ رسائلك « '..Msguser..'\n ≁ نسبه تفاعلك « '..string.sub(nspatfa, 1,5)..' %\n ≁ جفـصاتك « '..edit..'\n ≁ نقـاط تبـعك « '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ≁ ايديك < '..msg.sender_user_id_..'\n ≁ معرفك < '..username..'\n ≁ رتـبتك بـرو < '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ≁ موقـعك < '..rtpa..'\n ≁ تفاعلك < '..Total_Msg(Msguser)..'\n ≁ رسائلك < '..Msguser..'\n ≁ نسبه  تفاعلك < '..string.sub(nspatfa, 1,5)..' %\n ≁ جفـصاتك < '..edit..'\n ≁ نقـاط تبـعك < '..NUMPGAME..']\n')
@@ -11240,7 +11240,7 @@ local Text =[[
 منـوࢪني يا وࢪده
 ●━━━━𝐑𝐀━━━━●
  تڪـدࢪ تعࢪف حاله الاضافات ↓
- بـس اڪتب ↫ حاله الاضافات
+ بـس اڪتب « حاله الاضافات
 ـ━━━━𝐑𝐀━━━━
 تڪدࢪ تــنتقل بلاضافات.. ↓
 بلسـته الموجوده بـضغـط 
