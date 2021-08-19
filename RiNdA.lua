@@ -2188,13 +2188,13 @@ return false
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
-send(msg.chat_id_, msg.id_,' •عدد اعضاء الكروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
+send(msg.chat_id_, msg.id_,' •عـدد اعضاء ڪࢪوبڪ قليلـ..🍒{'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* •بالتأكيد تم تفعيل الكروب*')
+send(msg.chat_id_, msg.id_,'* •متـفـعل منزمـان..🍒*')
 else
 sendText(msg.chat_id_,'\n *•الـضلـ؏ >* ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *•تم تفعيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)
@@ -2235,7 +2235,7 @@ end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* •بالتأكيد تم تعطيل الكروب*')
+send(msg.chat_id_, msg.id_,'* •متعـطل الڪࢪوب..🍒*')
 else
 sendText(msg.chat_id_,'\n *•الـضلـ؏ >* ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *•تم تعطيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:srem(bot_id..'Chek:Groups',msg.chat_id_)  
@@ -2325,8 +2325,8 @@ end,nil)
 end,nil) 
 end,nil)
 end
-if text and text:match("^ضع عدد الاعضاء (%d+)$") and Devmode(msg) then
-local Num = text:match("ضع عدد الاعضاء (%d+)$") 
+if text and text:match("^اعضاء الكروب(%d+)$") and Devmode(msg) then
+local Num = text:match("اعضاء الكروب(%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -2337,7 +2337,7 @@ end
 return false
 end
 database:set(bot_id..'Num:Add:Bot',Num) 
-send(msg.chat_id_, msg.id_,' •تم تعيين عدد الاعضاء سيتم تفعيل الكروبات التي اعضائها اكثر من  >> {'..Num..'} عضو')
+send(msg.chat_id_, msg.id_,' •تـم عـمࢪي محـد يڪدࢪ يفعـل بوتـڪ اله عدد ڪࢪوبه>{'..Num..'} عضو')
 end
 if text == 'تحديث السورس' and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
@@ -12016,7 +12016,7 @@ local Teext =[[
 ●━━━━𝐑𝐀━━━━●
 •جلب نسخه البوت
 •رفع نسخه البوت
-•ضع عدد الاعضاء + العدد
+•اعضاء الكروب+ العدد
 •ضع كليشه المطور
 •تفعيل/تعطيل الاذاعه
 •تفعيل/تعطيل البوت الخدمي
