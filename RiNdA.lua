@@ -2212,7 +2212,7 @@ Text = ' •تم تفعيل كروب جديده\n'..
 '\n •بواسطة {'..Name..'}'..
 '\n •ايدي الكروب {'..IdChat..'}'..
 '\n •اسم الكروب {['..NameChat..']}'..
-'\n •عدد اعضاء الكروب *{'..NumMember..'}*'..
+'\n •عدد ضع عدد الاعضاء *{'..NumMember..'}*'..
 '\n •الرابط {['..LinkGp..']}'
 if not Devmode(msg) then
 sendText(SUDO,Text,0,'md')
@@ -2277,7 +2277,7 @@ return false
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
-send(msg.chat_id_, msg.id_,' •عدد اعضاء الكروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
+send(msg.chat_id_, msg.id_,' •عدد ضع عدد الاعضاء قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
@@ -2311,7 +2311,7 @@ Text = ' •تم تفعيل كروب جديده\n'..
 '\n •بواسطة {'..Name..'}'..
 '\n •موقعه في الكروب {'..AddPy..'}' ..
 '\n •ايدي الكروب {'..IdChat..'}'..
-'\n •عدد اعضاء الكروب *{'..NumMember..'}*'..
+'\n •عدد ضع عدد الاعضاء *{'..NumMember..'}*'..
 '\n •اسم الكروب {['..NameChat..']}'..
 '\n •الرابط {['..LinkGp..']}'
 if not Devmode(msg) then
@@ -2325,8 +2325,8 @@ end,nil)
 end,nil) 
 end,nil)
 end
-if text and text:match("^اعضاء الكروب(%d+)$") and Devmode(msg) then
-local Num = text:match("اعضاء الكروب(%d+)$") 
+if text and text:match("^ضع عدد الاعضاء(%d+)$") and Devmode(msg) then
+local Num = text:match("ضع عدد الاعضاء(%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
