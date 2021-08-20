@@ -10402,7 +10402,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,'* 〃• ࢪتبتڪ بـࢪو ↬ >* '..rtp..🦇)
+send(msg.chat_id_, msg.id_,'* 〃• ࢪتبتڪ بـࢪو ↬ >* '..rtp)
 end
 if text == "اسمي"  then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
