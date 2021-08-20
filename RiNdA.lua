@@ -308,7 +308,7 @@ return var
 end 
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1897626429) then  
-var = 'لـوحدي ¹𖥻𝙒𝘼𝙀𝙇'
+var = 'مـبࢪمج السـوࢪس'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = '𝗙𝘂𝗡𝗱𝗘𝗱 𝗥𝗶𝗡𝗱𝗔'  
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -506,31 +506,31 @@ end
 function Total_Msg(msgs)  
 local RiNdA_Msg = ''  
 if msgs < 100 then 
-RiNdA_Msg = 'غير متفاعل' 
+RiNdA_Msg = 'تفـاعلڪ زڪ' 
 elseif msgs < 200 then 
-RiNdA_Msg = 'بده يتحسن' 
+RiNdA_Msg = 'داتفاعل' 
 elseif msgs < 400 then 
-RiNdA_Msg = 'شبه متفاعل' 
+RiNdA_Msg = 'نـايس بـࢪو' 
 elseif msgs < 700 then 
-RiNdA_Msg = 'متفاعل' 
+RiNdA_Msg = 'تـعجبني' 
 elseif msgs < 1200 then 
-RiNdA_Msg = 'متفاعل قوي' 
+RiNdA_Msg = 'تفـاعلڪ ضيـم' 
 elseif msgs < 2000 then 
-RiNdA_Msg = 'متفاعل جدا' 
+RiNdA_Msg = 'تفـاعلڪ للستاࢪ' 
 elseif msgs < 3500 then 
-RiNdA_Msg = 'اقوى تفاعل'  
+RiNdA_Msg = 'وحـش بتـفاعل'  
 elseif msgs < 4000 then 
-RiNdA_Msg = 'متفاعل نار' 
+RiNdA_Msg = 'بـࢪو انته وحش' 
 elseif msgs < 4500 then 
-RiNdA_Msg = 'قمة التفاعل'
+RiNdA_Msg = 'بࢪاسڪ 60حـض'
 elseif msgs < 5500 then 
-RiNdA_Msg = 'اقوى متفاعل' 
+RiNdA_Msg = 'تمـساح تفاعل' 
 elseif msgs < 7000 then 
-RiNdA_Msg = 'ملك التفاعل' 
+RiNdA_Msg = 'نـايم بلڪࢪوب' 
 elseif msgs < 9500 then 
-RiNdA_Msg = 'امبروطور التفاعل' 
+RiNdA_Msg = 'شڪاڪي' 
 elseif msgs < 10000000000 then 
-RiNdA_Msg = 'رب التفاعل'  
+RiNdA_Msg = 'ختـم التفاعل'  
 end 
 return RiNdA_Msg 
 end
@@ -539,13 +539,13 @@ local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChat
 local Json_Info = JSON.decode(Chek_Info)
 if Json_Info.ok == true then
 if Json_Info.result.status == "creator" then
-Send(msg.chat_id_,msg.id_,'\n≁ مالك الكروب')   
+Send(msg.chat_id_,msg.id_,'\n≁ 🥤..مالـڪ الڪࢪوب')   
 return false  end 
 if Json_Info.result.status == "member" then
-Send(msg.chat_id_,msg.id_,'\n≁ مجرد عضو هنا ')   
+Send(msg.chat_id_,msg.id_,'\n≁🔫 ..عضـو تايـه ')   
 return false  end
 if Json_Info.result.status == 'left' then
-Send(msg.chat_id_,msg.id_,'\n≁ الشخص غير موجود هنا ')   
+Send(msg.chat_id_,msg.id_,'\n≁ 🦇..ابـو معـࢪف مداخل هنا ')   
 return false  end
 if Json_Info.result.status == "administrator" then
 if Json_Info.result.can_change_info == true then
@@ -899,7 +899,7 @@ local keyboard = {
 {'تفعيل البوت الخدمي ≁ .','تعطيل البوت الخدمي ≁ .'},
 {'تنظيف الكروبات ≁ .','تنظيف المشتركين ≁ .'},
 {'جلب نسخه الاحتياطيه ≁ .'},
-{'تحديث السورس ≁ .','الاصدار ≁ .'},
+{'تحديث السورس ≁ .','التحـديث  ≁ .'},
 {'معلومات السيرفر ≁ .'},
 {'الغاء ≁ .'},
 }
@@ -1074,12 +1074,12 @@ end
 if text == 'تحديث السورس ≁ .' and Devmode(msg) then 
 os.execute('rm -rf RiNdA.lua')
 os.execute('wget https://raw.githubusercontent.com/RiNdA-SourcE/RiNdA/main/RiNdA.lua')
-send(msg.chat_id_, msg.id_,' ≁ تم تحديث السورس \n ≁ لديك اخر اصدار لسورس ريندا\n ≁ الاصدار > { v 1.6 }')
+send(msg.chat_id_, msg.id_,' ≁ تـم تحـديث سـوࢪس ࢪيندا \n ≁ عـندڪ اخـࢪ تحديـث من سوࢪس ࢪيندا\n ≁ التحـديث  > { Version> 1 }')
 dofile('RiNdA.lua')  
 end
-if text == 'الاصدار ≁ .' and Devmode(msg) then 
+if text == 'التحـديث  ≁ .' and Devmode(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ≁ اصدار سورس ريندا \n ≁ الاصدار >{ v 1.6 }')
+send(msg.chat_id_, msg.id_,' ≁ اصدار سورس ريندا \n ≁ التحـديث  >{ Version> 1 }')
 end
 if text == "ضع اسم للبوت ≁ ." and Devmode(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -2351,7 +2351,7 @@ return false
 end
 os.execute('rm -rf RiNdA.lua')
 os.execute('wget https://raw.githubusercontent.com/RiNdA-SourcE/RiNdA/main/RiNdA.lua')
-send(msg.chat_id_, msg.id_,' ≁ تم تحديث السورس \n ≁ لديك اخر اصدار لسورس ريندا\n ≁ الاصدار > { v 1.6 }')
+send(msg.chat_id_, msg.id_,' ≁ تـم تحـديث سـوࢪس ࢪيندا \n ≁ عـندڪ اخـࢪ تحديـث من سوࢪس ࢪيندا\n ≁ التحـديث  > { Version> 1 }')
 dofile('RiNdA.lua')  
 end
 
