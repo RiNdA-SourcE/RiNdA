@@ -10580,7 +10580,7 @@ end
 
 if text == 'تفعيل ضافني' and Manager(msg) then   
 if database:get(bot_id..'Added:Me'..msg.chat_id_) then
-Text = '* 〃• تـم تفعيل امـࢪ مـنو ضافنـي*'
+Text = '* 〃• شـوف يڪواد ضـافڪ/nتـفعل امࢪ منو ضافني*'
 database:del(bot_id..'Added:Me'..msg.chat_id_)  
 else
 Text = '* 〃•  تـࢪه مفـعلۿ ولحـمزه..🍒*'
