@@ -117,7 +117,7 @@ send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
 if text == 'مطور السورس' then
-TextReply = '↯𝗗𝗲𝘃 𝗡𝗮𝗺𝗲↶ @WYYYY ↷ @Biiiii'
+TextReply = '↯𝗗𝗲𝘃 𝗡𝗮𝗺𝗲↶ @WYYYYY ↷ @Biiiii'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
@@ -127,7 +127,7 @@ send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
 if text == 'مطور سورس' then
-TextReply = '↯𝗗𝗲𝘃 𝗡𝗮𝗺𝗲↶ @WYYYY ↷ @Biiiii'
+TextReply = '↯𝗗𝗲𝘃 𝗡𝗮𝗺𝗲↶ @WYYYYY ↷ @Biiiii'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
