@@ -647,7 +647,7 @@ t = t..'}}'
 local File = io.open('./'..bot_id..'.json', "w")
 File:write(t)
 File:close()
-sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..bot_id..'.json', '- عدد كروبات التي في البوت { '..#list..'}')
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..bot_id..'.json', 'بـࢪو عدد ڪࢪوبات موجوده بنسخـه..🔫{ '..#list..'}')
 end
 function download_to_file(url, file_path) 
 local respbody = {} 
@@ -898,7 +898,7 @@ local keyboard = {
 {'الاشتراك الاجباري ⌯︰.','وضع قناة الاشتراك ⌯︰.'},
 {'تفعيل البوت الخدمي ⌯︰.','تعطيل البوت الخدمي ⌯︰.'},
 {'تنظيف الكروبات ⌯︰.','تنظيف المشتركين ⌯︰.'},
-{'رفع نسخه للبوت ⌯︰.'},
+{'جلب نسخه الاحتياطيه ⌯︰.'},
 {'تحديث السورس ⌯︰.','التحـديث  ⌯︰.'},
 {'معلومات السيرفر ⌯︰.'},
 {'الغاء ⌯︰.'},
@@ -1212,7 +1212,7 @@ database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 send(msg.chat_id_, msg.id_," ⌯︰ارسل لي التوجيه الان")
 return false
 end 
-if text == 'رفع نسخه للبوت ⌯︰.' and Devmode(msg) then 
+if text == 'جلب نسخه الاحتياطيه ⌯︰.' and Devmode(msg) then 
 GetFile_Bot(msg)
 end
 if text == "تنظيف المشتركين ⌯︰." and Devmode(msg) then 
@@ -2664,7 +2664,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
 end
-if text == 'رفع نسخه للبوت' and Devmode(msg) then 
+if text == 'جلب نسخه الاحتياطيه' and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -10701,7 +10701,7 @@ local List = {
 𝟔𝟔𝟔 𖡋 #username ⌯︰ 
 𝟔𝟔𝟔 𖡋  #stast 
 𝟔𝟔𝟔 𖡋 #id ⌯︰ 
-𝟔𝟔𝟔 𖡋 #game ⌯︰ 
+𝟔??𝟔 𖡋 #game ⌯︰ 
 𝟔𝟔𝟔 𖡋 #msgs ⌯︰ 
 ]],
 [[
@@ -12001,7 +12001,7 @@ local Teext =[[
 ⌯︰الغاء العام
 ⌯︰قائمه العام
 ⌯︰مسح قائمه العام
-⌯︰رفع نسخه للبوت
+⌯︰جلب نسخه الاحتياطيه
 ⌯︰رفع نسخه الاحتياطيه
 ●━━━━𝐑𝐀━━━━●
 ⌯︰المتجر 
