@@ -8459,7 +8459,7 @@ local Text= [[
 🍒•`#auto` < تفاعل 
 🍒•`#stast` < موقع  
 🍒•`#edit` < السحكات
-🍒•`#game` < النقاط
+🍒• `#game` < النقاط
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false  
