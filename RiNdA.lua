@@ -2635,7 +2635,7 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼> .',url="https://t.me/SourcE_RiNdA"}},{{text = '𝗗𝗲𝗩 𝗪𝗮𝗘𝗹 .',url="https://t.me/Wyyyyy"},{text = '𝗗𝗲𝗩 𝗛𝗮𝗦𝗼 .',url="https://t.me/Biiiii"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},{{text = '𝗥𝗶𝗻𝗱𝗔 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 .',url="https://t.me/joinchat/B-Qo-OmD86s2MzZi"}},
+{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼> .',url="https://t.me/SourcE_RiNdA"}},{{text = '𝗗𝗲𝗩 𝗪𝗮𝗘𝗹 .',url="https://t.me/Wyyyyy"},{text = '𝗗𝗲𝗩 𝗛𝗮𝗦𝗼 .',url="https://t.me/Biiiii"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SourcE_RiNdA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2821,7 +2821,7 @@ end,nil)
 elseif text == 'سد السب' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Fshar'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰ نسـد> السـب ڪلبي *')
+send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰نسـد> السـب ڪلبي *')
 end,nil)  
 elseif text == 'سد الفارسيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Fars'..msg.chat_id_,true) 
@@ -2831,7 +2831,7 @@ end,nil)
 elseif text == 'سد الانكليزيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Engilsh'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰ نسـدت> الانكليزيه يڪلبي *')
+send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰نسـد> الانكليزيه *')
 end,nil)
 elseif text == 'سد الانلاين' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id.."lock:inline"..msg.chat_id_,'del')  
@@ -10486,10 +10486,10 @@ end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
 local mode = ' ⌯︰عدد الادمنيه : '..data.administrator_count_..
-'\n\n ⌯︰عدد الطارديـهم..🎀 : '..data.kicked_count_..
-'\n\n ⌯︰عدد اعضائـك..🎀  : '..data.member_count_..
-'\n\n ⌯︰عدد رسائل الكࢪوبـك..🎀 : '..(msg.id_/2097152/0.5)..
-'\n\n ⌯︰اسـم كروبـك..🎀 : ['..ta.title_..']'
+'\n\n ⌯︰عدد الطارديـهم..🔫 : '..data.kicked_count_..
+'\n\n ⌯︰عدد اعضائـك..🔫  : '..data.member_count_..
+'\n\n ⌯︰عدد رسائل الكࢪوبـك..🔫 : '..(msg.id_/2097152/0.5)..
+'\n\n ⌯︰اسـم كروبـك..🔫 : ['..ta.title_..']'
 send(msg.chat_id_, msg.id_, mode) 
 end,nil)
 end,nil)
@@ -10701,7 +10701,7 @@ local List = {
 𝟔𝟔𝟔 𖡋 #username ⌯︰ 
 𝟔𝟔𝟔 𖡋  #stast 
 𝟔𝟔𝟔 𖡋 #id ⌯︰ 
-𝟔??𝟔 𖡋 #game ⌯︰ 
+𝟔𝟔𝟔 𖡋 #game ⌯︰ 
 𝟔𝟔𝟔 𖡋 #msgs ⌯︰ 
 ]],
 [[
