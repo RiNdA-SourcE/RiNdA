@@ -3639,7 +3639,7 @@ status  = '\n *⌯︰تم حظره عام من الكروبات*'
 texts = usertext..status
 database:sadd(bot_id..'GBan:User', result.id_)
 else
-texts = '*⌯︰ماڪو هيج حساب تـاڪد ڪلبي*'
+texts = '*⌯︰لا يوجد حساب بهاذا المعرف*'
 end
 send(msg.chat_id_, msg.id_, texts)
 end
@@ -10486,10 +10486,10 @@ end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
 local mode = ' ⌯︰عدد الادمنيه : '..data.administrator_count_..
-'\n\n ⌯︰عدد الطارديـهم..🔫 : '..data.kicked_count_..
-'\n\n ⌯︰عدد اعضائـك..🔫  : '..data.member_count_..
-'\n\n ⌯︰عدد رسائل الكࢪوبـك..🔫 : '..(msg.id_/2097152/0.5)..
-'\n\n ⌯︰اسـم كروبـك..🔫 : ['..ta.title_..']'
+'\n\n ⌯︰عدد الطارديـهم..🎀 : '..data.kicked_count_..
+'\n\n ⌯︰عدد اعضائـك..🎀  : '..data.member_count_..
+'\n\n ⌯︰عدد رسائل الكࢪوبـك..🎀 : '..(msg.id_/2097152/0.5)..
+'\n\n ⌯︰اسـم كروبـك..🎀 : ['..ta.title_..']'
 send(msg.chat_id_, msg.id_, mode) 
 end,nil)
 end,nil)
@@ -10701,7 +10701,7 @@ local List = {
 𝟔𝟔𝟔 𖡋 #username ⌯︰ 
 𝟔𝟔𝟔 𖡋  #stast 
 𝟔𝟔𝟔 𖡋 #id ⌯︰ 
-𝟔𝟔𝟔 𖡋 #game ⌯︰ 
+𝟔??𝟔 𖡋 #game ⌯︰ 
 𝟔𝟔𝟔 𖡋 #msgs ⌯︰ 
 ]],
 [[
