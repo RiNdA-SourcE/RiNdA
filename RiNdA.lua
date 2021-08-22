@@ -2826,7 +2826,7 @@ end,nil)
 elseif text == 'وكف الفارسيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Fars'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰نقـفـلت > الفارسيه *')
+send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰نقـفـلت> الغه الايࢪانيه *')
 end,nil)   
 elseif text == 'وكف الانكليزيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Engilsh'..msg.chat_id_,true) 
@@ -10688,7 +10688,7 @@ local List = {
 ●⌯︰ 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 ●⌯︰ 𝐀𝐔𝐓𝐎 𖠰 #auto .
 ●⌯︰ 𝗖𝗢𝗠𝗠𝗘𝗡𝗧 𖠰 #comment .
-●⌯︰ 𝗘??𝗜𝗧 𖠰 #edit .
+●⌯︰ 𝗘𝗗𝗜𝗧 𖠰 #edit .
 ]],
 [[
 𓄼🇬🇧 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 :#username 
