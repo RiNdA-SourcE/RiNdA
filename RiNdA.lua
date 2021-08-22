@@ -647,7 +647,7 @@ t = t..'}}'
 local File = io.open('./'..bot_id..'.json', "w")
 File:write(t)
 File:close()
-sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..bot_id..'.json', '- بـࢪو عدد ڪࢪوبات موجوده بنسخـه { '..#list..'}')
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..bot_id..'.json', '- عدد كروبات التي في البوت { '..#list..'}')
 end
 function download_to_file(url, file_path) 
 local respbody = {} 
@@ -3639,7 +3639,7 @@ status  = '\n *⌯︰تم حظره عام من الكروبات*'
 texts = usertext..status
 database:sadd(bot_id..'GBan:User', result.id_)
 else
-texts = '*⌯︰ماڪو هيـج حسـاب..🔫*'
+texts = '*⌯︰ماڪو هيج حساب تـاڪد ڪلبي*'
 end
 send(msg.chat_id_, msg.id_, texts)
 end
