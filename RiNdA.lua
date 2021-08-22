@@ -2635,7 +2635,7 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼> .',url="https://t.me/SourcE_RiNdA"}},{{text = '𝗗𝗲𝗩 𝗪𝗮𝗘𝗹 .',url="https://t.me/Wyyyyy"},{text = '𝗗𝗲𝗩 𝗛𝗮𝗦𝗼 .',url="https://t.me/Biiiii"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},
+{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼> .',url="https://t.me/SourcE_RiNdA"}},{{text = '𝗗𝗲𝗩 𝗪𝗮𝗘𝗹 .',url="https://t.me/Wyyyyy"},{text = '𝗗𝗲𝗩 𝗛𝗮𝗦𝗼 .',url="https://t.me/Biiiii"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},{{text = '𝗥𝗶𝗻𝗱𝗔 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 .',url="https://t.me/joinchat/B-Qo-OmD86s2MzZi"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SourcE_RiNdA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -10701,8 +10701,8 @@ local List = {
 𝟔𝟔𝟔 𖡋 #username ⌯︰ 
 𝟔𝟔𝟔 𖡋  #stast 
 𝟔𝟔𝟔 𖡋 #id ⌯︰ 
-𝟔𝟔𝟔 𖡋 #game ⌯︰ 
-𝟔𝟔?? 𖡋 #msgs ⌯︰ 
+𝟔??𝟔 𖡋 #game ⌯︰ 
+𝟔𝟔𝟔 𖡋 #msgs ⌯︰ 
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸🍒
