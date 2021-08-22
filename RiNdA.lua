@@ -647,7 +647,7 @@ t = t..'}}'
 local File = io.open('./'..bot_id..'.json', "w")
 File:write(t)
 File:close()
-sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..bot_id..'.json', '- بـࢪو عدد ڪࢪوبات موجوده بنسخـه..🔫 { '..#list..'}')
+sendDocument(msg.chat_id_, msg.id_,0, 1, nil, './'..bot_id..'.json', '- بـࢪو عدد ڪࢪوبات موجوده بنسخـه { '..#list..'}')
 end
 function download_to_file(url, file_path) 
 local respbody = {} 
