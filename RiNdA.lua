@@ -11287,11 +11287,11 @@ end
 send(msg.chat_id_, msg.id_, t..'●━━━━𝐑𝐀━━━━●ٴ\n⌯︰⌯︰. [<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA) ')
 end
 if text == "عطل الابراج" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '*⌯︰تعطـلت الابࢪاج ضلـ؏ *')
+send(msg.chat_id_, msg.id_, '*⌯︰تم تعطيل الابراج*')
 database:set(bot_id.." mode:brj_Bots"..msg.chat_id_,"close")
 end
-if text == "فعل الابراج" and Manager(msg) then
-send(msg.chat_id_, msg.id_,'*⌯︰تفعلـت الابࢪاج بـࢪو *')
+if text == "تفعيل الابراج" and Manager(msg) then
+send(msg.chat_id_, msg.id_,'*⌯︰تم تفعيل الابراج*')
 database:set(bot_id.." mode:brj_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^برج (.*)$") and database:get(bot_id.." mode:brj_Bots"..msg.chat_id_) == "open" then
