@@ -2826,7 +2826,7 @@ end,nil)
 elseif text == 'وكف الفارسيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Fars'..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰نقـفـلت> الغه الايࢪانيه *')
+send(msg.chat_id_, msg.id_,' *⌯︰الـضلـ؏ >* ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⌯︰نقـفـلت↶ الغه الايࢪانيه *')
 end,nil)   
 elseif text == 'وكف الانكليزيه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 database:set(bot_id..'lock:Engilsh'..msg.chat_id_,true) 
