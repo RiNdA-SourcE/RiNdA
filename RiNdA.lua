@@ -11127,45 +11127,45 @@ end
 end
 
 
-if text and text:match("^تغير رد المطور (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد المطور (.*)$") 
+if text and text:match("^غير اسم المطور (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم المطور (.*)$") 
 database:set(bot_id.."Sudo:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد المطور الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم المطور الى > "..Teext)
 end
-if text and text:match("^تغير رد المالك (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد المالك (.*)$") 
+if text and text:match("^غير اسم المالك (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم المالك (.*)$") 
 database:set(bot_id.."CoSu:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد المالك الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم المالك الى > "..Teext)
 end
-if text and text:match("^تغير رد منشئ الاساسي (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد منشئ الاساسي (.*)$") 
+if text and text:match("^غير اسم منشئ الاساسي (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم منشئ الاساسي (.*)$") 
 database:set(bot_id.."BasicConstructor:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد المنشئ الاساسي الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم المنشئ الاساسي الى > "..Teext)
 end
-if text and text:match("^تغير رد المنشئ (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد المنشئ (.*)$") 
+if text and text:match("^غير اسم المنشئ (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم المنشئ (.*)$") 
 database:set(bot_id.."Constructor:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد المنشئ الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم المنشئ الى > "..Teext)
 end
-if text and text:match("^تغير رد المدير (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد المدير (.*)$") 
+if text and text:match("^غير اسم المدير (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم المدير (.*)$") 
 database:set(bot_id.."Manager:Rd"..msg.chat_id_,Teext) 
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد المدير الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم المدير الى > "..Teext)
 end
-if text and text:match("^تغير رد الادمن (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد الادمن (.*)$") 
+if text and text:match("^غير اسم الادمن (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم الادمن (.*)$") 
 database:set(bot_id.."Mod:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد الادمن الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم الادمن الى > "..Teext)
 end
-if text and text:match("^تغير رد المميز (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد المميز (.*)$") 
+if text and text:match("^غير اسم المميز (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم المميز (.*)$") 
 database:set(bot_id.."Special:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد المميز الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم المميز الى > "..Teext)
 end
-if text and text:match("^تغير رد العضو (.*)$") and Manager(msg) then
-local Teext = text:match("^تغير رد العضو (.*)$") 
+if text and text:match("^غير اسم العضو (.*)$") and Manager(msg) then
+local Teext = text:match("^غير اسم العضو (.*)$") 
 database:set(bot_id.."Memp:Rd"..msg.chat_id_,Teext)
-send(msg.chat_id_, msg.id_," ⊀︰ تم تغير رد العضو الى > "..Teext)
+send(msg.chat_id_, msg.id_," ⊀︰ تم غير اسم العضو الى > "..Teext)
 end
 if text == 'م1' or text == 'م2' or text == 'م3' or text == 'م4' or text == 'م5' then
 send(msg.chat_id_, msg.id_,"صـاࢪت قديـمه مال م ثقـفنه اكـتب الاوامࢪ..🍒")
@@ -11731,14 +11731,14 @@ local Teext =[[
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ اوامر التغير …
 ●━━━━𝐑𝐀━━━━●
-⊀︰ تغير رد المطور + اسم
-⊀︰ تغير رد المالك + اسم
-⊀︰ تغير رد منشئ الاساسي + اسم
-⊀︰ تغير رد المنشئ + اسم
-⊀︰ تغير رد المدير + اسم
-⊀︰ تغير رد الادمن + اسم
-⊀︰ تغير رد المميز + اسم
-⊀︰ تغير رد العضو + اسم
+⊀︰ غير اسم المطور + اسم
+⊀︰ غير اسم المالك + اسم
+⊀︰ غير اسم منشئ الاساسي + اسم
+⊀︰ غير اسم المنشئ + اسم
+⊀︰ غير اسم المدير + اسم
+⊀︰ غير اسم الادمن + اسم
+⊀︰ غير اسم المميز + اسم
+⊀︰ غير اسم العضو + اسم
 ⊀︰ تغير امر الاوامر
 ⊀︰ تغير امر م1 ~ الئ م10
 ●━━━━𝐑𝐀━━━━●ٴ
