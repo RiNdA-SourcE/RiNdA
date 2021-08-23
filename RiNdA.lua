@@ -505,31 +505,31 @@ end,nil)
 end 
 function Total_Msg(msgs)  
 local RiNdA_Msg = ''  
-if msgs  ↬100 then 
+if msgs < 100 then 
 RiNdA_Msg = 'غير متفاعل' 
-elseif msgs  ↬200 then 
+elseif msgs < 200 then 
 RiNdA_Msg = 'بده يتحسن' 
-elseif msgs  ↬400 then 
+elseif msgs < 400 then 
 RiNdA_Msg = 'شبه متفاعل' 
-elseif msgs  ↬700 then 
+elseif msgs < 700 then 
 RiNdA_Msg = 'متفاعل' 
-elseif msgs  ↬1200 then 
+elseif msgs < 1200 then 
 RiNdA_Msg = 'متفاعل قوي' 
-elseif msgs  ↬2000 then 
+elseif msgs < 2000 then 
 RiNdA_Msg = 'متفاعل جدا' 
-elseif msgs  ↬3500 then 
+elseif msgs < 3500 then 
 RiNdA_Msg = 'اقوى تفاعل'  
-elseif msgs  ↬4000 then 
+elseif msgs < 4000 then 
 RiNdA_Msg = 'متفاعل نار' 
-elseif msgs  ↬4500 then 
+elseif msgs < 4500 then 
 RiNdA_Msg = 'قمة التفاعل'
-elseif msgs  ↬5500 then 
+elseif msgs < 5500 then 
 RiNdA_Msg = 'اقوى متفاعل' 
-elseif msgs  ↬7000 then 
+elseif msgs < 7000 then 
 RiNdA_Msg = 'ملك التفاعل' 
-elseif msgs  ↬9500 then 
+elseif msgs < 9500 then 
 RiNdA_Msg = 'امبروطور التفاعل' 
-elseif msgs  ↬10000000000 then 
+elseif msgs < 10000000000 then 
 RiNdA_Msg = 'رب التفاعل'  
 end 
 return RiNdA_Msg 
@@ -2187,7 +2187,7 @@ send(msg.chat_id_, msg.id_,'*⌯︰عذرا يرجى ترقيه البوت مش�
 return false  
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
-if tonumber(data.member_count_)  ↬tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
+if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
 send(msg.chat_id_, msg.id_,' ⌯︰عدد اعضاء الكروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
@@ -2276,7 +2276,7 @@ send(msg.chat_id_, msg.id_,'*⌯︰عذرا يرجى ترقيه البوت مش�
 return false  
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
-if tonumber(data.member_count_)  ↬tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
+if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
 send(msg.chat_id_, msg.id_,' ⌯︰عدد اعضاء الكروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
@@ -10366,7 +10366,7 @@ local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.sender_
 local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
 local username = ('[@'..data.username_..']' or 'لا يوجد')
 local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,' ⌯︰ايـديـه  ↬'..iduser..'\n ⌯︰مـعࢪفـه  ↬'..username..'\n ⌯︰ࢪتبـته  ↬'..rtp..'\n ⌯︰تعـديلاته  ↬'..edit..'\n ⌯︰نقـاطه  ↬'..NUMPGAME..'\n ⌯︰جهـاته  ↬'..Contact..'\n ⌯︰ࢪسائـله  ↬'..Msguser..'')
+send(msg.chat_id_, msg.id_,' ⌯︰ايـديـه < '..iduser..'\n ⌯︰مـعࢪفـه < '..username..'\n ⌯︰ࢪتبـته < '..rtp..'\n ⌯︰تعـديلاته < '..edit..'\n ⌯︰نقـاطه < '..NUMPGAME..'\n ⌯︰جهـاته < '..Contact..'\n ⌯︰ࢪسائـله < '..Msguser..'')
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -10647,7 +10647,7 @@ return false
 end
 local function getpro(extra, result, success)
 if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ⌯︰عدد صورك  ↬"..result.total_count_.." صوره‌‏", msg.id_, msg.id_, "md")
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ⌯︰عدد صورك < "..result.total_count_.." صوره‌‏", msg.id_, msg.id_, "md")
 else
 send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
   end end
@@ -10818,12 +10818,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⌯︰𝗂𝖣  ↬'..msg.sender_user_id_..'\n ⌯︰𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾  ↬'..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍  ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱  ↬'..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲  ↬'..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌  ↬'..edit..'\n ⌯︰𝖣𝗈𝗍  ↬'..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⌯︰𝗂𝖣 ↬< '..msg.sender_user_id_..'\n ⌯︰𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾 ↬ '..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍 ↬< '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱 ↬< '..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲 ↬< '..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⌯︰𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ⌯︰𝗂𝖣  ↬'..msg.sender_user_id_..'\n ⌯︰معرفك  ↬'..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍  ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱  ↬'..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲  ↬'..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌  ↬'..edit..'\n ⌯︰𝖣𝗈𝗍  ↬'..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⌯︰𝗂𝖣 ↬< '..msg.sender_user_id_..'\n ⌯︰معرفك < '..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍 ↬< '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱 ↬< '..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲 ↬< '..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⌯︰𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
 else
-send(msg.chat_id_, msg.id_, '\n ⌯︰الصوره  ↬ليس لديك صور في حسابك'..'[\n ⌯︰𝗂𝖣  ↬'..msg.sender_user_id_..'\n ⌯︰𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾  ↬'..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍  ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱  ↬'..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲  ↬'..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌  ↬'..edit..'\n ⌯︰𝖣𝗈𝗍  ↬'..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_, '\n ⌯︰الصوره < ليس لديك صور في حسابك'..'[\n ⌯︰𝗂𝖣 ↬< '..msg.sender_user_id_..'\n ⌯︰𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾 ↬ '..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍 ↬< '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱 ↬< '..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲 ↬< '..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⌯︰𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
 end 
 end
 end
@@ -10841,7 +10841,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n ⌯︰𝗂𝖣  ↬'..msg.sender_user_id_..'\n ⌯︰𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾  ↬'..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍  ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱  ↬'..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲  ↬'..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌  ↬'..edit..'\n ⌯︰𝖣𝗈𝗍  ↬'..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⌯︰𝗂𝖣 ↬< '..msg.sender_user_id_..'\n ⌯︰𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾 ↬ '..username..'\n ⌯︰𝖲𝗍𝖺𝖲𝗍 ↬< '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⌯︰𝖯𝗈𝗐𝖾𝖱 ↬< '..rtpa..'\n ⌯︰𝖬𝗌𝖦𝖲 ↬< '..Msguser..'\n ⌯︰𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⌯︰𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
 end
 end
 
@@ -11782,7 +11782,7 @@ local Teext =[[
 ⌯︰الاوامر كالتالي ♻️ ↓
 ●━━━━𝐑𝐀━━━━●
 ⌯︰استعاده الاوامر 
-⌯︰تحويل كالاتي ↬بالرد على صوره او ملصق او صوت او بصمه بالامر ← تحويل 
+⌯︰تحويل كالاتي< بالرد على صوره او ملصق او صوت او بصمه بالامر ← تحويل 
 ⌯︰صيح ~ تاك ~ المميزين : الادمنيه : المدراء : المنشئين : المنشئين الاساسين
 ⌯︰كشف القيود
 ⌯︰تعين الايدي
