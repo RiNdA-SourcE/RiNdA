@@ -898,7 +898,7 @@ local keyboard = {
 {'الاشتراك الاجباري ⌯︰.','وضع قناة الاشتراك ⌯︰.'},
 {'تفعيل البوت الخدمي ⌯︰.','تعطيل البوت الخدمي ⌯︰.'},
 {'تنظيف الكروبات ⌯︰.','تنظيف المشتركين ⌯︰.'},
-{'جلب نسخه الاحتياطيه ⌯︰.'},
+{'رفع نسخه للبوت⌯︰.'},
 {'تحديث ريندا ⌯︰.','تحديث ⌯︰.'},
 {'معلومات السيرفر ⌯︰.'},
 {'الغاء ⌯︰.'},
@@ -1212,7 +1212,7 @@ database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 send(msg.chat_id_, msg.id_," ⌯︰ارسل لي التوجيه الان")
 return false
 end 
-if text == 'جلب نسخه الاحتياطيه ⌯︰.' and Devmode(msg) then 
+if text == 'رفع نسخه للبوت⌯︰.' and Devmode(msg) then 
 GetFile_Bot(msg)
 end
 if text == "تنظيف المشتركين ⌯︰." and Devmode(msg) then 
