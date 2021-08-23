@@ -2683,7 +2683,7 @@ for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
 if Cmds then 
-t = t..""..k.."↫ ("..v..") > {"..Cmds.."}\n"
+t = t..""..k.."↫ ("..v..") ↶ {"..Cmds.."}\n"
 else
 t = t..""..k.."↫ ("..v..") \n"
 end
