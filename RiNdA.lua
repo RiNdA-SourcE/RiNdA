@@ -2683,13 +2683,13 @@ for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
 if Cmds then 
-t = t..""..k..">> ("..v..") > {"..Cmds.."}\n"
+t = t..""..k.."↫ ("..v..") > {"..Cmds.."}\n"
 else
-t = t..""..k..">> ("..v..") \n"
+t = t..""..k.."↫ ("..v..") \n"
 end
 end
 if #list == 0 then
-t = "*⌯︰لا يوجد اوامر مضافه*"
+t = "*⌯︰ماڪو اوامـࢪ مضافه يࢪوحي..*"
 end
 send(msg.chat_id_, msg.id_,'['..t..']')
 end
