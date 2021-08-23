@@ -1062,12 +1062,12 @@ memUsedPrc=`free -m | awk 'NR==2{printf "%sMB/%sMB {%.2f%}\n", $3,$2,$3*100/$2 }
 HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
-echo '⇗ نظام التشغيل ⇖⌯︰\n*>> '"$linux_version"'*' 
-echo '*———————————~*\n⌯︰.{ الذاكره العشوائيه } ⇎\n*>> '"$memUsedPrc"'*'
-echo '*———————————~*\n⌯︰.{ وحـده الـتـخـزيـن } ⇎\n*>> '"$HardDisk"'*'
-echo '*———————————~*\n⌯︰.{ الـمــعــالــج } ⇎\n*>> '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '*———————————~*\n⌯︰.{ الــدخــول } ⇎\n*>> '`whoami`'*'
-echo '*———————————~*\n⌯︰.{ مـده تـشغيـل الـسـيـرفـر }⇎\n*>> '"$uptime"'*'
+echo '⇗ نظام التشغيل ⇖⌯︰\n*↬ '"$linux_version"'*' 
+echo '*———————————~*\n⌯︰.{ الذاكره العشوائيه } ⇎\n*↬ '"$memUsedPrc"'*'
+echo '*———————————~*\n⌯︰.{ وحـده الـتـخـزيـن } ⇎\n*↬ '"$HardDisk"'*'
+echo '*———————————~*\n⌯︰.{ الـمــعــالــج } ⇎\n*↬ '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '*———————————~*\n⌯︰.{ الــدخــول } ⇎\n*↬ '`whoami`'*'
+echo '*———————————~*\n⌯︰.{ مـده تـشغيـل الـسـيـرفـر }⇎\n*↬ '"$uptime"'*'
 ]]):read('*all'))  
 end
 
@@ -1464,7 +1464,7 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
+send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى ↬{"..#list.."} مشترك في البوت ")
 database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 
@@ -1497,7 +1497,7 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى >>{"..#list.."} كروب في البوت ")
+send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى ↬{"..#list.."} كروب في البوت ")
 database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 
@@ -1517,7 +1517,7 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى >>{"..#list.."} كروبات في البوت ")
+send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى ↬{"..#list.."} كروبات في البوت ")
 database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
@@ -1537,7 +1537,7 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
+send(msg.chat_id_, msg.id_," ⌯︰تمت الاذاعه الى ↬{"..#list.."} مشترك في البوت ")
 database:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
@@ -2183,18 +2183,18 @@ end
 return false
 end
 if msg.can_be_deleted_ == false then 
-send(msg.chat_id_, msg.id_,'*⌯︰عذرا يرجى ترقيه البوت مشرف*')
+send(msg.chat_id_, msg.id_,'*⌯︰اࢪفع البـوت بڪل صلاحيـات يࢪوحي*')
 return false  
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
-send(msg.chat_id_, msg.id_,' ⌯︰عدد اعضاء الكروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
+send(msg.chat_id_, msg.id_,' ⌯︰عدد اعضاء الكروب قليله يرجى جمع ↬ {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* ⌯︰بالتأكيد تم تفعيل الكروب*')
+send(msg.chat_id_, msg.id_,'* ⌯︰مـفعل الڪࢪوب منزمـان..🦇*')
 else
 sendText(msg.chat_id_,'\n *⌯︰الـضلـ؏  ↷ * ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *⌯︰تم تفعيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)
@@ -2277,7 +2277,7 @@ return false
 end
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if tonumber(data.member_count_) < tonumber(database:get(bot_id..'Num:Add:Bot') or 0) and not Devmode(msg) then
-send(msg.chat_id_, msg.id_,' ⌯︰عدد اعضاء الكروب قليله يرجى جمع >> {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
+send(msg.chat_id_, msg.id_,' ⌯︰عدد اعضاء الكروب قليله يرجى جمع ↬ {'..(database:get(bot_id..'Num:Add:Bot') or 0)..'} عضو')
 return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
@@ -2291,7 +2291,7 @@ elseif da.status_.ID == "ChatMemberStatusEditor" then
 var = 'مشرف'
 end
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* ⌯︰تم تفعيل الكروب*')
+send(msg.chat_id_, msg.id_,'* ⌯︰تفـعل بوت بڪࢪوب .🔫*')
 else
 sendText(msg.chat_id_,'\n *⌯︰الـضلـ؏  ↷ * ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *⌯︰تم تفعيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)  
@@ -2337,7 +2337,7 @@ end
 return false
 end
 database:set(bot_id..'Num:Add:Bot',Num) 
-send(msg.chat_id_, msg.id_,' ⌯︰تم تعيين عدد الاعضاء سيتم تفعيل الكروبات التي اعضائها اكثر من  >> {'..Num..'} عضو')
+send(msg.chat_id_, msg.id_,' ⌯︰تم تعيين عدد الاعضاء سيتم تفعيل الكروبات التي اعضائها اكثر من  ↬ {'..Num..'} عضو')
 end
 if text == 'تحديث السورس' and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
@@ -2514,7 +2514,7 @@ if (tonumber(mrmode_nnn2) == tonumber(mrmode_nnn) or tonumber(mrmode_nnn2) > ton
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, msg.sender_user_id_)
 else 
 database:incrby(bot_id.."RiNdA:nump22"..msg.chat_id_..msg.sender_user_id_,1)
-send(msg.chat_id_, msg.id_, "⌯︰عزيزي >>["..mrmode2.username_.."](https://t.me/"..(mrmode2.username_ or "SourcE_RiNdA")..")\n⌯︰عليك وضع التوحيد ⪼ {"..database:get(bot_id.."RiNdA:teh"..msg.chat_id_).."} بجانب اسمك\n⌯︰عدد المحاولات المتبقيه {"..(tonumber(mrmode_nnn) - tonumber(mrmode_nnn2)).."}")
+send(msg.chat_id_, msg.id_, "⌯︰عزيزي ↬["..mrmode2.username_.."](https://t.me/"..(mrmode2.username_ or "SourcE_RiNdA")..")\n⌯︰عليك وضع التوحيد ⪼ {"..database:get(bot_id.."RiNdA:teh"..msg.chat_id_).."} بجانب اسمك\n⌯︰عدد المحاولات المتبقيه {"..(tonumber(mrmode_nnn) - tonumber(mrmode_nnn2)).."}")
 end
 end
 end
@@ -2683,9 +2683,9 @@ for k,v in pairs(list) do
 Cmds = database:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
 if Cmds then 
-t = t..""..k..">> ("..v..") > {"..Cmds.."}\n"
+t = t..""..k.."↬ ("..v..") > {"..Cmds.."}\n"
 else
-t = t..""..k..">> ("..v..") \n"
+t = t..""..k.."↬ ("..v..") \n"
 end
 end
 if #list == 0 then
@@ -8521,7 +8521,7 @@ end
 if (c - x) == 0 then
 send(msg.chat_id_, msg.id_, "* ⌯︰لا توجـد بوتـات فـي الكـࢪوب..🍒*")
 else
-local t = ' ⌯︰عـدد البوتات بكࢪوبك يكـيك >> {'..c..'}\n ⌯︰عدد البوتات التي هي ادمن >> {'..x..'}\n ⌯︰تم طرد >> {'..(c - x)..'} من البوتات'
+local t = ' ⌯︰عـدد البوتات بكࢪوبك يكـيك ↬ {'..c..'}\n ⌯︰عدد البوتات التي هي ادمن ↬ {'..x..'}\n ⌯︰تم طرد ↬ {'..(c - x)..'} من البوتات'
 send(msg.chat_id_, msg.id_,t) 
 end 
 end,nil)  
@@ -8552,14 +8552,14 @@ elseif result.members_[i].status_.ID == "ChatMemberStatusEditor" then
 t = t + 1
 tr = ' {★}'
 end
-text = text..">> [@"..ta.username_..']'..tr.."\n"
+text = text.."↬ [@"..ta.username_..']'..tr.."\n"
 if #admins == 0 then
 send(msg.chat_id_, msg.id_, " ⌯︰لا توجـد بوتـات فـي الكـࢪوب..🍒")
 return false 
 end
 if #admins == i then 
-local a = '\n●━━━━𝐑𝐀━━━━●\n ⌯︰عدد البوتات التي هنا >> {'..n..'} بوت\n'
-local f = ' ⌯︰عدد البوتات التي هي ادمن >> {'..t..'}\n ⌯︰ملاحضه علامة ال (✯) تعني ان البوت ادمن \n'
+local a = '\n●━━━━𝐑𝐀━━━━●\n ⌯︰عدد البوتات التي هنا ↬ {'..n..'} بوت\n'
+local f = ' ⌯︰عدد البوتات التي هي ادمن ↬ {'..t..'}\n ⌯︰ملاحضه علامة ال (✯) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
 end,nil)
@@ -9419,7 +9419,7 @@ db = "ملف 📁"
 elseif database:get(bot_id.."Add:Rd:Sudo:Audio"..v) then
 db = "اغنيه 🎵"
 end
-text = text..""..k.." >> ("..v..") -› {"..db.."}\n"
+text = text..""..k.." ↬ ("..v..") -› {"..db.."}\n"
 end
 if #list == 0 then
 text = "⌯︰لا يوجد ردود للمطور"
@@ -9658,7 +9658,7 @@ db = "مـلف"
 elseif database:get(bot_id.."Add:Rd:Manager:Audio"..v..msg.chat_id_) then
 db = "اغـنيه"
 end
-text = text..""..k..">> ("..v..") -› {"..db.."}\n"
+text = text..""..k.."↬ ("..v..") -› {"..db.."}\n"
 end
 if #list == 0 then
 text = "*⌯︰لا يوجد ردود للمدير*"
