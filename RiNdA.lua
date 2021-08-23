@@ -899,7 +899,7 @@ local keyboard = {
 {'تفعيل البوت الخدمي ⌯︰.','تعطيل البوت الخدمي ⌯︰.'},
 {'تنظيف الكروبات ⌯︰.','تنظيف المشتركين ⌯︰.'},
 {'جلب نسخه الاحتياطيه ⌯︰.'},
-{'تحديث السورس ⌯︰.','الاصدار ⌯︰.'},
+{'تحديث السورس ⌯︰.','تحديث ⌯︰.'},
 {'معلومات السيرفر ⌯︰.'},
 {'الغاء ⌯︰.'},
 }
@@ -1074,12 +1074,12 @@ end
 if text == 'تحديث السورس ⌯︰.' and Devmode(msg) then 
 os.execute('rm -rf RiNdA.lua')
 os.execute('wget https://raw.githubusercontent.com/RiNdA-SourcE/RiNdA/main/RiNdA.lua')
-send(msg.chat_id_, msg.id_,' ⌯︰تم تحديث السورس \n ⌯︰لديك اخر اصدار لسورس ريندا\n ⌯︰الاصدار > { v 1.6 }')
+send(msg.chat_id_, msg.id_,' ⌯︰تم تحديث سوࢪس ࢪيندا \n ⌯︰لديك اخر اصدار لسورس ريندا\n ⌯︰تحديث > { Version> 1 }')
 dofile('RiNdA.lua')  
 end
-if text == 'الاصدار ⌯︰.' and Devmode(msg) then 
+if text == 'تحديث ⌯︰.' and Devmode(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ⌯︰اصدار سورس ريندا \n ⌯︰الاصدار >{ v 1.6 }')
+send(msg.chat_id_, msg.id_,' ⌯︰اصدار سورس ريندا \n ⌯︰تحديث >{ Version> 1 }')
 end
 if text == "ضع اسم للبوت ⌯︰." and Devmode(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -2351,7 +2351,7 @@ return false
 end
 os.execute('rm -rf RiNdA.lua')
 os.execute('wget https://raw.githubusercontent.com/RiNdA-SourcE/RiNdA/main/RiNdA.lua')
-send(msg.chat_id_, msg.id_,' ⌯︰تم تحديث السورس \n ⌯︰لديك اخر اصدار لسورس ريندا\n ⌯︰الاصدار > { v 1.6 }')
+send(msg.chat_id_, msg.id_,' ⌯︰تم تحديث سوࢪس ࢪيندا \n ⌯︰لديك اخر اصدار لسورس ريندا\n ⌯︰تحديث > { Version> 1 }')
 dofile('RiNdA.lua')  
 end
 
@@ -2635,7 +2635,7 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 Text = "𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙍𝙞𝙉𝙙𝘼"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼> .',url="https://t.me/SourcE_RiNdA"}},{{text = '𝗗𝗲𝗩 𝗪𝗮𝗘𝗹 .',url="https://t.me/Wyyyyy"},{text = '𝗗𝗲𝗩 𝗛𝗮𝗦𝗼 .',url="https://t.me/Biiiii"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},
+{{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼> .',url="https://t.me/SourcE_RiNdA"}},{{text = '𝗗𝗲𝗩 𝗪𝗮𝗘𝗹 .',url="https://t.me/Wyyyyy"},{text = '𝗗𝗲𝗩 𝗛𝗮𝗦𝗼 .',url="https://t.me/Biiiii"}},{{text = '𝗥𝗶𝗡𝗱𝗔 𝗰𝗛𝗮𝗻𝗻𝗹 .',url="https://t.me/ebbxx"}},{{text = '𝗥𝗶𝗻𝗱𝗔 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 .',url="https://t.me/joinchat/B-Qo-OmD86s2MzZi"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SourcE_RiNdA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
