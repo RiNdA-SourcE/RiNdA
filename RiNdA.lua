@@ -2307,13 +2307,13 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = ' ⊀︰ تم تفعيل كروب جديده\n'..
-'\n ⊀︰ بواسطة {'..Name..'}'..
-'\n ⊀︰ موقعه في الكروب {'..AddPy..'}' ..
-'\n ⊀︰ ايدي الكروب {'..IdChat..'}'..
-'\n ⊀︰ عدد اعضاء الكروب *{'..NumMember..'}*'..
-'\n ⊀︰ اسم الكروب {['..NameChat..']}'..
-'\n ⊀︰ الرابط {['..LinkGp..']}'
+Text = ' ⊀︰ فـعلو بوتـڪ بڪࢪوب جديد\n'..
+'\n ⊀︰ الفعـله {'..Name..'}'..
+'\n ⊀︰ ࢪتبته بلڪࢪوب {'..AddPy..'}' ..
+'\n ⊀︰ ايدي الڪࢪوب  {'..IdChat..'}'..
+'\n ⊀︰ عدد الڪࢪوب *{'..NumMember..'}*'..
+'\n ⊀︰ اسم الكروبهـم {['..NameChat..']}'..
+'\n ⊀︰ ࢪابط ڪࢪوبهم {['..LinkGp..']}'
 if not Devmode(msg) then
 sendText(SUDO,Text,0,'md')
 end
@@ -8152,7 +8152,7 @@ end
 if text == 'المطور' or text == 'مطور' then
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5
-Text = "*⊀︰ 𝖣𝖾𝗏 𝖭𝖺𝗆𝖤 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⊀︰ 𝖣𝖾𝗏 ??𝖲𝖺𝖱 ↬* [@"..result.username_.."]"
+Text = "*⊀︰ 𝖣𝖾𝗏 𝖭𝖺𝗆𝖤 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⊀︰ 𝖣𝖾𝗏 𝖴𝖲𝖺𝖱 ↬* [@"..result.username_.."]"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
@@ -10818,7 +10818,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾?? ??𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴??𝖾𝖱 ??𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
