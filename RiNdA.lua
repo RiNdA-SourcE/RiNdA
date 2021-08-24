@@ -9839,7 +9839,7 @@ data,res = https.request('https://ccccxcc.ml/David/Audios.php')
 if res == 200 then
 audios = json:decode(data)
 if audios.Info == true then
-local Text ='*⊀︰ تـم اختياࢪ المقطـ؏ الصۅتـي لـڪ⊀︰ 🍼*'
+local Text =' يࢪوحـيِّ اختّاࢪيتلك الاغنيه اسمـ؏..🔫'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '<𝙎𝙤𝙪𝙍𝙘𝙀🕸️𝙍𝙞𝙉𝙙𝘼>',url="t.me/SourcE_RiNdA"}},
