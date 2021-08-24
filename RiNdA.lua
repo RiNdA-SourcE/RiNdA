@@ -11203,7 +11203,7 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11498,7 +11498,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11568,7 +11568,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11622,7 +11622,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11682,7 +11682,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11747,7 +11747,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11831,7 +11831,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11905,7 +11905,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -11949,7 +11949,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -12046,7 +12046,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -12102,7 +12102,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
@@ -12146,7 +12146,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⑴', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
+{text = '- مَ1 ', callback_data="/help1"},{text = '⑵', callback_data="/help2"},{text = '⑶', callback_data="/help3"},
 },
 {
 {text = '⑷', callback_data="/help4"},{text = '⑸', callback_data="/help5"},
