@@ -2578,7 +2578,7 @@ end
 if data.username_ then 
 if RiNdAChengUserName ~= data.username_ then 
 local Text = {
-'شكو غيرت معرفك شنو نشروك بقنوات فضايح😂🥺',
+'شكو غيرت معرفك شنو نشروك بقنوات فضايح',
 "هاها شو غيرت معرفك بس لا هددتك/ج الحب",
 "شسالفه شو غيرت معرفك 😐🌝",
 "غير معرفه خمطو بساع بساع \n هاذه معرفه : @"..data.username_.."",
@@ -2609,7 +2609,7 @@ if data.id_ ~= bot_id then
 local RiNdAChengPhoto = database:get(bot_id.."RiNdA:Cheng:Photo"..data.id_)
 if not data.profile_photo_ then 
 if RiNdAChengPhoto then 
-send(msg.chat_id_, msg.id_, "حذف كل صور ابن الحلو شكد غبي لعد😂🥺")
+send(msg.chat_id_, msg.id_, "حذف كل صور ابن الحلو شكد غبي لعد")
 database:del(bot_id.."RiNdA:Cheng:Photo"..data.id_) 
 end
 end
@@ -8152,7 +8152,7 @@ end
 if text == 'المطور' or text == 'مطور' then
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5
-Text = "*⊀︰ 𝖣𝖾𝗏 𝖭𝖺𝗆𝖤 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⊀︰ 𝖣??𝗏 𝖴𝖲𝖺𝖱 ↬* [@"..result.username_.."]"
+Text = "*⊀︰ 𝖣𝖾𝗏 𝖭𝖺𝗆𝖤 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⊀︰ 𝖣𝖾𝗏 𝖴𝖲𝖺𝖱 ↬* [@"..result.username_.."]"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
@@ -10818,7 +10818,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 ??𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
@@ -11354,13 +11354,13 @@ end
 end
 if text == "شنو رئيك بهذا" or text == "شنو رئيك بهذ" or text == "شنو رئيج بهذ" or text == "شنو رئيج بهذا" or text == "شنو رايك بهذا" or text == "شنو رايك بهذ" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"ملطـلط داخـل للتلي علـمود بنـات..🔫 😂🥺"," مو خوش ولد 😶","زاحف وما احبه ??😹"}
+local texting = {"ملطـلط داخـل للتلي علـمود بنـات..🔫 "," احـسه موخـوش ولـد..🍫","ملطـلط بنـات.🐍"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
 if text == "شنو رئيك بهاي" or text == "شنو رئيك بهايي" or text == "شنو رئيج بهايي" or text == "شنو رئيج بهاي" or text == "شنو رايك بهاي" or text == "شنو رايك بهايي" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"دور حلوين 🤕😹","جكمه وصخه عوفها ☹️😾","حقيره ومنتكبره 😶😂"}
+local texting = {"عـود ثكيلۿ وهيـه منجوه لجـوه وكول مڪال وائل..🦇","تحـط صوࢪ مو الـها وتصيـح اني بنيـه زࢪبا..🔫","احـسها موخـوش بنيه وعتـقد مࢪتبطه الـف مࢪا..🍼"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
@@ -12385,8 +12385,8 @@ if (text and text == "*تعطيل اوامر التحشيش*") then
 send(msg.chat_id_, msg.id_, '* ⊀︰ تم تعطيل اوامر التحشيش*')
 database:set(bot_id.."Fun_Bots:"..msg.chat_id_,"true")
 end
-if (text and text == "*تفعيل اوامر التحشيش*") then 
-send(msg.chat_id_, msg.id_, '*  ⊀︰ تم تفعيل اوامر التحشيش*')
+if (text and text == "*تفعيل التسليه*") then 
+send(msg.chat_id_, msg.id_, '*  ⊀︰ تم تفعيل التسليه*')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
 local Name_Bot = (database:get(bot_id..'Name:Bot') or 'ريندا')
