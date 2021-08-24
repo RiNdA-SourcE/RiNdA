@@ -895,7 +895,7 @@ local keyboard = {
 {'اذاعه ⊀︰ .','اذاعه خاص ⊀︰ .','اذاعه بالتثبيت ⊀︰ .'},
 {'اذاعه بالتوجيه ⊀︰ .','اذاعه بالتوجيه خاص ⊀︰ .'},
 {'تفعيل الاشتراك الاجباري ⊀︰ .','تعطيل الاشتراك الاجباري ⊀︰ .'},
-{'الاشتراك الاجباري ⊀︰ .','وضع قناة الاشتراك ⊀︰ .'},
+{'الاشتراك الاجباري ⊀︰ .','حط قناة الاشتراك ⊀︰ .'},
 {'تفعيل البوت الخدمي ⊀︰ .','تعطيل البوت الخدمي ⊀︰ .'},
 {'تنظيف الكروبات ⊀︰ .','تنظيف المشتركين ⊀︰ .'},
 {'رفع نسخه للبوت⊀︰ .'},
@@ -1556,10 +1556,10 @@ if data and data.message_ and data.message_ == "USERNAME_NOT_OCCUPIED" then
 send(msg.chat_id_, msg.id_, ' ⊀︰ المعرف لا يوجد فيه قناة')
 return false  end
 if data and data.type_ and data.type_.ID and data.type_.ID == 'PrivateChatInfo' then
-send(msg.chat_id_, msg.id_, ' ⊀︰ عذا لا يمكنك وضع معرف حسابات في الاشتراك ')
+send(msg.chat_id_, msg.id_, ' ⊀︰ عذا لا يمكنك حط معرف حسابات في الاشتراك ')
 return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == true then
-send(msg.chat_id_, msg.id_,' ⊀︰ عذا لا يمكنك وضع معرف كروب بالاشتراك ')
+send(msg.chat_id_, msg.id_,' ⊀︰ عذا لا يمكنك حط معرف كروب بالاشتراك ')
 return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == false then
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.ID and data.type_.channel_.status_.ID == 'ChatMemberStatusEditor' then
@@ -1626,7 +1626,7 @@ end
 --------------------------------------------------------------------------------------------------------------
 if database:get(bot_id.."Set:Description" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
 if text == 'الغاء' then 
-send(msg.chat_id_, msg.id_,"* ⊀︰ تم الغاء وضع الوصف*")
+send(msg.chat_id_, msg.id_,"* ⊀︰ تم الغاء حط الوصف*")
 database:del(bot_id.."Set:Description" .. msg.chat_id_ .. "" .. msg.sender_user_id_)
 return false  
 end 
@@ -2370,7 +2370,7 @@ database:del(bot_id..'text:ch:user')
 send(msg.chat_id_, msg.id_, " ⊀︰ تم مسح رساله الاشتراك ")
 return false  
 end
-if text and text:match("^وضع قناة الاشتراك ⊀︰ .$") and Devmode(msg) then  
+if text and text:match("^حط قناة الاشتراك ⊀︰ .$") and Devmode(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, ' ⊀︰ حسنآ ارسل لي معرف القناة')
 return false  
@@ -2476,8 +2476,8 @@ end
 bnnaGet(msg.sender_user_id_, MODE7_name)
 end
 if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
-if text and text:match("^وضع توحيد (.*)$") and Manager(msg) and database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
-local teh = text:match("^وضع توحيد (.*)$")
+if text and text:match("^حط توحيد (.*)$") and Manager(msg) and database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
+local teh = text:match("^حط توحيد (.*)$")
 send(msg.chat_id_, msg.id_,'⊀︰ تم تعيين '..teh..' كتوحيد للمجموعه')
 database:set(bot_id.."RiNdA:teh"..msg.chat_id_,teh)
 end
@@ -2514,7 +2514,7 @@ if (tonumber(mrmode_nnn2) == tonumber(mrmode_nnn) or tonumber(mrmode_nnn2) > ton
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, msg.sender_user_id_)
 else 
 database:incrby(bot_id.."RiNdA:nump22"..msg.chat_id_..msg.sender_user_id_,1)
-send(msg.chat_id_, msg.id_, "⊀︰ عزيزي >>["..mrmode2.username_.."](https://t.me/"..(mrmode2.username_ or "SourcE_RiNdA")..")\n⊀︰ عليك وضع التوحيد ⪼ {"..database:get(bot_id.."RiNdA:teh"..msg.chat_id_).."} بجانب اسمك\n⊀︰ عدد المحاولات المتبقيه {"..(tonumber(mrmode_nnn) - tonumber(mrmode_nnn2)).."}")
+send(msg.chat_id_, msg.id_, "⊀︰ عزيزي >>["..mrmode2.username_.."](https://t.me/"..(mrmode2.username_ or "SourcE_RiNdA")..")\n⊀︰ عليك حط التوحيد ⪼ {"..database:get(bot_id.."RiNdA:teh"..msg.chat_id_).."} بجانب اسمك\n⊀︰ عدد المحاولات المتبقيه {"..(tonumber(mrmode_nnn) - tonumber(mrmode_nnn2)).."}")
 end
 end
 end
@@ -2729,7 +2729,7 @@ end
 return false
 end
 database:set(bot_id.."Del:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_,'true') 
-send(msg.chat_id_, msg.id_,'* ⊀︰ ارسل الامر الذي قمت بوضعه بدلا عن القديم*')  
+send(msg.chat_id_, msg.id_,'* ⊀︰ ارسل الامر الذي قمت بحطه بدلا عن القديم*')  
 return false
 end
 end
@@ -8087,14 +8087,14 @@ end
 if text and text:match('^ضع تكرار (%d+)$') and Mod(msg) then   
 local Num = text:match('ضع تكرار (.*)')
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"floodmax" ,Num) 
-send(msg.chat_id_, msg.id_,' ⊀︰ تم وضع عدد التكرار ('..Num..')')  
+send(msg.chat_id_, msg.id_,' ⊀︰ تم حط عدد التكرار ('..Num..')')  
 end 
 if text and text:match('^ضع زمن التكرار (%d+)$') and Mod(msg) then   
 local Num = text:match('^ضع زمن التكرار (%d+)$')
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"floodtime" ,Num) 
-send(msg.chat_id_, msg.id_,' ⊀︰ تم وضع زمن التكرار ('..Num..')') 
+send(msg.chat_id_, msg.id_,' ⊀︰ تم حط زمن التكرار ('..Num..')') 
 end
-if text == "ضع رابط" or text == 'وضع رابط' then
+if text == "ضع رابط" or text == 'حط رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -8224,14 +8224,14 @@ send(msg.chat_id_, msg.id_,' ⊀︰ تـم وخࢪت صـوره عـمري..🍒
 end
 return false  
 end
-if text == 'ضع وصف' or text == 'وضع وصف' then  
+if text == 'ضع وصف' or text == 'حط وصف' then  
 if Mod(msg) then
 database:setex(bot_id.."Set:Description" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 120, true)  
 send(msg.chat_id_, msg.id_,' ⊀︰ دࢪ࣪ وصـف عمـري..🍒')
 end
 return false  
 end
-if text == 'ضع ترحيب' or text == 'وضع ترحيب' then  
+if text == 'ضع ترحيب' or text == 'حط ترحيب' then  
 if Mod(msg) then
 database:setex(bot_id.."Welcome:Group" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 120, true)  
 t  = '* ⊀︰ ارسل لي الترحيب الان*'
@@ -8452,7 +8452,7 @@ database:setex(bot_id.."CHENG:ID"..msg.chat_id_..""..msg.sender_user_id_,240,tru
 local Text= [[
 ⊀︰ اࢪسـل كلـيشه الايـدي ..🦇
  ⊀︰ تـڪدࢪ تضـيف من هذني الاوامࢪ جوه وتࢪتـب
- ⊀︰ واذا مالڪ خلڪ اڪـتب تغـيࢪ الايدي وطز بلوضعيۿ
+ ⊀︰ واذا مالڪ خلڪ اڪـتب تغـيࢪ الايدي وطز بلحطيۿ
 🥤⌯↬`#rdphoto` ↫ تعلـيق الصـوࢪه
 🥤⌯↬`#username` ↫ اسـمك
 🥤⌯↬`#msgs` ↫ عـدد ࢪسـائل
@@ -8578,7 +8578,7 @@ send(msg.chat_id_, msg.id_,"* ⊀︰ تم حفظ قوانين الكروب*")
 database:del(bot_id.."Set:Rules:" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
 end  
 
-if text == 'ضع قوانين' or text == 'وضع قوانين' then 
+if text == 'ضع قوانين' or text == 'حط قوانين' then 
 if Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -9163,8 +9163,8 @@ database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 send(msg.chat_id_, msg.id_," ⊀︰ ارسل لي التوجيه الان") 
 return false
 end 
-if text and text:match('^ضع اسم (.*)') and Manager(msg) or text and text:match('^وضع اسم (.*)') and Manager(msg) then 
-local Name = text:match('^ضع اسم (.*)') or text and text:match('^وضع اسم (.*)') 
+if text and text:match('^ضع اسم (.*)') and Manager(msg) or text and text:match('^حط اسم (.*)') and Manager(msg) then 
+local Name = text:match('^ضع اسم (.*)') or text and text:match('^حط اسم (.*)') 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -9885,13 +9885,13 @@ sender = rpl[math.random(#rpl)]
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' .. URL.escape(sender))
 end
-if text and text:match("^وضع لقب (.*)$") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
-local timsh = text:match("^وضع لقب (.*)$")
+if text and text:match("^حط لقب (.*)$") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
+local timsh = text:match("^حط لقب (.*)$")
 function start_function(extra, result, success)
 local chek = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='..msg.chat_id_..'&user_id='..bot_id)
 local getInfo = JSON.decode(chek)
 if getInfo.result.can_promote_members == false then
-send(msg.chat_id_, msg.id_,'⊀︰ لا يمكنني تعديل  او وضع لقب ليس لدي صلاحيه\n ⊀︰ قم بترقيتي جميع الصلاحيات او صلاحية اضافه مشرف ') 
+send(msg.chat_id_, msg.id_,'⊀︰ لا يمكنني تعديل  او حط لقب ليس لدي صلاحيه\n ⊀︰ قم بترقيتي جميع الصلاحيات او صلاحية اضافه مشرف ') 
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10818,7 +10818,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴??𝖾𝖱 ??𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 ??𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
@@ -11598,7 +11598,7 @@ local Teext =[[
 📝∫𝙿𝚄𝚃 - 𝙰𝙳𝙳 .
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ اهلا بك عزيزي ✓ .
-⊀︰ اوامر الوضع - اضف ( 📌 - 📍) .
+⊀︰ اوامر الحط - اضف ( 📌 - 📍) .
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ اضف / حذف ← رد
 ⊀︰ اضف / حذف ← صلاحيه
@@ -11806,14 +11806,14 @@ local Teext =[[
 ⊀︰ الصلاحيات
 ⊀︰ كشف ~ برد ← بمعرف ← ايدي
 ⊀︰ تاك للكل
-⊀︰ وضع لقب + لقب
+⊀︰ حط لقب + لقب
 ⊀︰ حذف لقب بالرد
 ⊀︰ اعدادات المجموعه
 ⊀︰ عدد الكروب
 ⊀︰ ردود المدير
 ⊀︰ اسم بوت + الرتبه
 ⊀︰ الاوامر المضافه
-⊀︰ وضع توحيد + توحيد
+⊀︰ حط توحيد + توحيد
 ⊀︰ تعين عدد الكتم + رقم
 ⊀︰ كتم اسم + اسم
 ⊀︰ التوحيد
@@ -11917,7 +11917,7 @@ keyboard.inline_keyboard = {
 {text = '- مَ9 ', callback_data="/help9"},{text = '- مَ10 ', callback_data="/help10"},
 },
 {
-{text = '↑𝐁𝐚𝐜𝐤 𝐭𝐨 𝐥𝐢𝐬𝐭↑', callback_data="/help"},
+{text = '↑𝐁𝐚𝐜𝐤 𝐭?? 𝐥𝐢𝐬𝐭↑', callback_data="/help"},
 },
 {
 {text = '<𝙎𝙤𝙪𝙍𝙘𝙀🍒𝙍𝙞𝙉𝙙𝘼>', url="t.me/SourcE_RiNdA"},
@@ -12209,7 +12209,7 @@ local Teext =[[
 *الاوامر الخاصة فـي التوحيد *
 *تفعيل التوحيد*
 *تعطيل التوحيد*
-*وضع توحيد + التوحيد*
+*حط توحيد + التوحيد*
 *تعين عدد الكتم + عدد*
 *التوحيد*
 ]]
