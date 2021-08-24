@@ -11086,11 +11086,11 @@ end
 return false
 end
 if tonumber(NUMPY) == tonumber(0) then
-send(msg.chat_id_,msg.id_,"\n* ⊀︰ ماتكدࢪ تبيـ؏ نقأّطك يمعـود اذا اقـل من 1 *") 
+send(msg.chat_id_,msg.id_,"\n* ⊀︰ لا استطيع البيع اقل من 1 *") 
 return false 
 end
 if tonumber(database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)) == tonumber(0) then
-send(msg.chat_id_,msg.id_,' ⊀︰ ماعنـدك ولا نقطـه يحضيِّ\n ⊀︰ اذا تࢪيـد تࢪبح نقاط\n ⊀︰ اڪـتب الالعأّبِ ولعـب بـࢪو ! ') 
+send(msg.chat_id_,msg.id_,' ⊀︰ ليس لديك نقاط في الالعاب\n ⊀︰ اذا كنت تريد ربح نقاط \n ⊀︰ ارسل الالعاب وابدأ اللعب ! ') 
 else
 local NUM_GAMES = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
 if tonumber(NUMPY) > tonumber(NUM_GAMES) then
