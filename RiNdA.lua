@@ -2194,7 +2194,7 @@ end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ متفعل البـوت منزمـان.*')
+send(msg.chat_id_, msg.id_,' ⊀︰ متفعل البـوت منزمـان.')
 else
 sendText(msg.chat_id_,'\n *⊀︰ الـضلـ؏  ↷ * ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *⊀︰ تم تفعيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)
@@ -2208,12 +2208,12 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = ' ⊀︰ تم تفعيل كروب جديده\n'..
-'\n ⊀︰ بواسطة {'..Name..'}'..
-'\n ⊀︰ ايدي الكروب {'..IdChat..'}'..
-'\n ⊀︰ اسم الكروب {['..NameChat..']}'..
-'\n ⊀︰ عدد اعضاء الكروب *{'..NumMember..'}*'..
-'\n ⊀︰ الرابط {['..LinkGp..']}'
+Text = ' ⊀︰ فـعلو بوتـك بڪࢪوب جديد \n'..
+'\n ⊀︰ الفعـله {'..Name..'}'..
+'\n ⊀︰ ايدي الڪࢪوب {'..IdChat..'}'..
+'\n ⊀︰ اسم ڪࢪوبهم {['..NameChat..']}'..
+'\n ⊀︰ عدد اعضائهم *{'..NumMember..'}*'..
+'\n ⊀︰ ࢪابط ڪࢪوبهم {['..LinkGp..']}'
 if not Devmode(msg) then
 sendText(SUDO,Text,0,'md')
 end
@@ -2291,7 +2291,7 @@ elseif da.status_.ID == "ChatMemberStatusEditor" then
 var = 'مشرف'
 end
 if database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم تفعيل الكروب*')
+send(msg.chat_id_, msg.id_,' ⊀︰ بلـعافيه يࢪوحي تفـعل بـوت..')
 else
 sendText(msg.chat_id_,'\n *⊀︰ الـضلـ؏  ↷ * ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *⊀︰ تم تفعيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:sadd(bot_id..'Chek:Groups',msg.chat_id_)  
