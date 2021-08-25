@@ -9505,7 +9505,7 @@ return false
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_, '⊀︰ الان ارسل الرد الذي تريد اضافته \n⊀︰ قد يكون (ملف - فديو - نص - ملصق - بصمه - متحركه )\n⊀︰ يمكنك اضافه الى النص :\n⊀︰ 🌐 `#username` > معرف المستخدم\n⊀︰ 📨 `#msgs` > عدد رسائل المستخدم\n⊀︰ 📎 `#name` > اسم المستخدم\n⊀︰ 🆔 `#id` > ايدي المستخدم\n⊀︰ 🎖 `#stast` > رتبه المستخدم \n⊀︰ 📝 `#edit` > عدد السحكات ')
+send(msg.chat_id_, msg.id_, '⊀︰ دز ࢪد الي تࢪيد اتضيـفه بـࢪو.🔫 \n⊀︰ ملـف » فديـو » نـص » ملصـق » بـصمه » متحࢪكه \n⊀︰ تڪدࢪ تࢪتب ࢪد مالك بس انسـخ وضيـف ↯ :\n 🦇 `#username` ↫ معـࢪف ﭑݪشخـص\n 🦇 `#msgs` ↫ عدد ࢪسائل ﭑݪشخـص\n 🦇 `#name` ↫ اسم ﭑݪشـخـص\n 🦇 `#id` ↫ ايـدي ﭑݪشـخـص\n 🦇 `#stast` ↫ ࢪتبه ﭑݪشخـص\n 🦇 `#edit` ↫ عـدد سحڪات ﭑݪشخـص ')
 database:set(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
 database:set(bot_id.."Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
 database:sadd(bot_id.."List:Rd:Sudo", text)
@@ -9639,7 +9639,7 @@ end
 end
 if text == ("ردود المدير") and Manager(msg) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
-text = "⊀︰ قائمه ردود المدير \n●━━━━𝐑𝐀━━━━●\n"
+text = "⊀︰ ࢪدود الڪࢪوب \n●━━━━𝐑𝐀━━━━●\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = "مـتحࢪكه"
@@ -9661,7 +9661,7 @@ end
 text = text..""..k..">> ("..v..") -› {"..db.."}\n"
 end
 if #list == 0 then
-text = "*⊀︰ لا يوجد ردود للمدير*"
+text = "*⊀︰ ماڪو ࢪدود مديࢪ يحضّيِّ*"
 end
 send(msg.chat_id_, msg.id_,"["..text.."]")
 end
@@ -9709,7 +9709,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Manager:Photo"..test..msg.chat_id_, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ تـم حفـظ الࢪد بنـجاح..🕸️*")
+send(msg.chat_id_, msg.id_,"*⊀︰ انحفـض ࢪدك يࢪوحي.🦇*")
 return false  
 end  
 end
@@ -9723,7 +9723,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ ارسل الكلمه التي تريد اضافتها*")
+send(msg.chat_id_, msg.id_,"*⊀︰ دز ﭑݪكلمه تࢪيد اتضيـفهِ بـࢪوِ*")
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
@@ -9759,7 +9759,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_.."") == "true2" then
-send(msg.chat_id_, msg.id_,"*⊀︰ تم ازالة الرد من قائمه الردود*")
+send(msg.chat_id_, msg.id_,"*⊀︰ شلـتّ الـࢪد مَـن قائمه الࢪدود يعافيتي*")
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
