@@ -886,12 +886,12 @@ local bl = ' ⊀︰ اهلا عزيزي آلمـطـور\n ⊀︰ آنت آلم�
 local keyboard = {
 {'الاحصائيات ⊀︰ .'},
 {'تعطيل التواصل ⊀︰ .','تفعيل التواصل ⊀︰ .'},
-{'خلي اسم للبوت ⊀︰ .','قائمه العام ⊀︰ .','قائمه الكتم العام ⊀︰ .'},
+{'ضع اسم للبوت ⊀︰ .','قائمه العام ⊀︰ .','قائمه الكتم العام ⊀︰ .'},
 {'⊀︰ . تحديثات سورس ريندا ⊀︰ .'},
 {'المطورين ⊀︰ .','الثانويين ⊀︰ .'},
 {'المشتركين ⊀︰ .','الكروبات ⊀︰ .'},
 {'تغير رساله الاشتراك','حذف رساله الاشتراك ⊀︰ .','تغير الاشتراك'},
-{'خلي كليشه ستارت ⊀︰ .','حذف كليشه ستارت ⊀︰ .'},
+{'ضع كليشه ستارت ⊀︰ .','حذف كليشه ستارت ⊀︰ .'},
 {'اذاعه ⊀︰ .','اذاعه خاص ⊀︰ .','اذاعه بالتثبيت ⊀︰ .'},
 {'اذاعه بالتوجيه ⊀︰ .','اذاعه بالتوجيه خاص ⊀︰ .'},
 {'تفعيل الاشتراك الاجباري ⊀︰ .','تعطيل الاشتراك الاجباري ⊀︰ .'},
@@ -1046,7 +1046,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ تم حفظ كليشه ستارت')
 database:del(bot_id..'Start:Bots') 
 return false
 end
-if text == 'خلي كليشه ستارت ⊀︰ .' and Devmode(msg) then 
+if text == 'ضع كليشه ستارت ⊀︰ .' and Devmode(msg) then 
 database:set(bot_id..'Start:Bots',true) 
 send(msg.chat_id_, msg.id_,' ⊀︰ ارسل لي الكليشه الان')
 return false
@@ -1081,7 +1081,7 @@ if text == 'تحديث ⊀︰ .' and Devmode(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ⊀︰ اصدار سورس ريندا \n ⊀︰ تحديث >{ Version> 1 }')
 end
-if text == "خلي اسم للبوت ⊀︰ ." and Devmode(msg) then  
+if text == "ضع اسم للبوت ⊀︰ ." and Devmode(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
 send(msg.chat_id_, msg.id_," ⊀︰ ارسل اليه الاسم الان ")
 return false
@@ -2325,8 +2325,8 @@ end,nil)
 end,nil) 
 end,nil)
 end
-if text and text:match("^خلي عدد الاعضاء (%d+)$") and Devmode(msg) then
-local Num = text:match("خلي عدد الاعضاء (%d+)$") 
+if text and text:match("^ضع عدد الاعضاء (%d+)$") and Devmode(msg) then
+local Num = text:match("ضع عدد الاعضاء (%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -8084,17 +8084,17 @@ send(msg.chat_id_,msg.id_," ⊀︰ ليست لدي صلاحية التثبيت �
 end
 end,nil)
 end
-if text and text:match('^خلي تكرار (%d+)$') and Mod(msg) then   
-local Num = text:match('خلي تكرار (.*)')
+if text and text:match('^ضع تكرار (%d+)$') and Mod(msg) then   
+local Num = text:match('ضع تكرار (.*)')
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"floodmax" ,Num) 
 send(msg.chat_id_, msg.id_,' ⊀︰ تم خلي عدد التكرار ('..Num..')')  
 end 
-if text and text:match('^خلي زمن التكرار (%d+)$') and Mod(msg) then   
-local Num = text:match('^خلي زمن التكرار (%d+)$')
+if text and text:match('^ضع زمن التكرار (%d+)$') and Mod(msg) then   
+local Num = text:match('^ضع زمن التكرار (%d+)$')
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"floodtime" ,Num) 
 send(msg.chat_id_, msg.id_,' ⊀︰ تم خلي زمن التكرار ('..Num..')') 
 end
-if text == "خلي رابط" or text == 'خلي رابط' then
+if text == "ضع رابط" or text == 'خلي رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -8183,7 +8183,7 @@ local inline = {{{text = ta.title_, url=linkgpp.result}},
 } 
 send_inline_key(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5) 
 else 
-send(msg.chat_id_, msg.id_,'لا يوجد رابط ارسل ` خلي رابط` لعمل رابط') 
+send(msg.chat_id_, msg.id_,'لا يوجد رابط ارسل ` ضع رابط` لعمل رابط') 
 end 
 end,nil) 
 end
@@ -8203,7 +8203,7 @@ database:del(bot_id.."Private:Group:Link"..msg.chat_id_)
 return false      
 end
 end
-if text and text:match("^خلي صوره") and Mod(msg) and msg.reply_to_message_id_ == 0 then  
+if text and text:match("^ضع صوره") and Mod(msg) and msg.reply_to_message_id_ == 0 then  
 database:set(bot_id..'Change:Chat:Photo'..msg.chat_id_..':'..msg.sender_user_id_,true) 
 send(msg.chat_id_, msg.id_,' ⊀︰ دࢪ࣪ صـوࢪه تـريد اضيفها') 
 return false
@@ -8224,14 +8224,14 @@ send(msg.chat_id_, msg.id_,' ⊀︰ تـم وخࢪت صـوره عـمري..🕸
 end
 return false  
 end
-if text == 'خلي وصف' or text == 'خلي وصف' then  
+if text == 'ضع وصف' or text == 'خلي وصف' then  
 if Mod(msg) then
 database:setex(bot_id.."Set:Description" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 120, true)  
 send(msg.chat_id_, msg.id_,' ⊀︰ دࢪ࣪ وصـف عمـري..🕸️')
 end
 return false  
 end
-if text == 'خلي ترحيب' or text == 'خلي ترحيب' then  
+if text == 'ضع ترحيب' or text == 'خلي ترحيب' then  
 if Mod(msg) then
 database:setex(bot_id.."Welcome:Group" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 120, true)  
 t  = '* ⊀︰ ارسل لي الترحيب الان*'
@@ -8421,7 +8421,7 @@ if text == 'مسح كليشه المطور' and Devmode(msg) then
 database:del(bot_id..'TEXT_SUDO')
 send(msg.chat_id_, msg.id_,' ⊀︰ تم مسح كليشه المطور')
 end
-if text == 'خلي كليشه المطور' and Devmode(msg) then
+if text == 'ضع كليشه المطور' and Devmode(msg) then
 database:set(bot_id..'Set:TEXT_SUDO'..msg.chat_id_..':'..msg.sender_user_id_,true)
 send(msg.chat_id_,msg.id_,' ⊀︰ ارسل الكليشه الان')
 return false
@@ -8578,7 +8578,7 @@ send(msg.chat_id_, msg.id_,"* ⊀︰ تم حفظ قوانين الكروب*")
 database:del(bot_id.."Set:Rules:" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
 end  
 
-if text == 'خلي قوانين' or text == 'خلي قوانين' then 
+if text == 'ضع قوانين' or text == 'خلي قوانين' then 
 if Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -9163,8 +9163,8 @@ database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 send(msg.chat_id_, msg.id_," ⊀︰ ارسل لي التوجيه الان") 
 return false
 end 
-if text and text:match('^خلي اسم (.*)') and Manager(msg) or text and text:match('^خلي اسم (.*)') and Manager(msg) then 
-local Name = text:match('^خلي اسم (.*)') or text and text:match('^خلي اسم (.*)') 
+if text and text:match('^ضع اسم (.*)') and Manager(msg) or text and text:match('^خلي اسم (.*)') and Manager(msg) then 
+local Name = text:match('^ضع اسم (.*)') or text and text:match('^خلي اسم (.*)') 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -11599,7 +11599,7 @@ local Teext =[[
 ⊀︰ اضف / حذف ← رد
 ⊀︰ اضف / حذف ← صلاحيه
 ●━━━━𝐑𝐀━━━━●
-⊀︰ خلي + امر …
+⊀︰ ضع + امر …
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ اسم
 ⊀︰ رابط
@@ -12013,8 +12013,8 @@ local Teext =[[
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ جلب نسخه البوت
 ⊀︰ ارفع نسخه البوت
-⊀︰ خلي عدد الاعضاء + العدد
-⊀︰ خلي كليشه المطور
+⊀︰ ضع عدد الاعضاء + العدد
+⊀︰ ضع كليشه المطور
 ⊀︰ تفعيل/تعطيل الاذاعه
 ⊀︰ تفعيل/تعطيل البوت الخدمي
 ⊀︰ تفعيل/تعطيل التواصل
