@@ -12125,7 +12125,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-𝖶𝖾𝖫𝖢𝗈𝖬𝖾 𝗍𝖮 𝖱𝗂𝖭𝖣𝖺 𝗅𝖭𝖿𝖮 🦖
+𝖶𝖾𝖫𝖢𝗈𝖬𝖾 𝗍𝖮 𝖱𝗂𝖭𝖣𝖺 𝗅𝖭𝖿𝖮 
 *- مَ1 ↫ اوامࢪ سـد 𝖺𝖭𝖽 افتح*
 *- مَ2 ↫ اوامࢪ تعطيـل 𝖺𝖭𝖽 تفعـيل*
 *- مَ3 ↫ اوامࢪ خلـي 𝖺𝖭𝖽 اضف*
