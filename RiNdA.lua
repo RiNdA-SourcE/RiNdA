@@ -9634,7 +9634,7 @@ database:del(bot_id.."Add:Rd:Manager:File"..v..msg.chat_id_)
 database:del(bot_id.."Add:Rd:Manager:Audio"..v..msg.chat_id_)
 database:del(bot_id.."List:Manager"..msg.chat_id_)
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ تـم مسـح ࢪدود المـديࢪ*")
+send(msg.chat_id_, msg.id_,"⊀︰تـم مسح ࢪدود الكروب")
 end
 end
 if text == ("ردود الكروب") and Manager(msg) then
