@@ -11062,7 +11062,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⌯︰لا تستطيع استخدام البوت \n  ⌯︰يرجى الاشتراك بالقناه اولا \n  ⌯︰اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -11070,7 +11070,7 @@ local Num = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
 if Num == 0 then 
 Text = '* ماعـندك نقاط اكتب الالعاب وجمـع*'
 else
-Text = '* ⊀︰ عـدد نقـاطك بـࢪو..🕸️ >* { '..Num..' } نقطه '
+Text = '* ⌯︰عـدد نقـاطك بـࢪو..🍒 >* { '..Num..' } نقطه '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11081,26 +11081,26 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⌯︰لا تستطيع استخدام البوت \n  ⌯︰يرجى الاشتراك بالقناه اولا \n  ⌯︰اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 if tonumber(NUMPY) == tonumber(0) then
-send(msg.chat_id_,msg.id_,"\n* ⊀︰ لا استطيع البيع اقل من 1 *") 
+send(msg.chat_id_,msg.id_,"\n* ⌯︰لا استطيع البيع اقل من 1 *") 
 return false 
 end
 if tonumber(database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)) == tonumber(0) then
-send(msg.chat_id_,msg.id_,' ⊀︰ ليس لديك نقاط في الالعاب\n ⊀︰ اذا كنت تريد ربح نقاط \n ⊀︰ ارسل الالعاب وابدأ اللعب ! ') 
+send(msg.chat_id_,msg.id_,' ⌯︰ليس لديك نقاط في الالعاب\n ⌯︰اذا كنت تريد ربح نقاط \n ⌯︰ارسل الالعاب وابدأ اللعب ! ') 
 else
 local NUM_GAMES = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
 if tonumber(NUMPY) > tonumber(NUM_GAMES) then
-send(msg.chat_id_,msg.id_,'\n ⊀︰ ليس لديك نقاط في هذه لعبه \n ⊀︰ لزيادة نقاطك في اللعبه \n ⊀︰ ارسل الالعاب وابدأ اللعب !') 
+send(msg.chat_id_,msg.id_,'\n ⌯︰ليس لديك نقاط في هذه لعبه \n ⌯︰لزيادة نقاطك في اللعبه \n ⌯︰ارسل الالعاب وابدأ اللعب !') 
 return false 
 end
 local NUMNKO = (NUMPY * 50)
 database:decrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,NUMPY)  
 database:incrby(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_,NUMNKO)  
-send(msg.chat_id_,msg.id_,' ⊀︰ تم خصم *> { '..NUMPY..' }* من نقاطك \n ⊀︰ وتم اضافة* > { '..(NUMPY * 50)..' } رساله الى رسالك *')
+send(msg.chat_id_,msg.id_,' ⌯︰تم خصم *> { '..NUMPY..' }* من نقاطك \n ⌯︰وتم اضافة* > { '..(NUMPY * 50)..' } رساله الى رسالك *')
 end 
 return false 
 end
