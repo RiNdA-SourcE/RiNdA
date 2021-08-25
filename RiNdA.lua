@@ -7994,7 +7994,7 @@ local text =
 '\n'..' ⊀︰ امر صيح > { '..kickme..
 ' }\n'..' ⊀︰ امر اطردني > { '..sehuser..
 ' }\n'..' ⊀︰ امر منو ضافني > { '..addme..
-' }\n'..' ⊀︰ ردود المدير > { '..rdmder..
+' }\n'..' ⊀︰ ردود الكروب > { '..rdmder..
 ' }\n'..' ⊀︰ ردود المطور > { '..rdsudo..
 ' }\n'..' ⊀︰ الايدي > { '..idgp..
 ' }\n'..' ⊀︰ الايدي بالصوره > { '..idph..
@@ -9621,7 +9621,7 @@ send(msg.chat_id_, msg.id_,"*⊀︰ تم حذف ردود المتعدده*")
 end
 ------------------------------------------------------------------------
 if Manager(msg) then
-if text == ("مسح ردود المدير") and not database:get(bot_id.."Rio:Lock:GpRd"..msg.chat_id_) then
+if text == ("مسح ردود الكروب") and not database:get(bot_id.."Rio:Lock:GpRd"..msg.chat_id_) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
 for k,v in pairs(list) do
 database:del(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_)   
@@ -9637,9 +9637,9 @@ end
 send(msg.chat_id_, msg.id_,"*⊀︰ تـم مسـح ࢪدود المـديࢪ*")
 end
 end
-if text == ("ردود المدير") and Manager(msg) then
+if text == ("ردود الكروب") and Manager(msg) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
-text = "⊀︰ قائمه ردود المدير \n●━━━━𝐑𝐀━━━━●\n"
+text = "⊀︰ قائمه ردود الكروب \n●━━━━𝐑𝐀━━━━●\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = "مـتحࢪكه"
@@ -9661,7 +9661,7 @@ end
 text = text..""..k..">> ("..v..") -› {"..db.."}\n"
 end
 if #list == 0 then
-text = "*⊀︰ ماڪو ࢪدود مديࢪ يحضّيِّ*"
+text = "*⊀︰ لا يوجد ردود للمدير*"
 end
 send(msg.chat_id_, msg.id_,"["..text.."]")
 end
@@ -9709,7 +9709,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Manager:Photo"..test..msg.chat_id_, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ انحفـض ࢪدك يࢪوحي.🦇*")
+send(msg.chat_id_, msg.id_,"*⊀︰ تـم حفـظ الࢪد بنـجاح..🕸️*")
 return false  
 end  
 end
@@ -9723,7 +9723,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ دز ﭑݪكلمه تࢪيد اتضيـفهِ بـࢪوِ*")
+send(msg.chat_id_, msg.id_,"*⊀︰ ارسل الكلمه التي تريد اضافتها*")
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
@@ -9759,7 +9759,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_.."") == "true2" then
-send(msg.chat_id_, msg.id_,"*⊀︰ شلـتّ الـࢪد مَـن قائمه الࢪدود يعافيتي*")
+send(msg.chat_id_, msg.id_,"*⊀︰ تم ازالة الرد من قائمه الردود*")
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
@@ -10248,21 +10248,21 @@ end
 send(msg.chat_id_, msg.id_, Text) 
 end
 
-if text == 'تفعيل ردود المدير' and Manager(msg) then   
+if text == 'تفعيل ردود الكروب' and Manager(msg) then   
 if database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
-Text = ' *⊀︰ تم تفعيل ردود المدير*'
+Text = ' *⊀︰ تم تفعيل ردود الكروب*'
 database:del(bot_id..'Reply:Manager'..msg.chat_id_)  
 else
-Text = ' *⊀︰ تم تفعيل ردود المدير*'
+Text = ' *⊀︰ تم تفعيل ردود الكروب*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل ردود المدير' and Manager(msg) then  
+if text == 'تعطيل ردود الكروب' and Manager(msg) then  
 if not database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
 database:set(bot_id..'Reply:Manager'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل ردود المدير*' 
+Text = '\n *⊀︰ تم تعطيل ردود الكروب*' 
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل ردود المدير*'
+Text = '\n *⊀︰ بالتاكيد تم تعطيل ردود الكروب*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11540,7 +11540,7 @@ local Teext =[[
 ⊀︰ ردود المطور
 ⊀︰ ردود البوت
 ⊀︰ الترحيب
-⊀︰ ردود المدير
+⊀︰ ردود الكروب
 ⊀︰ ٴall
 ⊀︰ الردود
 ⊀︰ نسبة الحب
@@ -11659,7 +11659,7 @@ local Teext =[[
 ⊀︰ المنشئين
 ⊀︰ الاساسين
 ⊀︰ الاسماء المكتومه
-⊀︰ ردود المدير
+⊀︰ ردود الكروب
 ⊀︰ البوتات
 ⊀︰ امسح
 ⊀︰ صلاحيه
@@ -11806,7 +11806,7 @@ local Teext =[[
 ⊀︰ حذف لقب بالرد
 ⊀︰ اعدادات المجموعه
 ⊀︰ عدد الكروب
-⊀︰ ردود المدير
+⊀︰ ردود الكروب
 ⊀︰ اسم بوت + الرتبه
 ⊀︰ الاوامر المضافه
 ⊀︰ خلي توحيد + توحيد
