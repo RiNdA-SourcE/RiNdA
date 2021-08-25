@@ -9470,7 +9470,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Sudo:Photo"..test, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"⊀︰ تـم حفـظ الࢪد بنـجاح..🕸️")
+send(msg.chat_id_, msg.id_,"⊀︰ تـم حفـظ الࢪد بنـجاح.🦇")
 return false  
 end  
 end
@@ -9485,11 +9485,11 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ اࢪسل الكـلمـه التࢪيـد اضـافتهـا🕸️*")
+send(msg.chat_id_, msg.id_,"*⊀︰دز ࢪد تࢪيد تضيفه لكل ڪࢪوبات*")
 database:set(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
-if text == "حذف رد للكل" and Devmode(msg) then 
+if text == "مسح رد عام" and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -9499,13 +9499,13 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ ارسل الكلمه التري تريد حذفها*")
+send(msg.chat_id_, msg.id_,"*⊀︰ دز الكلمـه تࢪيد تحذفه بـࢪو*")
 database:set(bot_id.."Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_, '⊀︰ دز ࢪد الي تࢪيد اتضيـفه بـࢪو.🔫 \n⊀︰ ملـف » فديـو » نـص » ملصـق » بـصمه » متحࢪكه \n⊀︰ تڪدࢪ تࢪتب ࢪد مالك بس انسـخ وضيـف ↯ :\n 🦇 `#username` ↫ معـࢪف ﭑݪشخـص\n 🦇 `#msgs` ↫ عدد ࢪسائل ﭑݪشخـص\n 🦇 `#name` ↫ اسم ﭑݪشـخـص\n 🦇 `#id` ↫ ايـدي ﭑݪشـخـص\n 🦇 `#stast` ↫ ࢪتبه ﭑݪشخـص\n 🦇 `#edit` ↫ عـدد سحڪات ﭑݪشخـص ')
+send(msg.chat_id_, msg.id_, '⊀︰ دز ࢪد الي تࢪيد اتضيـفه بـࢪو.🔫 \n⊀︰ ملـف » فديـو » نـص » ملصـق » بـصمه » متحࢪكه \n⊀︰ تڪدࢪ تࢪتب ࢪد مالك بس انسـخ وضيـف ↯ :\n🦇 `#username` ↫ معـࢪف ﭑݪشخـص\n🦇 `#msgs` ↫ عدد ࢪسائل ﭑݪشخـص\n🦇 `#name` ↫ اسم ﭑݪشـخـص\n🦇 `#id` ↫ ايـدي ﭑݪشـخـص\n🦇 `#stast` ↫ ࢪتبه ﭑݪشخـص\n🦇 `#edit` ↫ عـدد سحڪات ﭑݪشخـص ')
 database:set(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
 database:set(bot_id.."Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
 database:sadd(bot_id.."List:Rd:Sudo", text)
@@ -9513,7 +9513,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_,"*⊀︰ تم ازالة الرد من قائمه ردود المطور*")
+send(msg.chat_id_, msg.id_,"*⊀︰ انـمسح ࢪد من ࢪدود المطـوࢪ بـࢪو*")
 list = {"Add:Rd:Sudo:Audio","Add:Rd:Sudo:File","Add:Rd:Sudo:Video","Add:Rd:Sudo:Photo","Add:Rd:Sudo:Text","Add:Rd:Sudo:stekr","Add:Rd:Sudo:vico","Add:Rd:Sudo:Gif"}
 for k,v in pairs(list) do
 database:del(bot_id..''..v..text)
