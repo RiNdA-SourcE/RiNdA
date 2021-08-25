@@ -8450,7 +8450,7 @@ return false
 end
 database:setex(bot_id.."CHENG:ID"..msg.chat_id_..""..msg.sender_user_id_,240,true)  
 local Text= [[
-⊀︰ اࢪسـل كلـيشه الايـدي ..🦇
+⊀︰ اࢪسـل كلـيشه الايـدي ..🍒
  ⊀︰ تـڪدࢪ تضـيف من هذني الاوامࢪ جوه وتࢪتـب
  ⊀︰ واذا مالڪ خلڪ اڪـتب تغـيࢪ الايدي وطز بلخلييۿ
 🥤⌯↬`#rdphoto` ↫ تعلـيق الصـوࢪه
@@ -9470,7 +9470,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Sudo:Photo"..test, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"⊀︰ تـم حفـظ الࢪد بنـجاح.🦇")
+send(msg.chat_id_, msg.id_,"⊀︰ تـم حفـظ الࢪد بنـجاح.")
 return false  
 end  
 end
@@ -9485,11 +9485,11 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰دز ࢪد تࢪيد تضيفه لكل ڪࢪوبات*")
+send(msg.chat_id_, msg.id_,"*⊀︰ اࢪسل الكـلمـه التࢪيـد اضـافتهـا🕸️*")
 database:set(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
-if text == "مسح رد عام" and Devmode(msg) then 
+if text == "حذف رد للكل" and Devmode(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -9499,13 +9499,13 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ دز الكلمـه تࢪيد تحذفه بـࢪو*")
+send(msg.chat_id_, msg.id_,"*⊀︰ ارسل الكلمه التري تريد حذفها*")
 database:set(bot_id.."Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_, '⊀︰ دز ࢪد الي تࢪيد اتضيـفه بـࢪو.🔫 \n⊀︰ ملـف » فديـو » نـص » ملصـق » بـصمه » متحࢪكه \n⊀︰ تڪدࢪ تࢪتب ࢪد مالك بس انسـخ وضيـف ↯ :\n🦇 `#username` ↫ معـࢪف ﭑݪشخـص\n🦇 `#msgs` ↫ عدد ࢪسائل ﭑݪشخـص\n🦇 `#name` ↫ اسم ﭑݪشـخـص\n🦇 `#id` ↫ ايـدي ﭑݪشـخـص\n🦇 `#stast` ↫ ࢪتبه ﭑݪشخـص\n🦇 `#edit` ↫ عـدد سحڪات ﭑݪشخـص ')
+send(msg.chat_id_, msg.id_, '⊀︰ دز ࢪد الي تࢪيد اتضيـفه بـࢪو.🔫 \n⊀︰ ملـف » فديـو » نـص » ملصـق » بـصمه » متحࢪكه \n⊀︰ تڪدࢪ تࢪتب ࢪد مالك بس انسـخ وضيـف ↯ :\n 🍒 `#username` ↫ معـࢪف ﭑݪشخـص\n 🍒 `#msgs` ↫ عدد ࢪسائل ﭑݪشخـص\n 🍒 `#name` ↫ اسم ﭑݪشـخـص\n 🍒 `#id` ↫ ايـدي ﭑݪشـخـص\n 🍒 `#stast` ↫ ࢪتبه ﭑݪشخـص\n 🍒 `#edit` ↫ عـدد سحڪات ﭑݪشخـص ')
 database:set(bot_id.."Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
 database:set(bot_id.."Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
 database:sadd(bot_id.."List:Rd:Sudo", text)
@@ -9513,7 +9513,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_,"*⊀︰ انـمسح ࢪد من ࢪدود المطـوࢪ بـࢪو*")
+send(msg.chat_id_, msg.id_,"*⊀︰ تم ازالة الرد من قائمه ردود المطور*")
 list = {"Add:Rd:Sudo:Audio","Add:Rd:Sudo:File","Add:Rd:Sudo:Video","Add:Rd:Sudo:Photo","Add:Rd:Sudo:Text","Add:Rd:Sudo:stekr","Add:Rd:Sudo:vico","Add:Rd:Sudo:Gif"}
 for k,v in pairs(list) do
 database:del(bot_id..''..v..text)
@@ -9709,7 +9709,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Manager:Photo"..test..msg.chat_id_, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ انحفـض ࢪدك يࢪوحي.🦇*")
+send(msg.chat_id_, msg.id_,"*⊀︰ انحفـض ࢪدك يࢪوحي.🍒*")
 return false  
 end  
 end
@@ -11360,19 +11360,19 @@ end
 end
 if text == "شنو رئيك بهاي" or text == "شنو رئيك بهايي" or text == "شنو رئيج بهايي" or text == "شنو رئيج بهاي" or text == "شنو رايك بهاي" or text == "شنو رايك بهايي" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"عـود ثكيلۿ وهيـه منجوه لجـوه وكول مڪال وائل..🦇","تحـط صوࢪ مو الـها وتصيـح اني بنيـه زࢪبا..🔫","احـسها موخـوش بنيه وعتـقد مࢪتبطه الـف مࢪا..🍼"}
+local texting = {"عـود ثكيلۿ وهيـه منجوه لجـوه وكول مڪال وائل..🍒","تحـط صوࢪ مو الـها وتصيـح اني بنيـه زࢪبا..🔫","احـسها موخـوش بنيه وعتـقد مࢪتبطه الـف مࢪا..🍼"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
 if text == "هينه" or text == "رزله" or text == "هيني" or text == "رزلي" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"سـࢪسح قنفذ هوه انتـه جـلب ڪ...🔫","لـو بيك خيـࢪࢪ مضـل ملطلـط نسـوان..🦇","لـو بيك خيـࢪࢪ ماحصࢪك فلان..🔫🤣","امك ڪحبۿ وابـوك كواد شتطلـ؏ انتـه طبيب اسنـان..🍼"}
+local texting = {"سـࢪسح قنفذ هوه انتـه جـلب ڪ...🔫","لـو بيك خيـࢪࢪ مضـل ملطلـط نسـوان..🍒","لـو بيك خيـࢪࢪ ماحصࢪك فلان..🔫🤣","امك ڪحبۿ وابـوك كواد شتطلـ؏ انتـه طبيب اسنـان..🍼"}
 send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
 if text == "مصه" or text == "بوسه" or text == "بوسي" or text == "مصي" then
 if not database:get(bot_id..'lock:add'..msg.chat_id_) then
-local texting = {"مووووووووواححح🍫","ماحـب بوس ڪلـبي شوف وائل..🦇","خـدڪ وصـخ دي..🔫 😂","بـوسني بلاول.🦇","ويـن.؟ تࢪيـده بشفـتڪ؟","ابنـحلووو داڪلك عيـب..🕸️","عـيب وائل ميقبـل..🎀","مــحح منشـفه..🥤"}send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
+local texting = {"مووووووووواححح🍫","ماحـب بوس ڪلـبي شوف وائل..🍒","خـدڪ وصـخ دي..🔫 😂","بـوسني بلاول.🍒","ويـن.؟ تࢪيـده بشفـتڪ؟","ابنـحلووو داڪلك عيـب..🕸️","عـيب وائل ميقبـل..🎀","مــحح منشـفه..🥤"}send(msg.chat_id_, msg.id_, ''..texting[math.random(#texting)]..'')
 end
 end
 if text == 'تفعيل الردود' and Manager(msg) then   
