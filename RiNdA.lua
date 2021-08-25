@@ -10818,7 +10818,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 ??𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
