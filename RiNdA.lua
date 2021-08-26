@@ -6115,18 +6115,18 @@ t = "\n ⊀︰ قائمة الجلاب الكروب \n●━━━━𝐑𝐀━
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
-t = t..""..k.."> الجلب [@"..username.."]\n"
+t = t..""..k.."> المرتي [@"..username.."]\n"
 else
-t = t..""..k.."> الجلب `"..v.."`\n"
+t = t..""..k.."> المرتي `"..v.."`\n"
 end
 end
 if #list == 0 then
-t = " ⊀︰ لا يوجد جلب"
+t = " ⊀︰ لا يوجد مرتي"
 end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("ارفع جلب") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
+if text == ("ارفع مرتي") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6144,7 +6144,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Motte:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n *⊀︰ ﭑݪعضوٍَ >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-local  statuss  = '\n ⊀︰ تم ارفع جلب في الكروب\n ⊀︰ تعال حبي اطيك عضمه'
+local  statuss  = '\n ⊀︰ تم رفـع الـضلـعه مࢪتي\n ⊀︰ اذا تحتكين ادچچ بطـل ولباس حمـزه.🦇'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -6152,7 +6152,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if (text == ("نزل جلب")) and msg.reply_to_message_id_ and Mod(msg) then
+if (text == ("نزل مرتي")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6166,7 +6166,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Motte:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n *⊀︰ ﭑݪعضوٍَ >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-status  = '\n ⊀︰ تم نزل جلب في الكروب\n ⊀︰ حبي رجع عضمه'
+status  = '\n ⊀︰ تم تنزيل الـضلـعه من مࢪتي\n ⊀︰ متت مطلـقه جاده صاࢪت خطـيه.🌶️'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -11866,7 +11866,7 @@ local Teext =[[
 ⊀︰ ارفع + نزل ← ساد
 ⊀︰ تاك لصخوله
 ●━━━━𝐑𝐀━━━━●
-⊀︰ ارفع + نزل ← جلب
+⊀︰ ارفع + نزل ← مرتي
 ⊀︰ تاك لجلاب
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ ارفع + نزل ← قرد 
@@ -11996,7 +11996,7 @@ local Teext =[[
 ⊀︰ الغاء العام
 ⊀︰ قائمه العام
 ⊀︰ مسح قائمه العام
-⊀︰ جلب نسخه الاحتياطيه
+⊀︰ مرتي نسخه الاحتياطيه
 ⊀︰ ارفع نسخه الاحتياطيه
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ المتجر 
@@ -12011,7 +12011,7 @@ local Teext =[[
 ⊀︰ اذاعه بالتوجيه خاص
 ⊀︰ اذاعه بالتثبيت
 ●━━━━𝐑𝐀━━━━●
-⊀︰ جلب نسخه البوت
+⊀︰ مرتي نسخه البوت
 ⊀︰ ارفع نسخه البوت
 ⊀︰ ضع عدد الاعضاء + العدد
 ⊀︰ ضع كليشه المطور
