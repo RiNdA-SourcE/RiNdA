@@ -10260,18 +10260,18 @@ end
 if text == 'تعطيل ردود الكروب' and Manager(msg) then  
 if not database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
 database:set(bot_id..'Reply:Manager'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل ردود الكروب*' 
+Text = '\n *⊀︰ تعطلـن ࢪدود الڪࢪوب يࢪوحي.🦇*' 
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل ردود الكروب*'
+Text = '\n *⊀︰ معطليـها قبل مـتجي بـࢪو.🦇*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'تفعيل ردود المطور' and Manager(msg) then   
 if database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
 database:del(bot_id..'Reply:Sudo'..msg.chat_id_)  
-Text = '\n *⊀︰ تم تفعيل ردود المطور*'
+Text = '\n *⊀︰ فعـلت ࢪدود المطـوࢪ بـࢪو.🦇*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تفعيل ردود المطور*'
+Text = '\n *⊀︰ شسالـفه هيه ڪساع يمعود مفعليها.🥤*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11613,7 +11613,7 @@ local Teext =[[
 ⊀︰ امر
 ⊀︰ ترتيب الاوامر
 ●━━━━𝐑𝐀━━━━●ٴ
-⊀︰ . [<𝙎𝙤𝙪𝙍𝙘𝙀🕸️𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
+⊀︰ . [<𝙎𝙤𝙪𝙍𝙘𝙀🕸️??𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
