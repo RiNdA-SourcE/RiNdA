@@ -10271,16 +10271,16 @@ if database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
 database:del(bot_id..'Reply:Sudo'..msg.chat_id_)  
 Text = '\n *⊀︰ فعـلت ࢪدود المطوࢪ بـࢪو*'
 else
-Text = '\n *⊀︰ شسالـفه هيه ڪساع يمعود مفعليها.*'
+Text = '\n ⊀︰ شسالـفه هيه ڪساع يمعود مفعليها.'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'تعطيل ردود المطور' and Manager(msg) then  
 if not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
 database:set(bot_id..'Reply:Sudo'..msg.chat_id_,true)   
-Text = '\n *⊀︰ تم تعطيل ردود المطور*' 
+Text = '\n ⊀︰ تعطـلت ࢪدود المطـوࢪ يࢪوحي' 
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل ردود المطور*'
+Text = '\n ⊀︰ معطليها منـزمان يحضيِّ لضل تلـح'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11613,7 +11613,7 @@ local Teext =[[
 ⊀︰ امر
 ⊀︰ ترتيب الاوامر
 ●━━━━𝐑𝐀━━━━●ٴ
-⊀︰ . [<𝙎𝙤𝙪𝙍𝙘𝙀🕸️𝙍𝙞𝙉??𝘼>](t.me/SourcE_RiNdA)
+⊀︰ . [<𝙎𝙤𝙪𝙍𝙘𝙀🕸️𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
