@@ -10271,16 +10271,16 @@ if database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
 database:del(bot_id..'Reply:Sudo'..msg.chat_id_)  
 Text = '\n *⊀︰ فعـلت ࢪدود المطوࢪ بـࢪو*'
 else
-Text = '\n *⊀︰ شسالـفه هيه ڪساع يمعود مفعليها.*'
+Text = '\n *⊀︰ شسالـفه هيه ڪساع يمعود مفعليها*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'تعطيل ردود المطور' and Manager(msg) then  
 if not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
 database:set(bot_id..'Reply:Sudo'..msg.chat_id_,true)   
-Text = '\n *⊀︰ تعطـلت ࢪدود المطـوࢪ يࢪوحي*' 
+Text = '\n *⊀︰ تعطل ࢪدود المـطوࢪ يڪلبي*' 
 else
-Text = '\n *⊀︰ معطليها منـزمان يحضيِّ لضل تلـح*'
+Text = '\n *⊀︰ معطل ࢪدود المطـوࢪ منزمان*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
