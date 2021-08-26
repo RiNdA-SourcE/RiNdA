@@ -10287,9 +10287,9 @@ end
 if text == 'تفعيل الايدي' and Manager(msg) then   
 if database:get(bot_id..'Bot:Id'..msg.chat_id_)  then
 database:del(bot_id..'Bot:Id'..msg.chat_id_) 
-Text = '\n *⊀︰ 🦇.تفـعل الايدي بـࢪو اڪتب ايدي وشوفه*' 
+Text = '\n *⊀︰ فعلـت الايدي يࢪوحي دز ايدي وشـوفه.🔫*' 
 else
-Text = '\n *⊀︰ مفعـليها لتلح حـبِ*'
+Text = '\n *⊀︰ بالتاكيد تم تفعيل الايدي*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
