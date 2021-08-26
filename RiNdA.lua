@@ -3938,7 +3938,7 @@ else
 CeckFile = "(×)"
 end
 NumFile = NumFile + 1
-TextS = TextS..'*'..NumFile.."→* {`"..name..'`} > '..CeckFile..'\n[-Information]('..Info..')\n'
+TextS = TextS..'*'..NumFile.."↬* {`"..name..'`} > '..CeckFile..'\n[-Information]('..Info..')\n'
 end
 send(msg.chat_id_, msg.id_,TextS..TextE) 
 end
@@ -3957,7 +3957,7 @@ if file_bot then
 io.close(file_bot)
 t = " ⊀︰ الملف > "..file.."\n ⊀︰ تم تعطيل ملف \n"
 else
-t = " ⊀︰ بالتاكيد تم تعطيل ملف → "..file.."\n"
+t = " ⊀︰ بالتاكيد تم تعطيل ملف ↬ "..file.."\n"
 end
 local json_file, res = https.request("https://raw.githubusercontent.com/RiNdA-SourcE/Files_RiNdA/main/File_Bot/"..file)
 if res == 200 then
@@ -3975,7 +3975,7 @@ local file = name_t[2]..'.lua'
 local file_bot = io.open("File_Bot/"..file,"r")
 if file_bot then
 io.close(file_bot)
-t = " ⊀︰ بالتاكيد تم تفعيل ملف → "..file.." \n"
+t = " ⊀︰ بالتاكيد تم تفعيل ملف ↬ "..file.." \n"
 else
 t = " ⊀︰ الملف > "..file.."\n ⊀︰ تم تفعيل ملف \n"
 end
@@ -9204,9 +9204,9 @@ local list = RiNdA.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..x.." → {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
+t = t..""..x.." ↬ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..x.." → {"..v.user_id_.."}\n"
+t = t..""..x.." ↬ {"..v.user_id_.."}\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -10051,16 +10051,16 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end --الكود حصري سورس ريندا يعني لو بكتهن راح اعرفك انت الـضلـ؏  ذتهن
-local t = "\n⊀︰ المستخدم ~ ["..User_id .."] يصيح المشرفين \n●━━━━𝐑𝐀━━━━●\n"
+local t = "\n⊀︰ الـضلـ؏ ["..User_id .."] يصيـحكم تعالـو ڪايز \n●━━━━𝐑𝐀━━━━●\n"
 k = 0
 for i,v in pairs(data.members_) do
 if bot_id ~= v.user_id_ then 
 k = k + 1
 local username = database:get(bot_id.."user:Name"..v.user_id_)
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..k.." → {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
+t = t..""..k.." ↬ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..k.." → {`"..v.user_id_.."`}\n"
+t = t..""..k.." ↬ {`"..v.user_id_.."`}\n"
 end
 end
 end
@@ -10231,10 +10231,10 @@ return false
 end
 if text == 'تفعيل المغادره' and Devmode(msg) then   
 if database:get(bot_id..'Left:Bot'..msg.chat_id_) then
-Text = ' ⊀︰ تم تفعيل مغادرة البوت'
+Text = ' ⊀︰ تفعـلت مغادࢪه بـࢪو انطي الامࢪ وتلڪاني بـࢪه'
 database:del(bot_id..'Left:Bot'..msg.chat_id_)  
 else
-Text = ' ⊀︰ بالتاكيد تم تفعيل مغادرة البوت'
+Text = ' ⊀︰ ولبـاس حمـزه مفعليها .🥢'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
