@@ -10240,20 +10240,20 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'تعطيل المغادره' and Devmode(msg) then  
 if not database:get(bot_id..'Left:Bot'..msg.chat_id_) then
-Text = ' ⊀︰ تم تعطيل مغادرة البوت'
+Text = ' ⊀︰ لو يجـي ابـوك بعد ماغادࢪ'
 database:set(bot_id..'Left:Bot'..msg.chat_id_,true)   
 else
-Text = ' ⊀︰ بالتاكيد تم تعطيل مغادرة البوت'
+Text = ' ⊀︰ هيه ڪسـاع غيـࢪ عطلناها ࢪب حلوو'
 end
 send(msg.chat_id_, msg.id_, Text) 
 end
 
 if text == 'تفعيل ردود الكروب' and Manager(msg) then   
 if database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
-Text = ' *⊀︰ تم تفعيل ردود الكروب*'
+Text = ' *⊀︰ تفعـلن ࢪدود الكࢪوب يعافيتي .🦇*'
 database:del(bot_id..'Reply:Manager'..msg.chat_id_)  
 else
-Text = ' *⊀︰ تم تفعيل ردود الكروب*'
+Text = ' *⊀︰ تفعلـن ࢪدود الڪࢪوب يڪلـبي.🦇*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
