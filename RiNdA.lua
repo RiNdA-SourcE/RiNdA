@@ -6045,18 +6045,18 @@ t = "\n ⊀︰ قائمة صخوله الكروب \n●━━━━𝐑𝐀━�
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
-t = t..""..k.."> الصخل [@"..username.."]\n"
+t = t..""..k.."> الساد [@"..username.."]\n"
 else
-t = t..""..k.."> الصخل `"..v.."`\n"
+t = t..""..k.."> الساد `"..v.."`\n"
 end
 end
 if #list == 0 then
-t = " ⊀︰ لا يوجد صخل"
+t = " ⊀︰ لا يوجد ساد"
 end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("ارفع صخل") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
+if text == ("ارفع ساد") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6074,7 +6074,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Sakl:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n *⊀︰ ﭑݪعضوٍَ >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-local  statuss  = '\n ⊀︰ تم ارفع المتهم صخل بالكروب\n ⊀︰ الان اصبح صخل الكروب'
+local  statuss  = '\n ⊀︰ تم رفـع الـضلـ؏ُ سـاد\n ⊀︰ خطـيه مضـࢪوب بوࢪي. 🦇'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -6083,7 +6083,7 @@ return false
 end
 
 
-if (text == ("نزل صخل")) and msg.reply_to_message_id_ and Mod(msg) then
+if (text == ("نزل ساد")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6097,7 +6097,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Sakl:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n *⊀︰ ﭑݪعضوٍَ >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-status  = '\n ⊀︰ تم نزل ﭑݪعضوٍَ صخل\n ⊀︰ ارجع للبيتكم حبي'
+status  = '\n ⊀︰ تم تنـزيل الـضلـ؏ُ سـاد\n ⊀︰ صـاࢪ هبـي اخت تڪࢪط وامس يبجي.🍼'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -11863,7 +11863,7 @@ local Teext =[[
 ⊀︰ ارفع + نزل ← مطي 
 ⊀︰ تاك للمطايه
 ●━━━━𝐑𝐀━━━━●
-⊀︰ ارفع + نزل ← صخل
+⊀︰ ارفع + نزل ← ساد
 ⊀︰ تاك لصخوله
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ ارفع + نزل ← جلب
