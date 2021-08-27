@@ -9246,7 +9246,7 @@ if database:sismember(bot_id..'Special:User'..msg.chat_id_, result.id_) then
 vip = "مميز ،" else vip = ""
 end
 if Can_or_NotCan(result.id_,msg.chat_id_) ~= false then
-send(msg.chat_id_, msg.id_,"\n⊀︰ تـم نزلت السࢪبوت من ڪل الࢪتب.🦇 \n⊀︰ { "..dev..""..crr..""..cr..""..own..""..mod..""..mn..""..vip.." } \n")
+send(msg.chat_id_, msg.id_,"\n⊀︰ تـم نزلت السࢪبوت من ڪل الࢪتب \n⊀︰ { "..dev..""..crr..""..cr..""..own..""..mod..""..mn..""..vip.." } \n")
 else
 send(msg.chat_id_, msg.id_,"\n⊀︰ يمـعود تࢪا هوه عضـو شتنزلـهہ بعد\n")
 end
