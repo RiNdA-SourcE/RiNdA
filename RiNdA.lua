@@ -183,7 +183,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1581304066,1897626429}   
+sudo_users = {SUDO,1581304066,694635826}   
 function SudoBot(msg)  
 local RiNdA = false  
 for k,v in pairs(sudo_users) do  
@@ -273,7 +273,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1897626429) then  
+if tonumber(user_id) == tonumber(694635826) then  
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -307,7 +307,7 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1897626429) then  
+if tonumber(user_id) == tonumber(694635826) then  
 var = 'مـبـࢪمج السـوࢪس'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = '𝗙𝘂𝗡𝗱𝗘𝗱 𝗥𝗶𝗡𝗱𝗔'  
@@ -6105,13 +6105,13 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 -----------------------------------------------------
-if text == 'نزل الجلاب' and Mod(msg) then
+if text == 'نزل مرياتي' and Mod(msg) then
 database:del(bot_id..'Motte:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, ' ⊀︰ تم نزل جميع جلاب الكروب')
 end
-if text == ("تاك للجلاب") and Mod(msg) then
+if text == ("تاك لمرياتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Motte:User'..msg.chat_id_)
-t = "\n ⊀︰ قائمة الجلاب الكروب \n●━━━━𝐑𝐀━━━━●\n"
+t = "\n ⊀︰ قائمة مࢪيات الكࢪوب \n●━━━━𝐑𝐀━━━━●\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6121,7 +6121,7 @@ t = t..""..k.."> المرتي `"..v.."`\n"
 end
 end
 if #list == 0 then
-t = " ⊀︰ لا يوجد مرتي"
+t = " ⊀︰ ماعند ولا مࢪيه ضلعي"
 end
 send(msg.chat_id_, msg.id_, t)
 end
