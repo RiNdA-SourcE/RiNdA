@@ -10821,9 +10821,9 @@ if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↬ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ معرفك ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜ '..rtpa..'\n ⊀︰ ࢪسائلك ↜ '..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ نقـاطك ↜ '..NUMPGAME..']\n')
 else
-send(msg.chat_id_, msg.id_, '\n ⊀︰ الصوره < ليس لديك صور في حسابك'..'[\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↬ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_, '\n ⊀︰ الصوره < ليس لديك صور في حسابك'..'[\n ⊀︰ آيديك ↜ '..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜ '..rtpa..'\n ⊀︰ ࢪسائلك ↜ '..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ نقـاطك ↜ '..NUMPGAME..']\n')
 end 
 end
 end
@@ -10841,7 +10841,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↬ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↜ '..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜ '..rtpa..'\n ⊀︰ ࢪسائلك ↜ '..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ نقـاطك ↜ '..NUMPGAME..']\n')
 end
 end
 
@@ -10881,9 +10881,9 @@ return false
 end
 local Num = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..msg.sender_user_id_) or 0) 
 if Num == 0 then 
-Text = '* ⊀︰ ما ضـايف ولا عضـو *'
+Text = '* ⊀︰ تـحجي صدك ولا عضـو ضايـف.*'
 else
-Text = '* ⊀︰ عـدد جهـاتك يحـلوو..🕸️ >* { '..Num..' } '
+Text = '* ⊀︰ جهاتك ضايفـهم ضلعـي >* { '..Num..' } '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11613,7 +11613,7 @@ local Teext =[[
 ⊀︰ امر
 ⊀︰ ترتيب الاوامر
 ●━━━━𝐑𝐀━━━━●ٴ
-⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🕸️𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
+⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🕸️??𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
