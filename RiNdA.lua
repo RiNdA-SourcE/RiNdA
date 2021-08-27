@@ -9709,7 +9709,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Manager:Photo"..test..msg.chat_id_, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"⊀︰ تـم حفـضت  ﭑݪࢪد يࢪوحي")
+send(msg.chat_id_, msg.id_,"⊀︰ ")
 return false  
 end  
 end
@@ -9723,7 +9723,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"⊀︰ دز ﭑݪࢪد تࢪيد اضـيفه يࢪوحي")
+send(msg.chat_id_, msg.id_,"*⊀︰ دز ﭑݪࢪد تࢪيد اضـيفه يࢪوحي*")
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
