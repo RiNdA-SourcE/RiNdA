@@ -8873,7 +8873,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil)
 end  
 end
 if text == "مسح رسايلي" or text == "مسح رسائلي" or text == "حذف رسايلي" or text == "حذف رسائلي" then  
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم مسح 𝖬𝗌𝖦𝖲*')  
+send(msg.chat_id_, msg.id_,'* ⊀︰ تم مسح ࢪسائلك*')  
 database:del(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) 
 end
 if text == "رسايلي" or text == "رسائلي" or text == "msg" then 
@@ -8886,7 +8886,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,'* ⊀︰ عدد 𝖬𝗌𝖦𝖲 > { '..database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_)..'}*' ) 
+send(msg.chat_id_, msg.id_,'* ⊀︰ عدد ࢪسائلك > { '..database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_)..'}*' ) 
 end 
 if text == 'تفعيل الاذاعه' and Devmode(msg) then  
 if database:get(bot_id..'Bc:Bots') then
@@ -10818,12 +10818,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↬ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..']\n')
 else
-send(msg.chat_id_, msg.id_, '\n ⊀︰ الصوره < ليس لديك صور في حسابك'..'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_, '\n ⊀︰ الصوره < ليس لديك صور في حسابك'..'[\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↬ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..']\n')
 end 
 end
 end
@@ -10841,7 +10841,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n ⊀︰ 𝗂𝖣 ↬'..msg.sender_user_id_..'\n ⊀︰ 𝖴𝖲𝖾𝖱 𝖭𝖺𝖬𝖾 ↬ '..username..'\n ⊀︰ 𝖲𝗍𝖺𝖲𝗍 ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ 𝖯𝗈𝗐𝖾𝖱 ↬'..rtpa..'\n ⊀︰ 𝖬𝗌𝖦𝖲 ↬'..Msguser..'\n ⊀︰ 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 ↬ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↬ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↬'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↬ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↬'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↬'..rtpa..'\n ⊀︰ ࢪسائلك ↬'..Msguser..'\n ⊀︰ بعࢪاتك ↬ '..edit..'\n ⊀︰ نقـاطك ↬ '..NUMPGAME..']\n')
 end
 end
 
@@ -10862,7 +10862,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == "مسح سحكاتي" or text == "حذف سحكاتي" then  
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم مسح 𝗆𝗂𝖲𝗍𝖺𝖪𝖤𝗌 يلعـارر..🕸️*'  )  
+send(msg.chat_id_, msg.id_,'* ⊀︰ تم مسح بعࢪاتك يلعـارر..🕸️*'  )  
 database:del(bot_id..'edits'..msg.chat_id_..msg.sender_user_id_)
 end
 if text == "مسح جهاتي" or text == "حذف جهاتي" then  
