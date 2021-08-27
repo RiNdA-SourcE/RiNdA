@@ -10881,9 +10881,9 @@ return false
 end
 local Num = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..msg.sender_user_id_) or 0) 
 if Num == 0 then 
-Text = '* ⊀︰ تـحجي صدك ولا عضـو ضايـف.*'
+Text = '* ⊀︰ ما ضـايف ولا عضـو *'
 else
-Text = '* ⊀︰ جهاتك ضايفـهم ضلعـي >* { '..Num..' } '
+Text = '* ⊀︰ عـدد جهـاتك يحـلوو..🕸️ >* { '..Num..' } '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11613,7 +11613,7 @@ local Teext =[[
 ⊀︰ امر
 ⊀︰ ترتيب الاوامر
 ●━━━━𝐑𝐀━━━━●ٴ
-⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🕸️??𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
+⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🕸️𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
