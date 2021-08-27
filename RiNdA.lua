@@ -9246,9 +9246,9 @@ if database:sismember(bot_id..'Special:User'..msg.chat_id_, result.id_) then
 vip = "مميز ،" else vip = ""
 end
 if Can_or_NotCan(result.id_,msg.chat_id_) ~= false then
-send(msg.chat_id_, msg.id_,"\n⊀︰ تم نزل الشخص من الرتب التاليه \n⊀︰ { "..dev..""..crr..""..cr..""..own..""..mod..""..mn..""..vip.." } \n")
+send(msg.chat_id_, msg.id_,"\n⊀︰ تـم نزلت السࢪبوت من ڪل الࢪتب.🦇 \n⊀︰ { "..dev..""..crr..""..cr..""..own..""..mod..""..mn..""..vip.." } \n")
 else
-send(msg.chat_id_, msg.id_,"\n⊀︰ عذرا ﭑݪعضوٍَ لايملك رتبه \n")
+send(msg.chat_id_, msg.id_,"\n⊀︰ يمـعود تࢪا هوه عضـو شتنزلـهہ بعد\n")
 end
 if tonumber(msg.sender_user_id_) == true then
 database:srem(bot_id.."Sudo:User", result.id_)
