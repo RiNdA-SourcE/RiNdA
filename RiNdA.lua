@@ -3938,7 +3938,7 @@ else
 CeckFile = "(×)"
 end
 NumFile = NumFile + 1
-TextS = TextS..'*'..NumFile.."↜* {`"..name..'`} > '..CeckFile..'\n[-Information]('..Info..')\n'
+TextS = TextS..'*'..NumFile.."↬* {`"..name..'`} > '..CeckFile..'\n[-Information]('..Info..')\n'
 end
 send(msg.chat_id_, msg.id_,TextS..TextE) 
 end
@@ -3957,7 +3957,7 @@ if file_bot then
 io.close(file_bot)
 t = " ⊀︰ الملف > "..file.."\n ⊀︰ تم تعطيل ملف \n"
 else
-t = " ⊀︰ بالتاكيد تم تعطيل ملف ↜ "..file.."\n"
+t = " ⊀︰ بالتاكيد تم تعطيل ملف ↬ "..file.."\n"
 end
 local json_file, res = https.request("https://raw.githubusercontent.com/RiNdA-SourcE/Files_RiNdA/main/File_Bot/"..file)
 if res == 200 then
@@ -3975,7 +3975,7 @@ local file = name_t[2]..'.lua'
 local file_bot = io.open("File_Bot/"..file,"r")
 if file_bot then
 io.close(file_bot)
-t = " ⊀︰ بالتاكيد تم تفعيل ملف ↜ "..file.." \n"
+t = " ⊀︰ بالتاكيد تم تفعيل ملف ↬ "..file.." \n"
 else
 t = " ⊀︰ الملف > "..file.."\n ⊀︰ تم تفعيل ملف \n"
 end
@@ -8152,7 +8152,7 @@ end
 if text == 'المطور' or text == 'مطور' then
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)  
 local msg_id = msg.id_/2097152/0.5
-Text = "*⊀︰ 𝖣𝖾𝗏 𝖭𝖺𝗆𝖤 ↜ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⊀︰ 𝖣𝖾𝗏 𝖴𝖲𝖺𝖱 ↜* [@"..result.username_.."]"
+Text = "*⊀︰ 𝖣𝖾𝗏 𝖭𝖺𝗆𝖤 ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⊀︰ 𝖣𝖾𝗏 𝖴𝖲𝖺𝖱 ↬* [@"..result.username_.."]"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
@@ -8453,15 +8453,15 @@ local Text= [[
 ⊀︰ اࢪسـل كلـيشه الايـدي ..🦇
  ⊀︰ تـڪدࢪ تضـيف من هذني الاوامࢪ جوه وتࢪتـب
  ⊀︰ واذا مالڪ خلڪ اڪـتب تغـيࢪ الايدي وطز بلخلييۿ
-🥤⌯↜`#rdphoto` ↫ تعلـيق الصـوࢪه
-🥤⌯↜`#username` ↫ اسـمك
-🥤⌯↜`#msgs` ↫ عـدد ࢪسـائل
-🥤⌯↜`#photos` ↫ عدد صـوࢪ
-🥤⌯↜`#id` ↫ ايـديك
-🥤⌯↜`#auto` ↫ تفاعل 
-🥤⌯↜`#stast` ↫ موقع  
-🥤⌯↜`#edit` ↫ السحكات
-🥤⌯↜`#game` ↫ النقاط
+🥤⌯↬`#rdphoto` ↫ تعلـيق الصـوࢪه
+🥤⌯↬`#username` ↫ اسـمك
+🥤⌯↬`#msgs` ↫ عـدد ࢪسـائل
+🥤⌯↬`#photos` ↫ عدد صـوࢪ
+🥤⌯↬`#id` ↫ ايـديك
+🥤⌯↬`#auto` ↫ تفاعل 
+🥤⌯↬`#stast` ↫ موقع  
+🥤⌯↬`#edit` ↫ السحكات
+🥤⌯↬`#game` ↫ النقاط
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false  
@@ -9204,9 +9204,9 @@ local list = RiNdA.members_
 for k, v in pairs(list) do
 x = x + 1
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..x.." ↜ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
+t = t..""..x.." ↬ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..x.." ↜ {"..v.user_id_.."}\n"
+t = t..""..x.." ↬ {"..v.user_id_.."}\n"
 end
 end
 send(msg.chat_id_,msg.id_,t)
@@ -10058,9 +10058,9 @@ if bot_id ~= v.user_id_ then
 k = k + 1
 local username = database:get(bot_id.."user:Name"..v.user_id_)
 if database:get(bot_id..'user:Name'..v.user_id_) then
-t = t..""..k.." ↜ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
+t = t..""..k.." ↬ {[@"..database:get(bot_id..'user:Name'..v.user_id_).."]}\n"
 else
-t = t..""..k.." ↜ {`"..v.user_id_.."`}\n"
+t = t..""..k.." ↬ {`"..v.user_id_.."`}\n"
 end
 end
 end
@@ -10818,12 +10818,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↜ '..NUMPGAME..'\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, mode.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜'..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜'..edit..'\n ⊀︰ سحكاتك ↜'..NUMPGAME..'\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ معرفك < '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↜ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ معرفك ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜'..edit..'\n ⊀︰ سحكاتك ↜'..NUMPGAME..']\n')
 else
-send(msg.chat_id_, msg.id_, '\n ⊀︰ الصوره < ليس لديك صور في حسابك'..'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↜ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_, '\n ⊀︰ الصوره < ليس لديك صور في حسابك'..'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜'..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜'..edit..'\n ⊀︰ سحكاتك ↜'..NUMPGAME..']\n')
 end 
 end
 end
@@ -10841,7 +10841,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜ '..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜ '..edit..'\n ⊀︰ 𝖣𝗈𝗍 ↜ '..NUMPGAME..']\n')
+send(msg.chat_id_, msg.id_,'[\n ⊀︰ آيديك ↜'..msg.sender_user_id_..'\n ⊀︰ يوزࢪك ضلـ؏ ↜'..username..'\n ⊀︰ ࢪتبتك ضلـ؏ ↜'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n ⊀︰ مكانِك ↜'..rtpa..'\n ⊀︰ ࢪسائلك ↜'..Msguser..'\n ⊀︰ بعࢪاتك ↜'..edit..'\n ⊀︰ سحكاتك ↜'..NUMPGAME..']\n')
 end
 end
 
