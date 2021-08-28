@@ -8198,7 +8198,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_,msg.id_,"* ⊀︰ تم مسـح الرابـط..*")           
+send(msg.chat_id_,msg.id_,"* ⊀︰ تم مسـح الرابـط..🕸️*")           
 database:del(bot_id.."Private:Group:Link"..msg.chat_id_) 
 return false      
 end
