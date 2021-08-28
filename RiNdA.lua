@@ -9757,7 +9757,7 @@ database:del(bot_id.."Add:Rd:Manager:Audio"..text..msg.chat_id_)
 database:sadd(bot_id.."List:Manager"..msg.chat_id_.."", text)
 return false end
 end
-if text and text:match("^(.*)$") then
+if text and text:match("^(.حفـضت الࢪد يࢪوحي*)$") then
 if database:get(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_.."") == "true2" then
 send(msg.chat_id_, msg.id_,"*⊀︰ تم ازالة الرد من قائمه الردود*")
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
