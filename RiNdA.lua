@@ -6184,18 +6184,18 @@ t = "\n ⊀︰ قائمة القروده الكروب \n●━━━━𝐑𝐀�
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
-t = t..""..k.."> القرد [@"..username.."]\n"
+t = t..""..k.."> الزوجي [@"..username.."]\n"
 else
-t = t..""..k.."> القرد `"..v.."`\n"
+t = t..""..k.."> الزوجي `"..v.."`\n"
 end
 end
 if #list == 0 then
-t = " ⊀︰ لا يوجد قرد"
+t = " ⊀︰ لا يوجد زوجي"
 end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("ارفع قرد") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
+if text == ("ارفع زوجي") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6213,7 +6213,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Motee:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n *⊀︰ ﭑݪعضوٍَ >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-local  statuss  = '\n ⊀︰ تم ارفع قرد في الكروب\n ⊀︰ تعال حبي استلم موزه'
+local  statuss  = '\n ⊀︰ تم رفـع الـضلـ؏ُ زوجـيِ\n ⊀︰ صاࢪ زوجج بلعافـيه بس يزحف دچي. 🦇'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -6221,7 +6221,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if (text == ("نزل قرد")) and msg.reply_to_message_id_ and Mod(msg) then
+if (text == ("نزل زوجي")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6235,7 +6235,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Motee:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n *⊀︰ ﭑݪعضوٍَ >* ['..data.first_name_..'](t.me/'..(data.username_ or 'SourcE_RiNdA')..')'
-status  = '\n ⊀︰ تم نزل قرد من الكروب\n ⊀︰ رجع موزه حبي'
+status  = '\n ⊀︰ تم تنـزيل الـضلـ؏ُ مـن زوجـي\n ⊀︰ صاࢪࢪ مطـلق الاخ ࢪوح دوࢪ ثلاثينيه جاده '
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -11869,7 +11869,7 @@ local Teext =[[
 ⊀︰ ارفع + نزل ← مرتي
 ⊀︰ تاك لجلاب
 ●━━━━𝐑𝐀━━━━●
-⊀︰ ارفع + نزل ← قرد 
+⊀︰ ارفع + نزل ← زوجي 
 ⊀︰ تاك لقروده
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ ارفع + نزل ← بقره
