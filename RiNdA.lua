@@ -10520,7 +10520,7 @@ return false
 end
 end,nil)   
 else
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم تعطيل امر اطردني*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ ڪابتن امـࢪ اطࢪدني معطـل شوف واحد يشحتك*') 
 end
 end
 if text and text:match("^صيح (.*)$") then
