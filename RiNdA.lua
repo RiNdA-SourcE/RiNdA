@@ -8138,7 +8138,6 @@ end
 end
 if text == "تفعيل رابط" or text == 'تفعيل الرابط' then
 if Mod(msg) then  
-if not database:get(bot_id.."Link_Group:status"..msg.chat_id_) then
 database:set(bot_id.."Link_Group:status"..msg.chat_id_,true) 
 send(msg.chat_id_, msg.id_,"*⊀︰ تـم تفعيل ࢪابـط الڪروب..🕸️*") 
 return false  
@@ -8199,7 +8198,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_,msg.id_,"* ⊀︰ تم مسـح الرابـط..🕸️*")           
+send(msg.chat_id_,msg.id_,"* ⊀︰ تم مسـح الرابـط..*")           
 database:del(bot_id.."Private:Group:Link"..msg.chat_id_) 
 return false      
 end
