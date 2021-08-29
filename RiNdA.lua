@@ -890,7 +890,7 @@ local keyboard = {
 {'⊀︰ . تحديثات سورس ريندا ⊀︰ .'},
 {'المطورين ⊀︰ .','الثانويين ⊀︰ .'},
 {'المشتركين ⊀︰ .','الكروبات ⊀︰ .'},
-{'تغير ࢪساله الاشتراك','حذف ࢪساله الاشتراك ⊀︰ .','تغير الاشتراك'},
+{'تغير رساله الاشتراك','حذف رساله الاشتراك ⊀︰ .','تغير الاشتراك'},
 {'ضع كليشه ستارت ⊀︰ .','حذف كليشه ستارت ⊀︰ .'},
 {'اذاعه ⊀︰ .','اذاعه خاص ⊀︰ .','اذاعه بالتثبيت ⊀︰ .'},
 {'اذاعه بالتوجيه ⊀︰ .','اذاعه بالتوجيه خاص ⊀︰ .'},
@@ -962,35 +962,35 @@ end
 if text then    
 send(id_user,msg.id_,text)    
 local Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..id_user..')'
-local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الࢪساله اليه'
+local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الرساله اليه'
 sendText(SUDO,Text,msg.id_/2097152/0.5,'md')
 return false
 end    
 if msg.content_.ID == 'MessageSticker' then    
 sendSticker(id_user, msg.id_, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 local Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..id_user..')'
-local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الࢪساله اليه'
+local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الرساله اليه'
 sendText(SUDO,Text,msg.id_/2097152/0.5,'md')
 return false
 end      
 if msg.content_.ID == 'MessagePhoto' then    
 sendPhoto(id_user, msg.id_, 0, 1, nil,msg.content_.photo_.sizes_[0].photo_.persistent_id_,(msg.content_.caption_ or ''))    
 local Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..id_user..')'
-local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الࢪساله اليه'
+local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الرساله اليه'
 sendText(SUDO,Text,msg.id_/2097152/0.5,'md')
 return false
 end     
 if msg.content_.ID == 'MessageAnimation' then    
 sendDocument(id_user, msg.id_, 0, 1,nil, msg.content_.animation_.animation_.persistent_id_)    
 local Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..id_user..')'
-local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الࢪساله اليه'
+local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الرساله اليه'
 sendText(SUDO,Text,msg.id_/2097152/0.5,'md')
 return false
 end     
 if msg.content_.ID == 'MessageVoice' then    
 sendVoice(id_user, msg.id_, 0, 1, nil, msg.content_.voice_.voice_.persistent_id_)    
 local Name = '['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..id_user..')'
-local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الࢪساله اليه'
+local Text = ' ⊀︰ المستخدم > '..Name..'\n ⊀︰ تم ارسال الرساله اليه'
 sendText(SUDO,Text,msg.id_/2097152/0.5,'md')
 return false
 end     
@@ -1316,7 +1316,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -1345,7 +1345,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -1369,7 +1369,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -1394,7 +1394,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2178,7 +2178,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2228,7 +2228,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2267,7 +2267,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2332,7 +2332,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2345,7 +2345,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2360,14 +2360,14 @@ database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_,
 send(msg.chat_id_, msg.id_, ' ⊀︰ حسنآ ارسل لي معرف القناة')
 return false  
 end
-if text and text:match("^تغير ࢪساله الاشتراك$") and Devmode(msg) then  
+if text and text:match("^تغير رساله الاشتراك$") and Devmode(msg) then  
 database:setex(bot_id.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, ' ⊀︰ حسنآ ارسل لي النص الذي تريده')
 return false  
 end
-if text == "حذف ࢪساله الاشتراك ⊀︰ ." and Devmode(msg) then  
+if text == "حذف رساله الاشتراك ⊀︰ ." and Devmode(msg) then  
 database:del(bot_id..'text:ch:user')
-send(msg.chat_id_, msg.id_, " ⊀︰ تم مسح ࢪساله الاشتراك ")
+send(msg.chat_id_, msg.id_, " ⊀︰ تم مسح رساله الاشتراك ")
 return false  
 end
 if text and text:match("^خلي قناة الاشتراك ⊀︰ .$") and Devmode(msg) then  
@@ -2649,7 +2649,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2670,7 +2670,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -2724,7 +2724,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3584,7 +3584,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3616,7 +3616,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3653,7 +3653,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3684,7 +3684,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3715,7 +3715,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3752,7 +3752,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3784,7 +3784,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3807,7 +3807,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -3833,7 +3833,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4004,7 +4004,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4025,7 +4025,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4054,7 +4054,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4077,7 +4077,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4099,7 +4099,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ لا ����ستطيع استخدام البوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ لا ����ستطيع استخدام البوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4124,7 +4124,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4187,7 +4187,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4209,7 +4209,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4238,7 +4238,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4261,7 +4261,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4283,7 +4283,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4308,7 +4308,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4480,7 +4480,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4502,7 +4502,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4531,7 +4531,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4554,7 +4554,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4576,7 +4576,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4601,7 +4601,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4681,7 +4681,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4702,7 +4702,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4731,7 +4731,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4753,7 +4753,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4775,7 +4775,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4800,7 +4800,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4860,7 +4860,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4882,7 +4882,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4912,7 +4912,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4935,7 +4935,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4957,7 +4957,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -4982,7 +4982,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5147,7 +5147,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5173,7 +5173,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5206,7 +5206,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5233,7 +5233,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5255,7 +5255,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5280,7 +5280,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5339,7 +5339,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5365,7 +5365,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5398,7 +5398,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5425,7 +5425,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5447,7 +5447,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5472,7 +5472,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5496,7 +5496,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5540,7 +5540,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5592,7 +5592,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5675,7 +5675,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5701,7 +5701,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5735,7 +5735,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5763,7 +5763,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5785,7 +5785,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5810,7 +5810,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5855,7 +5855,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5881,7 +5881,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5924,7 +5924,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5950,7 +5950,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5993,7 +5993,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6019,7 +6019,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6062,7 +6062,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6089,7 +6089,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6132,7 +6132,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6158,7 +6158,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6201,7 +6201,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6227,7 +6227,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6270,7 +6270,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6296,7 +6296,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6339,7 +6339,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6365,7 +6365,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6408,7 +6408,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6434,7 +6434,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6477,7 +6477,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6503,7 +6503,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6546,7 +6546,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6572,7 +6572,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6615,7 +6615,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6641,7 +6641,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6683,7 +6683,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6769,7 +6769,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6815,7 +6815,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6843,7 +6843,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6874,7 +6874,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6924,7 +6924,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -6958,7 +6958,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7070,7 +7070,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7105,7 +7105,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7127,7 +7127,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7153,7 +7153,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7177,7 +7177,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7208,7 +7208,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7319,7 +7319,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7351,7 +7351,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7374,7 +7374,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7400,7 +7400,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7424,7 +7424,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7460,7 +7460,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7493,7 +7493,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -7530,7 +7530,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8008,7 +8008,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8018,12 +8018,12 @@ return false
 end
 tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.reply_to_message_id_,disable_notification_ = 1},function(arg,data) 
 if data.ID == "Ok" then
-send(msg.chat_id_, msg.id_," ⊀︰ تم تثبيت الࢪساله")   
+send(msg.chat_id_, msg.id_," ⊀︰ تم تثبيت الرساله")   
 database:set(bot_id..'Pin:Id:Msg'..msg.chat_id_,msg.reply_to_message_id_)
 elseif data.code_ == 6 then
 send(msg.chat_id_,msg.id_," ⊀︰ انا لست ادمن هنا يرجى ترقيتي ادمن ثم اعد المحاوله")  
 elseif data.message_ == "CHAT_NOT_MODIFIED" then
-send(msg.chat_id_,msg.id_," ⊀︰ لا توجد ࢪساله مثبته")  
+send(msg.chat_id_,msg.id_," ⊀︰ لا توجد رساله مثبته")  
 elseif data.message_ == "CHAT_ADMIN_REQUIRED" then
 send(msg.chat_id_,msg.id_," ⊀︰ ليست لدي صلاحية التثبيت يرجى التحقق من الصلاحيات")  
 end
@@ -8035,7 +8035,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8045,12 +8045,12 @@ return false
 end
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100','')},function(arg,data) 
 if data.ID == "Ok" then
-send(msg.chat_id_, msg.id_," ⊀︰ تم الغاء تثبيت الࢪساله")   
+send(msg.chat_id_, msg.id_," ⊀︰ تم الغاء تثبيت الرساله")   
 database:del(bot_id..'Pin:Id:Msg'..msg.chat_id_)
 elseif data.code_ == 6 then
 send(msg.chat_id_,msg.id_," ⊀︰ انا لست ادمن هنا يرجى ترقيتي ادمن ثم اعد المحاوله")  
 elseif data.message_ == "CHAT_NOT_MODIFIED" then
-send(msg.chat_id_,msg.id_," ⊀︰ لا توجد ࢪساله مثبته")  
+send(msg.chat_id_,msg.id_," ⊀︰ لا توجد رساله مثبته")  
 elseif data.message_ == "CHAT_ADMIN_REQUIRED" then
 send(msg.chat_id_,msg.id_," ⊀︰ ليست لدي صلاحية التثبيت يرجى التحقق من الصلاحيات")  
 end
@@ -8062,7 +8062,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8078,7 +8078,7 @@ database:del(bot_id..'Pin:Id:Msg'..msg.chat_id_)
 elseif data.code_ == 6 then
 send(msg.chat_id_,msg.id_," ⊀︰ انا لست ادمن هنا يرجى ترقيتي ادمن ثم اعد المحاوله")  
 elseif data.message_ == "CHAT_NOT_MODIFIED" then
-send(msg.chat_id_,msg.id_," ⊀︰ لا توجد ࢪساله مثبته")  
+send(msg.chat_id_,msg.id_," ⊀︰ لا توجد رساله مثبته")  
 elseif data.message_ == "CHAT_ADMIN_REQUIRED" then
 send(msg.chat_id_,msg.id_," ⊀︰ ليست لدي صلاحية التثبيت يرجى التحقق من الصلاحيات")  
 end
@@ -8101,7 +8101,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8194,7 +8194,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8203,7 +8203,7 @@ database:del(bot_id.."Private:Group:Link"..msg.chat_id_)
 return false      
 end
 end
-if text and text:match("^خلي صوره") and Mod(msg) and msg.reply_to_message_id_ == 0 then  
+if text and text:match("^ضع صوره") and Mod(msg) and msg.reply_to_message_id_ == 0 then  
 database:set(bot_id..'Change:Chat:Photo'..msg.chat_id_..':'..msg.sender_user_id_,true) 
 send(msg.chat_id_, msg.id_,' ⊀︰ دࢪ࣪ صـوࢪه تـريد اضيفها') 
 return false
@@ -8215,7 +8215,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8256,7 +8256,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8270,7 +8270,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8333,21 +8333,21 @@ if b.content_.sticker_ then
 local idsticker = b.content_.sticker_.set_id_
 database:sadd(bot_id.."filtersteckr"..msg.chat_id_,idsticker)
 text = 'الملصق'
-send(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم اࢪسالها مجددا')  
+send(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
 return false
 end
 if b.content_.ID == "MessagePhoto" then
 local photo = b.content_.photo_.id_
 database:sadd(bot_id.."filterphoto"..msg.chat_id_,photo)
 text = 'الصوره'
-send(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم اࢪسالها مجددا')  
+send(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
 return false
 end
 if b.content_.animation_.animation_ then
 local idanimation = b.content_.animation_.animation_.persistent_id_
 database:sadd(bot_id.."filteranimation"..msg.chat_id_,idanimation)
 text = 'المتحركه'
-send(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم اࢪسالها مجددا')  
+send(msg.chat_id_, msg.id_,textt..'( '..text..' ) بنجاح لن يتم ارسالها مجددا')  
 return false
 end
 end
@@ -8444,7 +8444,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8473,7 +8473,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8501,7 +8501,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8533,7 +8533,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8585,7 +8585,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8671,7 +8671,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8687,7 +8687,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8733,7 +8733,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8768,7 +8768,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8803,7 +8803,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8841,7 +8841,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8882,7 +8882,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8930,7 +8930,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8948,7 +8948,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -8968,12 +8968,12 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 if num > 1000 then 
-send(msg.chat_id_, msg.id_,'⊀︰ تستطيع التنظيف 1000 ࢪساله كحد اقصى') 
+send(msg.chat_id_, msg.id_,'⊀︰ تستطيع التنظيف 1000 رساله كحد اقصى') 
 return false  
 end  
 local msgm = msg.id_
@@ -9063,7 +9063,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9101,7 +9101,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9119,7 +9119,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9137,7 +9137,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9155,7 +9155,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9170,7 +9170,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9218,7 +9218,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9300,7 +9300,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9409,7 +9409,7 @@ db = "بصمه 📢"
 elseif database:get(bot_id.."Add:Rd:Sudo:stekr"..v) then
 db = "ملصق 🏷"
 elseif database:get(bot_id.."Add:Rd:Sudo:Text"..v) then
-db = "ࢪساله ✉"
+db = "رساله ✉"
 elseif database:get(bot_id.."Add:Rd:Sudo:Photo"..v) then
 db = "صوره 👤"
 elseif database:get(bot_id.."Add:Rd:Sudo:Video"..v) then
@@ -9481,7 +9481,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9495,7 +9495,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9606,7 +9606,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9719,7 +9719,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -9733,11 +9733,11 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ دز الـࢪد يࢪوحي حتـه حذفـهِ.*")
+send(msg.chat_id_, msg.id_,"*⊀︰ دز الـࢪد يࢪوحي حتـه حذفـهِ.🦇*")
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true2")
 return false 
 end
@@ -10088,14 +10088,14 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 local list = database:smembers(bot_id.."botss:RiNdA:List:Rd:Sudo")
 text = "\nقائمة ردود المتعدده \n●━━━━𝐑𝐀━━━━●\n"
 for k,v in pairs(list) do
-db = "ࢪساله "
+db = "رساله "
 text = text..""..k.." => {"..v.."} => {"..db.."}\n"
 end
 if #list == 0 then
@@ -10109,12 +10109,12 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
 database:set(bot_id.."botss:RiNdA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
-return send(msg.chat_id_, msg.id_,"⊀︰ دز ﭑݪࢪد تࢪيد اضـيفه يࢪوحي")
+return send(msg.chat_id_, msg.id_,"⊀︰ ارسل الرد الذي اريد اضافته")
 end
 if text == "حذف رد متعدد" and CoSu(msg) then
 if AddChannel(msg.sender_user_id_) == false then
@@ -10122,7 +10122,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -10378,7 +10378,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -10740,7 +10740,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -10876,7 +10876,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -11101,7 +11101,7 @@ end
 local NUMNKO = (NUMPY * 50)
 database:decrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,NUMPY)  
 database:incrby(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_,NUMNKO)  
-send(msg.chat_id_,msg.id_,' ⌯︰تم خصم *> { '..NUMPY..' }* من نقاطك \n ⌯︰وتم اضافة* > { '..(NUMPY * 50)..' } ࢪساله الى رسالك *')
+send(msg.chat_id_,msg.id_,' ⌯︰تم خصم *> { '..NUMPY..' }* من نقاطك \n ⌯︰وتم اضافة* > { '..(NUMPY * 50)..' } رساله الى رسالك *')
 end 
 return false 
 end
@@ -11182,7 +11182,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -11234,7 +11234,7 @@ local MRSoOoFi = database:get(bot_id.."AL:AddS0FI:stats") or "لم يتم الت
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه المـطوࢪ يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل البـوت \n  ⊀︰ لازم تـشتࢪڪ بقناه سوࢪس يࢪوحي \n  ⊀︰ اشـتࢪڪ هنا..🔫 ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -12003,8 +12003,8 @@ local Teext =[[
 ⊀︰ الاشتراك الاجباري
 ⊀︰ تعطيل الاشتراك الاجباري
 ⊀︰ تفعيل الاشتراك الاجباري
-⊀︰ حذف ࢪساله الاشتراك
-⊀︰ تغير ࢪساله الاشتراك
+⊀︰ حذف رساله الاشتراك
+⊀︰ تغير رساله الاشتراك
 ⊀︰ تغير الاشتراك
 ●━━━━𝐑𝐀━━━━●
 ⊀︰ الاحصائيات
