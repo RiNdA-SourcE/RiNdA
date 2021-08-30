@@ -3012,7 +3012,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'تفعيل نسبه الرجوله' and Manager(msg) then   
 if database:get(bot_id..'Cick:rjo'..msg.chat_id_) then
-Text = '* ⊀︰ تم تفعيل نسبه الرجوله*'
+Text = '* •تم تفعيل نسبه الرجوله*'
 database:del(bot_id..'Cick:rjo'..msg.chat_id_)  
 else
 Text = '* ⊀︰ بالتاكيد تم تفعيل الرجوله*'
@@ -8174,7 +8174,8 @@ database:del(bot_id.."my_photo:status"..msg.chat_id_)
 send(msg.chat_id_, msg.id_,"* ⊀︰ تم تعطيل الصوره*") 
 return false end
 end
-if text == "الرابط" then 
+if text == "الرابط" then
+if not database:get(bot_id.."Link_Group:status"..msg.chat_id_) then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
@@ -8186,6 +8187,7 @@ else
 send(msg.chat_id_, msg.id_,'لا يوجد رابط ارسل ` ضع رابط` لعمل رابط') 
 end 
 end,nil) 
+end
 end
 if text == 'مسح الرابط' or text == 'حذف الرابط' then
 if Mod(msg) then     
