@@ -9737,7 +9737,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ دز الـࢪد يࢪوحي حتـه حذفـهِ.🦇*")
+send(msg.chat_id_, msg.id_,"*⊀︰ دز الـࢪد يࢪوحي حتـه حذفـهِ*")
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true2")
 return false 
 end
