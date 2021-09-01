@@ -311,6 +311,8 @@ if tonumber(user_id) == tonumber(1897626429) then
 var = 'مـبـࢪمج السـوࢪس'
 elseif tonumber(user_id) == tonumber(1581304066) then
 var = '𝗙𝘂𝗡𝗱𝗘𝗱 𝗥𝗶𝗡𝗱𝗔'  
+elseif tonumber(user_id) == tonumber(1944656640) then
+var = 'حڪوائل'  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطـوࢪ الاسـاسي'  
 elseif database:sismember(bot_id.."Dev:mode:2", user_id) then 
@@ -11612,7 +11614,7 @@ local Teext =[[
 ⊀︰ امر
 ⊀︰ ترتيب الاوامر
 ●━━━━𝐑𝐀━━━━●ٴ
-⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🕸️𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
+⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🕸️??𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
