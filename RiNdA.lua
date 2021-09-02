@@ -10646,14 +10646,14 @@ end
 if text == "صورتي"  then
 local my_ph = database:get(bot_id.."my_photo:status"..msg.chat_id_)
 if not my_ph then
-send(msg.chat_id_, msg.id_,"* ⊀︰ يمعـود ساديـن امࢪ صوࢪتي*") 
+send(msg.chat_id_, msg.id_,"* ⊀︰ امـࢪ صورتي معطـل*") 
 return false  
 end
 local function getpro(extra, result, success)
 if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ⊀︰ صـوࢪ بࢪفايلك عدد مالهِن ↫ "..result.total_count_.." صـوࢪه", msg.id_, msg.id_, "md")
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ⊀︰ عدد صورك < "..result.total_count_.." صوره‌‏", msg.id_, msg.id_, "md")
 else
-send(msg.chat_id_, msg.id_,'ماعـندك ولا صوࢪه بحسابـك, 'md')
+send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
   end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
@@ -11108,7 +11108,7 @@ send(msg.chat_id_,msg.id_,' ⌯︰تم خصم *> { '..NUMPY..' }* من نقاط�
 end 
 return false 
 end
-if text == 'فحص البوتت' and Manager(msg) then
+if text == 'صلاحيات البوت' and Manager(msg) then
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. msg.chat_id_ ..'&user_id='.. bot_id..'')
 local Json_Info = JSON.decode(Chek_Info)
 if Json_Info.ok == true then
