@@ -1013,9 +1013,9 @@ end
 if text == 'تعطيل التواصل ⊀︰ .' and Devmode(msg) then  
 if not database:get(bot_id..'Tuasl:Bots') then
 database:set(bot_id..'Tuasl:Bots',true) 
-Text = '\n ⊀︰ تم تعطيل التواصل' 
+Text = '\n ⊀︰ عمـࢪي عطّلـت التواصل' 
 else
-Text = '\n ⊀︰ بالتاكيد تم تعطيل التواصل'
+Text = '\n ⊀︰ بالتاكيد عمـࢪي عطّلـت التواصل'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -1031,9 +1031,9 @@ end
 if text == 'تعطيل البوت الخدمي ⊀︰ .' and Devmode(msg) then  
 if not database:get(bot_id..'Free:Bots') then
 database:set(bot_id..'Free:Bots',true) 
-Text = '\n ⊀︰ تم تعطيل البوت الخدمي' 
+Text = '\n ⊀︰ عمـࢪي عطّلـت البوت الخدمي' 
 else
-Text = '\n ⊀︰ بالتاكيد تم تعطيل البوت الخدمي'
+Text = '\n ⊀︰ بالتاكيد عمـࢪي عطّلـت البوت الخدمي'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -2237,9 +2237,9 @@ end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'Chek:Groups',msg.chat_id_) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ بالتأكيد تم تعطيل الكروب*')
+send(msg.chat_id_, msg.id_,'* ⊀︰ بالتأكيد عمـࢪي عطّلـت الكروب*')
 else
-sendText(msg.chat_id_,'\n *⊀︰ الـضلـ؏  ↷ * ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *⊀︰ تم تعطيل الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
+sendText(msg.chat_id_,'\n *⊀︰ الـضلـ؏  ↷ * ['..string.sub(result.first_name_,0, 70)..'](tg://user?id='..result.id_..')\n *⊀︰ عمـࢪي عطّلـت الكروب* {'..chat.title_..'}',msg.id_/2097152/0.5,'md')
 database:srem(bot_id..'Chek:Groups',msg.chat_id_)  
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
 local NameChat = chat.title_
@@ -2251,7 +2251,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'ماڪو يࢪوحي'
 end
-Text = '\nتم تعطيل الكروب  ⊀︰ '..
+Text = '\nعمـࢪي عطّلـت الكروب  ⊀︰ '..
 '\n ⊀︰ بواسطة {'..Name..'}'..
 '\n ⊀︰ ايدي الكروب {'..IdChat..'}'..
 '\n ⊀︰ اسم الكروب {['..NameChat..']}'..
@@ -2390,7 +2390,7 @@ end
 if text == "تعطيل الاشتراك الاجباري ⊀︰ ." and Devmode(msg) then  
 database:del(bot_id..'add:ch:id')
 database:del(bot_id..'add:ch:username')
-send(msg.chat_id_, msg.id_, " ⊀︰ تم تعطيل الاشتراك الاجباري ")
+send(msg.chat_id_, msg.id_, " ⊀︰ عمـࢪي عطّلـت الاشتراك الاجباري ")
 return false  
 end
 if text == "الاشتراك الاجباري ⊀︰ ." and Devmode(msg) then  
@@ -2407,7 +2407,7 @@ send(msg.chat_id_, msg.id_, '⊀︰ تم تفعيل الاضافات')
 database:set(bot_id.."AL:AddS0FI:stats","✔")
 end
 if text == "تعطيل الاضافات" and SudoBot(msg) then
-send(msg.chat_id_, msg.id_, '⊀︰ تم تعطيل الاضافات')
+send(msg.chat_id_, msg.id_, '⊀︰ عمـࢪي عطّلـت الاضافات')
 database:set(bot_id.."AL:AddS0FI:stats","×")
 end
 if text == "حاله الاضافات" and Constructor(msg) then
@@ -2456,7 +2456,7 @@ send(msg.chat_id_, msg.id_, '⊀︰ تم التفعيل الاسماء المك�
 database:set(bot_id.."block:name:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل كتم الاسم" and Constructor(msg) and database:get(bot_id.."AL:AddS0FI:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '⊀︰ تم تعطيل الاسماء المكتومه')
+send(msg.chat_id_, msg.id_, '⊀︰ عمـࢪي عطّلـت الاسماء المكتومه')
 database:set(bot_id.."block:name:stats"..msg.chat_id_,"close")
 end
 if not Manager(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
@@ -2499,7 +2499,7 @@ send(msg.chat_id_, msg.id_, '*⊀︰ تم تفعيل التوحيد*')
 database:set(bot_id.."kt:twh:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل التوحيد" and Constructor(msg) and database:get(bot_id.."AL:AddS0FI:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل التوحيد*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت التوحيد*')
 database:set(bot_id.."kt:twh:stats"..msg.chat_id_,"close")
 end
 if not Constructor(msg) then
@@ -2529,7 +2529,7 @@ send(msg.chat_id_, msg.id_, '⊀︰ تم تفعيل تنبيه الاسماء')
 database:set(bot_id.."Ttn:DRG:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل تنبيه الاسماء" and Manager(msg) and database:get(bot_id.."AL:AddS0FI:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '⊀︰ تم تعطيل تنبيه الاسماء')
+send(msg.chat_id_, msg.id_, '⊀︰ عمـࢪي عطّلـت تنبيه الاسماء')
 database:set(bot_id.."Ttn:DRG:stats"..msg.chat_id_,"close")
 end
 if text and database:get(bot_id.."Ttn:DRG:stats"..msg.chat_id_) == "open" then 
@@ -2563,7 +2563,7 @@ send(msg.chat_id_, msg.id_, '⊀︰ تم تفعيل تنبيه المعرف')
 database:set(bot_id.."Ttn:Userr:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل تنبيه المعرف" and Constructor(msg) and database:get(bot_id.."AL:AddS0FI:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '⊀︰ تم تعطيل تنبيه المعرف')
+send(msg.chat_id_, msg.id_, '⊀︰ عمـࢪي عطّلـت تنبيه المعرف')
 database:set(bot_id.."Ttn:Userr:stats"..msg.chat_id_,"close")
 end
 if text and database:get(bot_id.."Ttn:Userr:stats"..msg.chat_id_) == "open" then  
@@ -2601,7 +2601,7 @@ send(msg.chat_id_, msg.id_, '⊀︰ تم تفعيل تنبيه الصور')
 database:set(bot_id.."Ttn:Ph:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل تنبيه الصور" and Manager(msg) and database:get(bot_id.."AL:AddS0FI:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '⊀︰ تم تعطيل تنبيه الصور')
+send(msg.chat_id_, msg.id_, '⊀︰ عمـࢪي عطّلـت تنبيه الصور')
 database:set(bot_id.."Ttn:Ph:stats"..msg.chat_id_,"close")
 end
 if text and database:get(bot_id.."Ttn:Ph:stats"..msg.chat_id_) == "open" then  
@@ -3006,9 +3006,9 @@ end
 if text == 'تعطيل نسبه الحب' and Manager(msg) then  
 if not database:get(bot_id..'Cick:lov'..msg.chat_id_) then
 database:set(bot_id..'Cick:lov'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل نسبه الحب*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت نسبه الحب*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل نسبه الحب*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت نسبه الحب*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3024,9 +3024,9 @@ end
 if text == 'تعطيل نسبه الرجوله' and Manager(msg) then  
 if not database:get(bot_id..'Cick:rjo'..msg.chat_id_) then
 database:set(bot_id..'Cick:rjo'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل نسبه الرجوله*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت نسبه الرجوله*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل نسبه الرجوله*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت نسبه الرجوله*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3042,9 +3042,9 @@ end
 if text == 'تعطيل نسبه الكره' and Manager(msg) then  
 if not database:get(bot_id..'Cick:krh'..msg.chat_id_) then
 database:set(bot_id..'Cick:krh'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل نسبه الكره*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت نسبه الكره*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل نسبه الكره*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت نسبه الكره*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3060,9 +3060,9 @@ end
 if text == 'تعطيل نسبه الانوثه' and Manager(msg) then  
 if not database:get(bot_id..'Cick:ano'..msg.chat_id_) then
 database:set(bot_id..'Cick:ano'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل نسبه الانوث*ه'
+Text = '\n *⊀︰ عمـࢪي عطّلـت نسبه الانوث*ه'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل نسبه الانوثه*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت نسبه الانوثه*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3080,7 +3080,7 @@ if not database:get(bot_id..'Cick:all'..msg.chat_id_) then
 database:set(bot_id..'Cick:all'..msg.chat_id_,true)  
 Text = '\n *⊀︰ تعـطل امـر الـتاك @all*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل امر @all*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت امر @all*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3096,9 +3096,9 @@ end
 if text == 'تعطيل كول' and CoSu(msg) then  
 if not database:get(bot_id..'Speak:after:me'..msg.chat_id_) then
 database:set(bot_id..'Speak:after:me'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل امر كول*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت امر كول*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل امر كول*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت امر كول*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3114,9 +3114,9 @@ end
 if text == 'تعطيل غنيلي' and CoSu(msg) then  
 if not database:get(bot_id..'sing:for:me'..msg.chat_id_) then
 database:set(bot_id..'sing:for:me'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل امر غنيلي*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت امر غنيلي*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل امر غنيلي*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت امر غنيلي*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -3957,9 +3957,9 @@ local file = name_t[2]..'.lua'
 local file_bot = io.open("File_Bot/"..file,"r")
 if file_bot then
 io.close(file_bot)
-t = " ⊀︰ الملف > "..file.."\n ⊀︰ تم تعطيل ملف \n"
+t = " ⊀︰ الملف > "..file.."\n ⊀︰ عمـࢪي عطّلـت ملف \n"
 else
-t = " ⊀︰ بالتاكيد تم تعطيل ملف ↬ "..file.."\n"
+t = " ⊀︰ بالتاكيد عمـࢪي عطّلـت ملف ↬ "..file.."\n"
 end
 local json_file, res = https.request("https://raw.githubusercontent.com/RiNdA-SourcE/Files_RiNdA/main/File_Bot/"..file)
 if res == 200 then
@@ -4385,9 +4385,9 @@ end
 if text == 'تعطيل التحويل' and CoSu(msg) then  
 if not database:get(bot_id..'DRAGOON:change:mode'..msg.chat_id_) then
 database:set(bot_id..'DRAGOON:change:mode'..msg.chat_id_,true)  
-Text = '\n ⊀︰ تم تعطيل امر تحويل'
+Text = '\n ⊀︰ عمـࢪي عطّلـت امر تحويل'
 else
-Text = '\n ⊀︰ بالتاكيد تم تعطيل امر تحويل'
+Text = '\n ⊀︰ بالتاكيد عمـࢪي عطّلـت امر تحويل'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -5503,7 +5503,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:kick'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' *⊀︰ تم تعطيل الطرد*') 
+send(msg.chat_id_, msg.id_,' *⊀︰ عمـࢪي عطّلـت الطرد*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5547,7 +5547,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:kick'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' *⊀︰ تم تعطيل الطرد*') 
+send(msg.chat_id_, msg.id_,' *⊀︰ عمـࢪي عطّلـت الطرد*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6690,7 +6690,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:kick'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' *⊀︰ تم تعطيل الحظر*') 
+send(msg.chat_id_, msg.id_,' *⊀︰ عمـࢪي عطّلـت الحظر*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6727,7 +6727,7 @@ end
 if text and text:match("^حظر @(.*)$") and Mod(msg) then
 local username = text:match("^حظر @(.*)$")
 if database:get(bot_id..'Lock:kick'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' *⊀︰ تم تعطيل الحظر*') 
+send(msg.chat_id_, msg.id_,' *⊀︰ عمـࢪي عطّلـت الحظر*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6776,7 +6776,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:kick'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,' *⊀︰ تم تعطيل الحظر*') 
+send(msg.chat_id_, msg.id_,' *⊀︰ عمـࢪي عطّلـت الحظر*') 
 return false
 end
 if tonumber(userid) == tonumber(bot_id) then  
@@ -8173,7 +8173,7 @@ end
 if text == "تعطيل الصوره" or text == 'تعطيل صورتي' then
 if Constructor(msg) then  
 database:del(bot_id.."my_photo:status"..msg.chat_id_) 
-send(msg.chat_id_, msg.id_,"* ⊀︰ تم تعطيل الصوره*") 
+send(msg.chat_id_, msg.id_,"* ⊀︰ عمـࢪي عطّلـت الصوره*") 
 return false end
 end
 if text == "الرابط" then
@@ -8279,7 +8279,7 @@ end
 return false
 end
 database:del(bot_id..'Chek:Welcome'..msg.chat_id_) 
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم تعطيل ترحيب الكروب*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ عمـࢪي عطّلـت ترحيب الكروب*') 
 return false  
 end
 if text == 'مسح الترحيب' or text == 'حذف الترحيب' then 
@@ -8904,9 +8904,9 @@ end
 if text == 'تعطيل الاذاعه' and Devmode(msg) then  
 if not database:get(bot_id..'Bc:Bots') then
 database:set(bot_id..'Bc:Bots',true) 
-Text = '\n ⊀︰ تم تعطيل الاذاعه' 
+Text = '\n ⊀︰ عمـࢪي عطّلـت الاذاعه' 
 else
-Text = '\n ⊀︰ بالتاكيد تم تعطيل الاذاعه'
+Text = '\n ⊀︰ بالتاكيد عمـࢪي عطّلـت الاذاعه'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -8922,9 +8922,9 @@ end
 if text == 'تعطيل التواصل' and Devmode(msg) then  
 if not database:get(bot_id..'Tuasl:Bots') then
 database:set(bot_id..'Tuasl:Bots',true) 
-Text = '\n ⊀︰ تم تعطيل التواصل' 
+Text = '\n ⊀︰ عمـࢪي عطّلـت التواصل' 
 else
-Text = '\n ⊀︰ بالتاكيد تم تعطيل التواصل'
+Text = '\n ⊀︰ بالتاكيد عمـࢪي عطّلـت التواصل'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -8958,9 +8958,9 @@ return false
 end
 if not database:get(bot_id..'Free:Bots') then
 database:set(bot_id..'Free:Bots',true) 
-Text = '\n ⊀︰ تم تعطيل البوت الخدمي' 
+Text = '\n ⊀︰ عمـࢪي عطّلـت البوت الخدمي' 
 else
-Text = '\n ⊀︰ بالتاكيد تم تعطيل البوت الخدمي'
+Text = '\n ⊀︰ بالتاكيد عمـࢪي عطّلـت البوت الخدمي'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -10014,11 +10014,11 @@ for i,lock in pairs(list) do
 database:del(bot_id..lock..msg.chat_id_)    
 end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'*⊀︰ الـضلـ؏  ↷ * ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⊀︰ تم تعطيل الحمايه القصوى*')
+send(msg.chat_id_, msg.id_,'*⊀︰ الـضلـ؏  ↷ * ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⊀︰ عمـࢪي عطّلـت الحمايه القصوى*')
 end,nil)   
 end
 if text == "تعطيل الانستا" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل الانستا*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت الانستا*')
 database:set(bot_id.."SourcE_RiNdA:insta_bot"..msg.chat_id_,"close")
 end
 if text == "تفعيل الانستا" and Manager(msg) then
@@ -10043,7 +10043,7 @@ send(msg.chat_id_, msg.id_,"⊀︰ تم تفعيل تاك المشرفين")
 end
 if text and text == "تعطيل تاك المشرفين" and Manager(msg) then 
 database:del(bot_id.."SourcE_RiNdA:Tag:Admins:"..msg.chat_id_)
-send(msg.chat_id_, msg.id_, "⊀︰ تم تعطيل تاك المشرفين")
+send(msg.chat_id_, msg.id_, "⊀︰ عمـࢪي عطّلـت تاك المشرفين")
 end
 
 if text == 'صيح المشرفين' or text == "تاك للمشرفين" or text == "وين المشرفين" or text == "المشرفين" then
@@ -10300,9 +10300,9 @@ end
 if text == 'تعطيل الايدي' and Manager(msg) then  
 if not database:get(bot_id..'Bot:Id'..msg.chat_id_)  then
 database:set(bot_id..'Bot:Id'..msg.chat_id_,true) 
-Text = '\n *⊀︰ تم تعطيل الايدي*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت الايدي*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل الايدي*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت الايدي*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -10338,7 +10338,7 @@ if not database:get(bot_id..'Lock:kick'..msg.chat_id_)  then
 database:set(bot_id..'Lock:kick'..msg.chat_id_,true) 
 Text = '\n *⊀︰ بعـد ولا معـيدي يكدر يحظـࢪ..🦇*' 
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل الحظر*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت الحظر*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -10524,7 +10524,7 @@ return false
 end
 end,nil)   
 else
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم تعطيل امر اطردني*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ عمـࢪي عطّلـت امر اطردني*') 
 end
 end
 if text and text:match("^صيح (.*)$") then
@@ -10554,7 +10554,7 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 else
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم تعطيل امر صيح*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ عمـࢪي عطّلـت امر صيح*') 
 end
 return false
 end
@@ -10594,7 +10594,7 @@ end
 if text == 'تعطيل ضافني' and Manager(msg) then  
 if not database:get(bot_id..'Added:Me'..msg.chat_id_) then
 database:set(bot_id..'Added:Me'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل امـࢪ مـنو ضافنـي*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت امـࢪ مـنو ضافنـي*'
 else
 Text = '\n *⊀︰ مـقـفوله ولـحمزۿ..🦇*'
 end
@@ -10621,7 +10621,7 @@ if not database:get(bot_id..'Seh:User'..msg.chat_id_) then
 database:set(bot_id..'Seh:User'..msg.chat_id_,true)  
 Text = '\n *⊀︰ تـم عطلـت امر صيـح..🦇*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل امر صيح*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت امر صيح*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -10637,9 +10637,9 @@ end
 if text == 'تعطيل اطردني' and Manager(msg) then  
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 database:set(bot_id..'Cick:Me'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تم تعطيل امر اطردني*'
+Text = '\n *⊀︰ عمـࢪي عطّلـت امر اطردني*'
 else
-Text = '\n *⊀︰ بالتاكيد تم تعطيل امر اطردني*'
+Text = '\n *⊀︰ بالتاكيد عمـࢪي عطّلـت امر اطردني*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -10775,7 +10775,7 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local modea = {
 " اخخ لو يلـزمك وائل يشبـعك حلـوك",
-" ⊀︰ مـوش صوࢪه حلغـوم..🍭",
+" ⊀︰ مـوش صوࢪه حلغـوم..??",
 " ⊀︰ جهرتك منورة ",
 " ⊀︰ هاي شكد حلو انتة",
 " ⊀︰ اصلا حسـون احلئ",
@@ -11270,7 +11270,7 @@ return false
 end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == "تعطيل الزخرفه" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل الزخرفه*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت الزخرفه*')
 database:set(bot_id.." mode:zhrf_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الزخرفه" and Manager(msg) then
@@ -11290,7 +11290,7 @@ end
 send(msg.chat_id_, msg.id_, t..'━━━━𝖱𝗂𝖭𝖽𝖠━━━━ٴ\n⊀︰ ⊀︰ . [<𝙎𝙤𝙪𝙍𝙘𝙀🦇𝙍𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA) ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل الابراج*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت الابراج*')
 database:set(bot_id.." mode:brj_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل الابراج" and Manager(msg) then
@@ -11309,11 +11309,11 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if text == "تعطيل حساب العمر" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل حساب العمر*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت حساب العمر*')
 database:set(bot_id.." mode:age_Bots"..msg.chat_id_,"close")
 end
 if text == "تعطيل حساب العمر" and Manager(msg) then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل حساب العمر*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت حساب العمر*')
 database:set(bot_id.." mode:age_Bots"..msg.chat_id_,"close")
 end
 if text == "تفعيل حساب العمر" and Manager(msg) then
@@ -11332,7 +11332,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 if text == "تعطيل الافلام" and Mod(msg) then
-send(msg.chat_id_, msg.id_, '*⊀︰ تم تعطيل الافلام*')
+send(msg.chat_id_, msg.id_, '*⊀︰ عمـࢪي عطّلـت الافلام*')
 database:set(bot_id.."mode:movie_bot"..msg.chat_id_,"close")
 end
 if text == "تفعيل الافلام" and Mod(msg) then
@@ -12368,7 +12368,7 @@ data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
 end
 end
 if (text and text == "*تعطيل اوامر التحشيش*") then 
-send(msg.chat_id_, msg.id_, '* ⊀︰ تم تعطيل اوامر التحشيش*')
+send(msg.chat_id_, msg.id_, '* ⊀︰ عمـࢪي عطّلـت اوامر التحشيش*')
 database:set(bot_id.."Fun_Bots:"..msg.chat_id_,"true")
 end
 if (text and text == "*تفعيل اوامر التحشيش*") then 
