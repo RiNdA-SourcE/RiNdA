@@ -7526,7 +7526,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
 
-if text == "كشف القيود" and Manager(msg) then 
+if text == "شوفلي القيود" and Manager(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -7538,14 +7538,14 @@ return false
 end
 function start_function(extra, result, success)
 if database:sismember(bot_id..'Muted:User'..msg.chat_id_,result.sender_user_id_) then
-Muted = 'مكتوم'
+Muted = 'بـࢪو هاذا خابـزي ڪتم'
 else
-Muted = 'غير مكتوم'
+Muted = 'ما مڪتوم يࢪوحي'
 end
 if database:sismember(bot_id..'Ban:User'..msg.chat_id_,result.sender_user_id_) then
-Ban = 'محظور'
+Ban = 'ࢪاڪعي بحظـࢪ'
 else
-Ban = 'غير محظور'
+Ban = 'ضلعي ممحظوࢪ'
 end
 if database:sismember(bot_id..'GBan:User',result.sender_user_id_) then
 GBan = 'محظور عام'
