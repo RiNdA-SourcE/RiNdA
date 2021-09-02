@@ -7488,8 +7488,8 @@ end
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 end
-if text and text:match('^كشف القيود @(.*)') and Manager(msg) then 
-local username = text:match('^كشف القيود @(.*)') 
+if text and text:match('^شوفلي القيود @(.*)') and Manager(msg) then 
+local username = text:match('^شوفلي القيود @(.*)') 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -10646,14 +10646,14 @@ end
 if text == "صورتي"  then
 local my_ph = database:get(bot_id.."my_photo:status"..msg.chat_id_)
 if not my_ph then
-send(msg.chat_id_, msg.id_,"* ⊀︰ امـࢪ صورتي معطـل*") 
+send(msg.chat_id_, msg.id_,"* ⊀︰ يمعـود ساديـن امࢪ صوࢪتي*") 
 return false  
 end
 local function getpro(extra, result, success)
 if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ⊀︰ عدد صورك < "..result.total_count_.." صوره‌‏", msg.id_, msg.id_, "md")
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_," ⊀︰ صـوࢪ بࢪفايلك عدد مالهِن ↫ "..result.total_count_.." صـوࢪه", msg.id_, msg.id_, "md")
 else
-send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
+send(msg.chat_id_, msg.id_,'ماعـندك ولا صوࢪه بحسابـك, 'md')
   end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
@@ -11781,7 +11781,7 @@ local Teext =[[
 ⊀︰ استعاده الاوامر 
 ⊀︰ تحويل كالاتي< بالرد على صوره او ملصق او صوت او بصمه بالامر ← تحويل 
 ⊀︰ صيح ~ تاك ~ المميزين : الادمنيه : المدراء : المنشئين : المنشئين الاساسين
-⊀︰ كشف القيود
+⊀︰ شوفلي القيود
 ⊀︰ تعين الايدي
 ⊀︰ تغير الايدي
 ⊀︰ الحساب + ايدي الحساب
