@@ -9713,7 +9713,7 @@ photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
 end
 database:set(bot_id.."Add:Rd:Manager:Photo"..test..msg.chat_id_, photo_in_group)  
 end
-send(msg.chat_id_, msg.id_,"⊀︰ تم حفظ الرد بنجاح ")
+send(msg.chat_id_, msg.id_,"⊀︰ نحـفض ࢪد ضلعي. ")
 return false  
 end  
 end
