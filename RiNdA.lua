@@ -9741,7 +9741,7 @@ send(msg.chat_id_, msg.id_,' ⊀︰ بـࢪو ماتڪدࢪ تستعمل الب�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,"*⊀︰ دز الڪلمه مال ࢪد حته احذفـه يࢪوحي*")
+send(msg.chat_id_, msg.id_,"*⊀︰ دز الـࢪد يࢪوحي حتـه حذفـهِ.*")
 database:set(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true2")
 return false 
 end
@@ -9763,7 +9763,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_.."") == "true2" then
-send(msg.chat_id_, msg.id_,"*⊀︰ حذفت الࢪد يࢪوحي .*")
+send(msg.chat_id_, msg.id_,"*⊀︰ انحـذف الـࢪد يࢪوحي*")
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
