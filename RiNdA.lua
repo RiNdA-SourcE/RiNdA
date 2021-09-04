@@ -5155,7 +5155,7 @@ return false
 end
 function start_function(extra, result, success)
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, result.sender_user_id_)
@@ -5180,7 +5180,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5213,7 +5213,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, userid)
@@ -5347,7 +5347,7 @@ return false
 end
 function start_function(extra, result, success)
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'MODE7:MN:TF'..msg.chat_id_, result.sender_user_id_)
@@ -5372,7 +5372,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5405,7 +5405,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'MODE7:MN:TF'..msg.chat_id_, userid)
@@ -5682,7 +5682,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5708,7 +5708,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5742,7 +5742,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'Special:User'..msg.chat_id_, userid)
@@ -5862,7 +5862,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5931,7 +5931,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6000,7 +6000,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6069,7 +6069,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6139,7 +6139,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6208,7 +6208,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6277,7 +6277,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6346,7 +6346,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6415,7 +6415,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6484,7 +6484,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6553,7 +6553,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6622,7 +6622,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -10354,9 +10354,9 @@ end
 if text == 'تعطيل الارفع' and Constructor(msg) then  
 if not database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_)  then
 database:set(bot_id..'Lock:Add:Bot'..msg.chat_id_,true) 
-Text = '\n* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*' 
+Text = '\n* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*' 
 else
-Text = '\n *⊀︰ بالتاكيد تـم تعطيـل الࢪفـ؏..🍒*'
+Text = '\n *⊀︰ بالتاكيد تعطـل ↫ الࢪفـ؏..🍒*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -11386,7 +11386,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'تعطيل الردود' and Manager(msg) then  
 database:set(bot_id..'lock:reply'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تـم تعطيـل الࢪدود🍒*'
+Text = '\n *⊀︰ تعطـل ↫ الࢪدود🍒*'
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'رابط الحذف' or text == 'رابط حذف' then
