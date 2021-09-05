@@ -2369,7 +2369,7 @@ return false
 end
 if text == "حذف رساله الاشتراك ⊀︰ ." and Devmode(msg) then  
 database:del(bot_id..'text:ch:user')
-send(msg.chat_id_, msg.id_, " ⊀︰ تم مسح رساله الاشتراك ")
+send(msg.chat_id_, msg.id_, " ⊀︰ تم وخر رساله الاشتراك ")
 return false  
 end
 if text and text:match("^خلي قناة الاشتراك ⊀︰ .$") and Devmode(msg) then  
@@ -2434,9 +2434,9 @@ send(msg.chat_id_, msg.id_, '⊀︰ تم الغاء كتم الاسم '..delBn)
 database:srem(bot_id.."RiNdA:blocname"..msg.chat_id_, delBn)
 end
 
-if text == "مسح الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
+if text == "وخر الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 database:del(bot_id.."RiNdA:blocname"..msg.chat_id_)
-texts = "⊀︰ تم مسح الاسماء المكتومه "
+texts = "⊀︰ تم وخر الاسماء المكتومه "
 send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
@@ -2695,7 +2695,7 @@ t = "*⊀︰ ماڪو اوامـࢪ مضافه يࢪوحي..*"
 end
 send(msg.chat_id_, msg.id_,'['..t..']')
 end
-if text == 'حذف الاوامر المضافه' or text == 'مسح الاوامر المضافه' then
+if text == 'حذف الاوامر المضافه' or text == 'وخر الاوامر المضافه' then
 if Constructor(msg) then 
 local list = database:smembers(bot_id..'List:Cmd:Group:New'..msg.chat_id_)
 for k,v in pairs(list) do
@@ -2719,7 +2719,7 @@ database:set(bot_id.."Set:Cmd:Group"..msg.chat_id_..':'..msg.sender_user_id_,'tr
 send(msg.chat_id_, msg.id_,'* ⊀︰ ارسل الامر القديم*')  
 return false
 end
-if text == 'حذف امر' or text == 'مسح امر' then 
+if text == 'حذف امر' or text == 'وخر امر' then 
 if Constructor(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -3558,9 +3558,9 @@ if text == 'تحديث' and Devmode(msg) then
 dofile('RiNdA.lua')  
 send(msg.chat_id_, msg.id_, ' ⊀︰ تم تحديث جميع الملفات') 
 end 
-if text == ("مسح قائمه العام") and Devmode(msg) then
+if text == ("وخر قائمه العام") and Devmode(msg) then
 database:del(bot_id..'GBan:User')
-send(msg.chat_id_, msg.id_, '\n ⊀︰ تم مسح قائمه العام')
+send(msg.chat_id_, msg.id_, '\n ⊀︰ تم وخر قائمه العام')
 return false
 end
 if text == ("قائمه العام") and Devmode(msg) then
@@ -3854,9 +3854,9 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text == ("مسح المطورين") and Devmode(msg) then
+if text == ("وخر المطورين") and Devmode(msg) then
 database:del(bot_id..'Sudo:User')
-send(msg.chat_id_, msg.id_, "\n ⊀︰ تم مسح قائمة المطورين  ")
+send(msg.chat_id_, msg.id_, "\n ⊀︰ تم وخر قائمة المطورين  ")
 end
 if text == ("المطورين") and Devmode(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
@@ -3993,9 +3993,9 @@ send(msg.chat_id_, msg.id_," ⊀︰ عذرا الملف لايدعم سورس ر
 end
 return false
 end
-if text == "مسح الملفات" and Devmode(msg) then
+if text == "وخر الملفات" and Devmode(msg) then
 os.execute("rm -fr File_Bot/*")
-send(msg.chat_id_,msg.id_," ⊀︰ تم مسح الملفات")
+send(msg.chat_id_,msg.id_," ⊀︰ تم وخر الملفات")
 return false
 end
 
@@ -4143,9 +4143,9 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
 end
-if text == ("مسح قائمه المالك") and Sudo(msg) then
+if text == ("وخر قائمه المالك") and Sudo(msg) then
 database:del(bot_id..'CoSu'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n ⊀︰ تم مسح قائمه المالك')
+send(msg.chat_id_, msg.id_, '\n ⊀︰ تم وخر قائمه المالك')
 return false
 end
 
@@ -4437,9 +4437,9 @@ end
 end
 -------------------
 ------------------------------------------------------------------------
-if text == ("مسح الاساسين") and CoSu(msg) then
+if text == ("وخر الاساسين") and CoSu(msg) then
 database:del(bot_id..'Basic:Constructor'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n *⊀︰ تم مسح المنشئين الاساسين*')
+send(msg.chat_id_, msg.id_, '\n *⊀︰ تم وخر المنشئين الاساسين*')
 return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
@@ -4621,9 +4621,9 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text == 'مسح المنشئين' and BasicConstructor(msg) then
+if text == 'وخر المنشئين' and BasicConstructor(msg) then
 database:del(bot_id..'Constructor'..msg.chat_id_)
-texts = '* ⊀︰ تم مسح المنشئين *'
+texts = '* ⊀︰ تم وخر المنشئين *'
 send(msg.chat_id_, msg.id_, texts)
 end
 
@@ -4819,9 +4819,9 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 end
 ------------------------------------------------------------------------
-if text == 'مسح المدراء' and Constructor(msg) then
+if text == 'وخر المدراء' and Constructor(msg) then
 database:del(bot_id..'Manager'..msg.chat_id_)
-texts = '* ⊀︰ تم مسح المدراء *'
+texts = '* ⊀︰ تم وخر المدراء *'
 send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
@@ -5076,9 +5076,9 @@ t = "*⊀︰ ماڪو يࢪوحي مطورين ثانويين*"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text == ("مسح الثانويين") and SudoBot(msg) then
+if text == ("وخر الثانويين") and SudoBot(msg) then
 database:del(bot_id.."Dev:mode:2")
-send(msg.chat_id_, msg.id_, "\n*⊀︰ تم مسح قائمة المطورين الثانويين *")
+send(msg.chat_id_, msg.id_, "\n*⊀︰ تم وخر قائمة المطورين الثانويين *")
 end
 ------------------------------------------------------------------------
 if text ==("ارفع الادمنيه") and Manager(msg) then
@@ -5107,9 +5107,9 @@ send(msg.chat_id_, msg.id_," ⊀︰ࢪفعـت المشـࢪفين{ "..num2.." }
 end
 end,nil)   
 end
-if text == 'مسح الادمنيه' and Manager(msg) then
+if text == 'وخر الادمنيه' and Manager(msg) then
 database:del(bot_id..'Mod:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '* ⊀︰ تم مسح الادمنيه*')
+send(msg.chat_id_, msg.id_, '* ⊀︰ تم وخر الادمنيه*')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
@@ -5155,7 +5155,7 @@ return false
 end
 function start_function(extra, result, success)
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, result.sender_user_id_)
@@ -5180,7 +5180,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5213,7 +5213,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'Mod:User'..msg.chat_id_, userid)
@@ -5299,9 +5299,9 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-if text == 'مسح المنظفين' and BasicConstructor(msg) then
+if text == 'وخر المنظفين' and BasicConstructor(msg) then
 database:del(bot_id..'MODE7:MN:TF'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '* ⊀︰ تم مسح المنظفين*')
+send(msg.chat_id_, msg.id_, '* ⊀︰ تم وخر المنظفين*')
 end
 if text == ("المنظفين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'MODE7:MN:TF'..msg.chat_id_)
@@ -5347,7 +5347,7 @@ return false
 end
 function start_function(extra, result, success)
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'MODE7:MN:TF'..msg.chat_id_, result.sender_user_id_)
@@ -5372,7 +5372,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5405,7 +5405,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not BasicConstructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'MODE7:MN:TF'..msg.chat_id_, userid)
@@ -5635,9 +5635,9 @@ return false
 end
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------
-if text == 'مسح المميزين' and Mod(msg) then
+if text == 'وخر المميزين' and Mod(msg) then
 database:del(bot_id..'Special:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '* ⊀︰ تم مسح المميزين*')
+send(msg.chat_id_, msg.id_, '* ⊀︰ تم وخر المميزين*')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
@@ -5682,7 +5682,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5708,7 +5708,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5742,7 +5742,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 database:sadd(bot_id..'Special:User'..msg.chat_id_, userid)
@@ -5832,7 +5832,7 @@ end
 ------------------------------------------------------------------------
 if text == 'نزل المطايه' and Mod(msg) then
 database:del(bot_id..'Mote:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, ' ⊀︰ تم مسح جميع المطايه')
+send(msg.chat_id_, msg.id_, ' ⊀︰ تم وخر جميع المطايه')
 end
 if text == ("تاك للمطايه") and Mod(msg) then
 local list = database:smembers(bot_id..'Mote:User'..msg.chat_id_)
@@ -5862,7 +5862,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5901,7 +5901,7 @@ end
 -----------------------------------------------------
 if text == 'نزل الحاتات' and Mod(msg) then
 database:del(bot_id..'Mode:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, ' ⊀︰ تم مسح جميع الحاتات')
+send(msg.chat_id_, msg.id_, ' ⊀︰ تم وخر جميع الحاتات')
 end
 if text == ("تاك للحاتات") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
@@ -5931,7 +5931,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -5970,7 +5970,7 @@ end
 -----------------------------------------------------
 if text == 'نزل الصاكين' and Mod(msg) then
 database:del(bot_id..'Modde:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, ' ⊀︰ تم مسح جميع الصاكين')
+send(msg.chat_id_, msg.id_, ' ⊀︰ تم وخر جميع الصاكين')
 end
 if text == ("تاك للصاكين") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
@@ -6000,7 +6000,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6069,7 +6069,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6139,7 +6139,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6208,7 +6208,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6277,7 +6277,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6346,7 +6346,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6415,7 +6415,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6484,7 +6484,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6553,7 +6553,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6622,7 +6622,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_) and not Constructor(msg) then
-send(msg.chat_id_, msg.id_,'* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*') 
+send(msg.chat_id_, msg.id_,'* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*') 
 return false
 end
 function start_function(extra, result, success)
@@ -6659,9 +6659,9 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 ---------------------------------------------
-if text == 'مسح المحظورين' and Mod(msg) then
+if text == 'وخر المحظورين' and Mod(msg) then
 database:del(bot_id..'Ban:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n ⊀︰ تم مسح المحظورين')
+send(msg.chat_id_, msg.id_, '\n ⊀︰ تم وخر المحظورين')
 end
 if text == ("المحظورين") then
 local list = database:smembers(bot_id..'Ban:User'..msg.chat_id_)
@@ -6899,9 +6899,9 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text == 'مسح المكتومين' and Mod(msg) then
+if text == 'وخر المكتومين' and Mod(msg) then
 database:del(bot_id..'Muted:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '* ⊀︰ تم مسح المكتومين*')
+send(msg.chat_id_, msg.id_, '* ⊀︰ تم وخر المكتومين*')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = database:smembers(bot_id..'Muted:User'..msg.chat_id_)
@@ -7694,7 +7694,7 @@ flood = 'بالتقيد'
 elseif database:hget(bot_id.."flooding:settings:"..msg.chat_id_,"flood") == "mute" then     
 flood = 'بالكتم'           
 elseif database:hget(bot_id.."flooding:settings:"..msg.chat_id_,"flood") == "del" then     
-flood = 'بالمسح'           
+flood = 'بالوخر'           
 else     
 flood = '✗'     
 end
@@ -8191,7 +8191,7 @@ end
 end,nil) 
 end
 end
-if text == 'مسح الرابط' or text == 'حذف الرابط' then
+if text == 'وخر الرابط' or text == 'حذف الرابط' then
 if Mod(msg) then     
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -8212,7 +8212,7 @@ database:set(bot_id..'Change:Chat:Photo'..msg.chat_id_..':'..msg.sender_user_id_
 send(msg.chat_id_, msg.id_,' ⊀︰ دࢪ࣪ صـوࢪه تـريد اضيفها') 
 return false
 end
-if text == "حذف الصوره" or text == "مسح الصوره" then 
+if text == "حذف الصوره" or text == "وخر الصوره" then 
 if Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -8282,7 +8282,7 @@ database:del(bot_id..'Chek:Welcome'..msg.chat_id_)
 send(msg.chat_id_, msg.id_,'* ⊀︰ تم تعطيل ترحيب الكروب*') 
 return false  
 end
-if text == 'مسح الترحيب' or text == 'حذف الترحيب' then 
+if text == 'وخر الترحيب' or text == 'حذف الترحيب' then 
 if Mod(msg) then
 database:del(bot_id..'Get:Welcome:Group'..msg.chat_id_) 
 send(msg.chat_id_, msg.id_,'* ⊀︰ تـم ازاله التࢪحيـب بـرو..🍒*') 
@@ -8385,14 +8385,14 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, cb, nil)
 end
 
-if text == "مسح قائمه المنع"and Manager(msg) then   
+if text == "وخر قائمه المنع"and Manager(msg) then   
 local list = database:smembers(bot_id.."RiNdA1:List:Filter"..msg.chat_id_)  
 for k,v in pairs(list) do  
 database:del(bot_id.."RiNdA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 database:del(bot_id.."RiNdA1:Add:Filter:Rp2"..v..msg.chat_id_)  
 database:srem(bot_id.."RiNdA1:List:Filter"..msg.chat_id_,v)  
 end  
-send(msg.chat_id_, msg.id_," ⊀︰ تم مسح قائمه المنع")  
+send(msg.chat_id_, msg.id_," ⊀︰ تم وخر قائمه المنع")  
 end
 
 if text == "قائمه المنع" and Manager(msg) then   
@@ -8408,22 +8408,22 @@ end
 send(msg.chat_id_, msg.id_,t)  
 end  
 
-if text == 'مسح قائمه منع المتحركات' and Manager(msg) then     
+if text == 'وخر قائمه منع المتحركات' and Manager(msg) then     
 database:del(bot_id.."filteranimation"..msg.chat_id_)
-send(msg.chat_id_, msg.id_,' ⊀︰ تم مسح قائمه منع المتحركات')  
+send(msg.chat_id_, msg.id_,' ⊀︰ تم وخر قائمه منع المتحركات')  
 end
-if text == 'مسح قائمه منع الصور' and Manager(msg) then     
+if text == 'وخر قائمه منع الصور' and Manager(msg) then     
 database:del(bot_id.."filterphoto"..msg.chat_id_)
-send(msg.chat_id_, msg.id_,' ⊀︰ تم مسح قائمه منع الصور')  
+send(msg.chat_id_, msg.id_,' ⊀︰ تم وخر قائمه منع الصور')  
 end
-if text == 'مسح قائمه منع الملصقات' and Manager(msg) then     
+if text == 'وخر قائمه منع الملصقات' and Manager(msg) then     
 database:del(bot_id.."filtersteckr"..msg.chat_id_)
-send(msg.chat_id_, msg.id_,' ⊀︰ تم مسح قائمه منع الملصقات')  
+send(msg.chat_id_, msg.id_,' ⊀︰ تم وخر قائمه منع الملصقات')  
 end
 ------------------
-if text == 'مسح كليشه المطور' and Devmode(msg) then
+if text == 'وخر كليشه المطور' and Devmode(msg) then
 database:del(bot_id..'TEXT_SUDO')
-send(msg.chat_id_, msg.id_,' ⊀︰ تم مسح كليشه المطور')
+send(msg.chat_id_, msg.id_,' ⊀︰ تم وخر كليشه المطور')
 end
 if text == 'ضع كليشه المطور' and Devmode(msg) then
 database:set(bot_id..'Set:TEXT_SUDO'..msg.chat_id_..':'..msg.sender_user_id_,true)
@@ -8470,7 +8470,7 @@ local Text= [[
 send(msg.chat_id_, msg.id_,Text)
 return false  
 end 
-if text == 'حذف الايدي' or text == 'مسح الايدي' then
+if text == 'حذف الايدي' or text == 'وخر الايدي' then
 if Manager(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
@@ -8597,7 +8597,7 @@ database:setex(bot_id.."Set:Rules:" .. msg.chat_id_ .. ":" .. msg.sender_user_id
 send(msg.chat_id_,msg.id_,"* ⊀︰ دز القوانـين يࢪوحي..*")  
 end
 end
-if text == 'مسح القوانين' or text == 'حذف القوانين' then  
+if text == 'وخر القوانين' or text == 'حذف القوانين' then  
 if Mod(msg) then
 send(msg.chat_id_, msg.id_,"* ⊀︰ تـم شلت ڪليشه القوانـين..*")  
 database:del(bot_id.."Set:Rules:Group"..msg.chat_id_) 
@@ -8637,7 +8637,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_,' *⊀︰ الـضلـ؏  ↷ * ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SourcE_RiNdA')..') \n *⊀︰ تـم فـتح التفليش *')  
 end,nil)   
 end
-if text == 'طرد المحذوفين' or text == 'مسح المحذوفين' then  
+if text == 'طرد المحذوفين' or text == 'وخر المحذوفين' then  
 if Mod(msg) then    
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),offset_ = 0,limit_ = 1000}, function(arg,del)
 for k, v in pairs(del.members_) do
@@ -8684,8 +8684,8 @@ database:sadd(bot_id.."Coomds"..msg.chat_id_,ComdNew)
 database:setex(bot_id.."Comd:New"..msg.chat_id_..""..msg.sender_user_id_,200,true)  
 send(msg.chat_id_, msg.id_, " ⊀︰ ارسل نوع الرتبه \n ⊀︰ {عـضـو -- ممـيـز -- ادمـن -- مـديـر}") 
 end
-if text and text:match("^مسح صلاحيه (.*)$") and Mod(msg) then 
-ComdNew = text:match("^مسح صلاحيه (.*)$")
+if text and text:match("^وخر صلاحيه (.*)$") and Mod(msg) then 
+ComdNew = text:match("^وخر صلاحيه (.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -8696,7 +8696,7 @@ end
 return false
 end
 database:del(bot_id.."Comd:New:rt:bot:"..ComdNew..msg.chat_id_)
-send(msg.chat_id_, msg.id_, "* ⊀︰ تم مسح الصلاحيه *\n") 
+send(msg.chat_id_, msg.id_, "* ⊀︰ تم وخر الصلاحيه *\n") 
 end
 if database:get(bot_id.."Comd:New"..msg.chat_id_..""..msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
@@ -8876,8 +8876,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil) 
 end  
 end
-if text == "مسح رسايلي" or text == "مسح رسائلي" or text == "حذف رسايلي" or text == "حذف رسائلي" then  
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم مسح ࢪسائلك*')  
+if text == "وخر رسايلي" or text == "وخر رسائلي" or text == "حذف رسايلي" or text == "حذف رسائلي" then  
+send(msg.chat_id_, msg.id_,'* ⊀︰ تم وخر ࢪسائلك*')  
 database:del(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) 
 end
 if text == "رسايلي" or text == "رسائلي" or text == "msg" then 
@@ -9012,12 +9012,12 @@ end
 if (msg.content_.animation_) or (msg.content_.photo_) or (msg.content_.video_) or (msg.content_.document) or (msg.content_.sticker_) and msg.reply_to_message_id_ == 0 then
 database:sadd(bot_id.."MODE7:allM"..msg.chat_id_, msg.id_)
 end
-if text == ("امسح") and cleaner(msg) then  
+if text == ("اوخر") and cleaner(msg) then  
 local list = database:smembers(bot_id.."MODE7:allM"..msg.chat_id_)
 for k,v in pairs(list) do
 local Message = v
 if Message then
-t = "*⊀︰ تم مسح "..k.." من الوسائط الموجوده*"
+t = "*⊀︰ تم وخر "..k.." من الوسائط الموجوده*"
 DeleteMessage(msg.chat_id_,{[0]=Message})
 database:del(bot_id.."MODE7:allM"..msg.chat_id_)
 end
@@ -9387,7 +9387,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 end
 
-if text == ("مسح ردود المطور") and Devmode(msg) then 
+if text == ("وخر ردود المطور") and Devmode(msg) then 
 local list = database:smembers(bot_id.."List:Rd:Sudo")
 for k,v in pairs(list) do
 database:del(bot_id.."Add:Rd:Sudo:Gif"..v)   
@@ -9400,7 +9400,7 @@ database:del(bot_id.."Add:Rd:Sudo:File"..v)
 database:del(bot_id.."Add:Rd:Sudo:Audio"..v)
 database:del(bot_id.."List:Rd:Sudo")
 end
-send(msg.chat_id_, msg.id_,"⊀︰ تم مسح ردود المطور")
+send(msg.chat_id_, msg.id_,"⊀︰ تم وخر ردود المطور")
 end
 if text == ("ردود المطور") and Devmode(msg) then 
 local list = database:smembers(bot_id.."List:Rd:Sudo")
@@ -9604,7 +9604,7 @@ database:srem(bot_id.."botss:RiNdA:List:Rd:Sudo", text)
 return false
 end
 end
-if text == ("مسح الردود المتعدده") and CoSu(msg) then
+if text == ("وخر الردود المتعدده") and CoSu(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -9625,7 +9625,7 @@ send(msg.chat_id_, msg.id_,"*⊀︰ تم حذف ردود المتعدده*")
 end
 ------------------------------------------------------------------------
 if Manager(msg) then
-if text == ("مسح ردود الكروب") and not database:get(bot_id.."Rio:Lock:GpRd"..msg.chat_id_) then
+if text == ("وخر ردود الكروب") and not database:get(bot_id.."Rio:Lock:GpRd"..msg.chat_id_) then
 local list = database:smembers(bot_id.."List:Manager"..msg.chat_id_.."")
 for k,v in pairs(list) do
 database:del(bot_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_)   
@@ -9638,7 +9638,7 @@ database:del(bot_id.."Add:Rd:Manager:File"..v..msg.chat_id_)
 database:del(bot_id.."Add:Rd:Manager:Audio"..v..msg.chat_id_)
 database:del(bot_id.."List:Manager"..msg.chat_id_)
 end
-send(msg.chat_id_, msg.id_,"⊀︰تـم مسح ࢪدود الكروب")
+send(msg.chat_id_, msg.id_,"⊀︰تـم وخر ࢪدود الكروب")
 end
 end
 if text == ("ردود الكروب") and Manager(msg) then
@@ -10354,9 +10354,9 @@ end
 if text == 'تعطيل الارفع' and Constructor(msg) then  
 if not database:get(bot_id..'Lock:Add:Bot'..msg.chat_id_)  then
 database:set(bot_id..'Lock:Add:Bot'..msg.chat_id_,true) 
-Text = '\n* ⊀︰ تعطـل ↫ الࢪفـ؏..🍒*' 
+Text = '\n* ⊀︰ تـم تعطيـل الࢪفـ؏..🍒*' 
 else
-Text = '\n *⊀︰ بالتاكيد تعطـل ↫ الࢪفـ؏..🍒*'
+Text = '\n *⊀︰ بالتاكيد تـم تعطيـل الࢪفـ؏..🍒*'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -10865,11 +10865,11 @@ Text = '* ⊀︰ جكـد تجفص دكتـب عدل >* { '..Num..' }'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == "مسح سحكاتي" or text == "حذف سحكاتي" then  
-send(msg.chat_id_, msg.id_,'* ⊀︰ تم مسح بعࢪاتك يلعـارر..🍒*'  )  
+if text == "وخر سحكاتي" or text == "حذف سحكاتي" then  
+send(msg.chat_id_, msg.id_,'* ⊀︰ تم وخر بعࢪاتك يلعـارر..🍒*'  )  
 database:del(bot_id..'edits'..msg.chat_id_..msg.sender_user_id_)
 end
-if text == "مسح جهاتي" or text == "حذف جهاتي" then  
+if text == "وخر جهاتي" or text == "حذف جهاتي" then  
 send(msg.chat_id_, msg.id_,'* ⊀︰ تـم مسـح جۿاتـك*'  )  
 database:del(bot_id..'Add:Contact'..msg.chat_id_..':'..msg.sender_user_id_)
 end
@@ -10992,7 +10992,7 @@ end
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
 -----------
-if text ==("مسح") and Mod(msg) and tonumber(msg.reply_to_message_id_) > 0 then
+if text ==("وخر") and Mod(msg) and tonumber(msg.reply_to_message_id_) > 0 then
 DeleteMessage(msg.chat_id_,{[0] = tonumber(msg.reply_to_message_id_),msg.id_})   
 end   
 if database:get(bot_id.."numadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
@@ -11386,7 +11386,7 @@ send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'تعطيل الردود' and Manager(msg) then  
 database:set(bot_id..'lock:reply'..msg.chat_id_,true)  
-Text = '\n *⊀︰ تعطـل ↫ الࢪدود🍒*'
+Text = '\n *⊀︰ تـم تعطيـل الࢪدود🍒*'
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'رابط الحذف' or text == 'رابط حذف' then
@@ -11592,28 +11592,22 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-📝∫𝙿𝚄𝚃 - 𝙰𝙳𝙳 .
-━━━━𝖱𝗂𝖭𝖽𝖠━━━━
-⊀︰ اهلا بك عزيزي ✓ .
-⊀︰ اوامر الخلي - اضف ( 📌 - 📍) .
-━━━━𝖱𝗂𝖭𝖽𝖠━━━━
-⊀︰ اضف / حذف ← رد
-⊀︰ اضف / حذف ← صلاحيه
-━━━━𝖱𝗂𝖭𝖽𝖠━━━━
-⊀︰ ضع + امر …
-━━━━𝖱𝗂𝖭𝖽𝖠━━━━
-⊀︰ اسم
-⊀︰ رابط
-⊀︰ ترحيب
-⊀︰ قوانين
-⊀︰ رد متعدد 
-⊀︰ صوره
-⊀︰ وصف
-⊀︰ تكرار + عدد
-⊀︰ رد
-⊀︰ امر
-⊀︰ ترتيب الاوامر
-━━━━𝖱𝗂𝖭𝖽𝖠━━━━ٴ
+منـوࢪني يا وࢪده
+- ضݪع انته باوامࢪ م3 ↶ خلي و اضف .
+ـ↷𝖱𝗂𝖭𝖣𝖺↶
+ ━━━━ 𝖱𝖠 ━━━━ 
+( خـلي ↶ ضـع  ) + الامـࢪ ..🦇
+•. اسـم 
+•. صـوࢪه
+•. وصـف
+•. رابـط
+•. قوانـين
+•. تـࢪحـيب
+( اوامـࢪ الاضـف↶  ) + الـࢪد او الامـࢪ ..🦇
+•. اضـف رد
+•. اضـف رد متعدد
+•. تࢪتيب الاوامـࢪ
+ ━━━━ 𝖱𝖠 ━━━━
 ⊀︰ . [<𝙎𝙤??𝙍𝙘𝙀🍒??𝙞𝙉𝙙𝘼>](t.me/SourcE_RiNdA)
 ]]
 keyboard = {} 
@@ -11649,9 +11643,9 @@ local Teext =[[
 ✂️∫W𝙸𝙿𝙴 - 𝙳𝙴𝙻𝙴𝚃𝙴 .
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ اهلا بك عزيزي 🔊 .
-⊀︰ اوامر مسح / الحذف ← امر ( ✂️ - 📝 ).
+⊀︰ اوامر وخر / الحذف ← امر ( ✂️ - 📝 ).
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
-⊀︰ مسح + امر ↓
+⊀︰ وخر + امر ↓
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ الايدي 
 ⊀︰ المميزين
@@ -11662,12 +11656,12 @@ local Teext =[[
 ⊀︰ الاسماء المكتومه
 ⊀︰ ردود الكروب
 ⊀︰ البوتات
-⊀︰ امسح
+⊀︰ اوخر
 ⊀︰ صلاحيه
 ⊀︰ قائمه منع المتحركات
 ⊀︰ قائمه منع الصور
 ⊀︰ قائمه منع الملصقات
-⊀︰ مسح قائمه المنع
+⊀︰ وخر قائمه المنع
 ⊀︰ المحذوفين
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ حذف  امر + الامر القديم
@@ -11925,8 +11919,8 @@ local Teext =[[
 ⊀︰ تفعيل ← تعطيل 
 ⊀︰ المجموعات ← المشتركين ← الاحصائيات
 ⊀︰ ارفع ← نزل منشئ اساسي
-⊀︰ مسح الاساسين ← المنشئين الاساسين
-⊀︰ مسح المنشئين ← المنشئين
+⊀︰ وخر الاساسين ← المنشئين الاساسين
+⊀︰ وخر المنشئين ← المنشئين
 ⊀︰ اسم ~ ايدي + بوت غادر 
 ⊀︰ اذاعه 
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━ٴ
@@ -11969,11 +11963,11 @@ local Teext =[[
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ تفعيل
 ⊀︰ تعطيل
-⊀︰ مسح الاساسين
+⊀︰ وخر الاساسين
 ⊀︰ المنشئين الاساسين
 ⊀︰ ارفع/نزل منشئ اساسي
 ⊀︰ ارفع/نزل مطور ثانوي 
-⊀︰ مسح المطورين
+⊀︰ وخر المطورين
 ⊀︰ المطورين
 ⊀︰ ارفع | نزل مطور
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
@@ -11985,14 +11979,14 @@ local Teext =[[
 ⊀︰ كتم عام
 ⊀︰ الغاء العام
 ⊀︰ قائمه العام
-⊀︰ مسح قائمه العام
+⊀︰ وخر قائمه العام
 ⊀︰ مرتي نسخه الاحتياطيه
 ⊀︰ ارفع نسخه الاحتياطيه
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ المتجر 
 ⊀︰ متجر الملفات
 ⊀︰ الملفات
-⊀︰ مسح الملفات
+⊀︰ وخر الملفات
 ⊀︰ تعطيل + تفعيل + اسم ملف
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ اذاعه خاص
@@ -12011,7 +12005,7 @@ local Teext =[[
 ⊀︰ تغير اسم البوت
 ⊀︰ اضف/حذف رد للكل
 ⊀︰ ردود المطور
-⊀︰ مسح ردود المطور
+⊀︰ وخر ردود المطور
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ الاشتراك الاجباري
 ⊀︰ تعطيل الاشتراك الاجباري
@@ -12062,9 +12056,9 @@ local Teext =[[
 ⊀︰ عرض معلوماتك ↑↓
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ ايديي ← اسمي 
-⊀︰ رسايلي ← مسح رسايلي 
+⊀︰ رسايلي ← وخر رسايلي 
 ⊀︰ رتبتي ← سحكاتي 
-⊀︰ مسح سحكاتي ← المنشئ 
+⊀︰ وخر سحكاتي ← المنشئ 
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
 ⊀︰ اوآمر المجموعه ↑↓
 ━━━━𝖱𝗂𝖭𝖽𝖠━━━━
